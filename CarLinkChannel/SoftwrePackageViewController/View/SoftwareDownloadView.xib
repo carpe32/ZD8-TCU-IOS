@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SoftwareDownloadView">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="230"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Foi-qq-wod">
+                    <rect key="frame" x="85.666666666666657" y="10" width="240" height="6"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="BkZ-Vn-P1G"/>
+                        <constraint firstAttribute="width" constant="240" id="O5x-Tn-FAh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download/Update" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ1-Qg-fQ4">
+                    <rect key="frame" x="0.0" y="28" width="411" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="5ee-sV-ghw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEy-S2-Utd">
+                    <rect key="frame" x="20" y="169" width="371" height="35"/>
+                    <color key="backgroundColor" red="0.13333333333333333" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="ff3-GC-TPk"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="OK">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="okButtonTarget:" destination="iN0-l3-epB" eventType="touchUpInside" id="yvO-3a-ymK"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Whether to download/update the program will take a few minutes for you. \na" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="q0S-c0-Kwx">
+                    <rect key="frame" x="20" y="58" width="371" height="101"/>
+                    <color key="backgroundColor" red="0.13333333333333333" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+                <progressView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HC3-Qm-zgo">
+                    <rect key="frame" x="20" y="214" width="371" height="4"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="Qvy-rf-hGG"/>
+                    </constraints>
+                </progressView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.070588235294117646" green="0.074509803921568626" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HC3-Qm-zgo" secondAttribute="trailing" constant="20" id="B8k-qg-0JS"/>
+                <constraint firstItem="HC3-Qm-zgo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="F5C-1C-HLl"/>
+                <constraint firstItem="bQ1-Qg-fQ4" firstAttribute="top" secondItem="Foi-qq-wod" secondAttribute="bottom" constant="10" id="FjA-OY-eNr"/>
+                <constraint firstAttribute="trailing" secondItem="bQ1-Qg-fQ4" secondAttribute="trailing" id="GpS-bx-AFr"/>
+                <constraint firstAttribute="bottom" secondItem="HC3-Qm-zgo" secondAttribute="bottom" constant="12" id="Hxo-PU-U8W"/>
+                <constraint firstItem="q0S-c0-Kwx" firstAttribute="top" secondItem="bQ1-Qg-fQ4" secondAttribute="bottom" constant="10" id="LqL-Cq-ZAh"/>
+                <constraint firstItem="oEy-S2-Utd" firstAttribute="top" secondItem="q0S-c0-Kwx" secondAttribute="bottom" constant="10" id="Lue-PO-Evt"/>
+                <constraint firstItem="HC3-Qm-zgo" firstAttribute="top" secondItem="oEy-S2-Utd" secondAttribute="bottom" constant="10" id="NEM-vy-wK0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oEy-S2-Utd" secondAttribute="trailing" constant="20" id="QF5-Dg-wj6"/>
+                <constraint firstItem="Foi-qq-wod" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="YqX-jD-Wz8"/>
+                <constraint firstItem="oEy-S2-Utd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gIN-Mf-hS9"/>
+                <constraint firstItem="Foi-qq-wod" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hZI-Zk-OH5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="q0S-c0-Kwx" secondAttribute="trailing" constant="20" id="kcS-OM-Ws5"/>
+                <constraint firstItem="bQ1-Qg-fQ4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lBt-v4-yVd"/>
+                <constraint firstItem="q0S-c0-Kwx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="yZl-RD-Ccl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descTextView" destination="q0S-c0-Kwx" id="juX-EY-NIs"/>
+                <outlet property="progressView" destination="HC3-Qm-zgo" id="2wD-ec-mtx"/>
+            </connections>
+            <point key="canvasLocation" x="-309.16030534351142" y="-420.42253521126764"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

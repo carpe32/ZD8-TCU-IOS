@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="520"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eb2-Yh-hrc">
+                    <rect key="frame" x="108" y="6" width="150" height="6"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="VE0-r8-XtC"/>
+                        <constraint firstAttribute="height" constant="6" id="bke-yl-0mM"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caution Warning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcF-xI-uoh">
+                    <rect key="frame" x="100.66666666666669" y="28" width="165" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="165" id="6eN-DM-xpB"/>
+                        <constraint firstAttribute="height" constant="21" id="cJs-e6-abk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0M-1c-uBa">
+                    <rect key="frame" x="20" y="55" width="326" height="360"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="360" id="PNJ-d8-UFV"/>
+                    </constraints>
+                    <mutableString key="text">1. If the speed exceeds 3000 within the past 5 minutes, it is necessary to lock the vehicle and sleep for 5 minutes first;
+
+2. The vehicle is in the state of flameout and power supply (judging the power supply standard: whether the fuel gauge of the instrument works normally, and the normal operation is the power supply state);
+
+3. The door cannot be opened or closed during operation;
+
+4. Turn off the headlights and air conditioning;
+
+5. Fasten the driver's seat belt;
+
+6. The phone is fully connected to the internet, and please do not answer or make calls during the writing process.</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix8-fh-uFr">
+                    <rect key="frame" x="20" y="450" width="326" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="LVR-UX-nTM"/>
+                    </constraints>
+                    <color key="tintColor" red="0.23921568627450979" green="0.45882352941176469" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="ok"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="s0M-1c-uBa" firstAttribute="top" secondItem="vcF-xI-uoh" secondAttribute="bottom" constant="6" id="2Yy-wQ-tKo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s0M-1c-uBa" secondAttribute="trailing" constant="20" id="KwO-dM-Twc"/>
+                <constraint firstItem="Ix8-fh-uFr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="LY2-HT-djg"/>
+                <constraint firstItem="vcF-xI-uoh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NcO-w9-vDI"/>
+                <constraint firstItem="Eb2-Yh-hrc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="Pis-RQ-mOB"/>
+                <constraint firstItem="vcF-xI-uoh" firstAttribute="top" secondItem="Eb2-Yh-hrc" secondAttribute="bottom" constant="16" id="Rin-ca-9JJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ix8-fh-uFr" secondAttribute="trailing" constant="20" id="WhU-aU-0gS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ix8-fh-uFr" secondAttribute="bottom" constant="20" id="ab7-Kl-iFX"/>
+                <constraint firstItem="s0M-1c-uBa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="pjT-Xn-pyh"/>
+                <constraint firstItem="Eb2-Yh-hrc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="smB-qG-Ds9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-440" y="-134"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

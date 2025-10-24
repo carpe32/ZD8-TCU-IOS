@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EcuInstallView">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECU programming in progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-C4-dNf">
+                    <rect key="frame" x="0.0" y="125" width="325" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="zrE-VV-1DH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huh-u3-Bq4">
+                    <rect key="frame" x="16" y="176" width="293" height="43"/>
+                    <string key="text">Please do not turn off the app,do not answer not make calls,keep the network stable,do not turn off your phone,and the vehicle remains powered on.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completing Section 4/7." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oZ-MI-V1Z">
+                    <rect key="frame" x="16" y="203" width="209" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="209" id="vkz-Ru-6gE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oci-CZ-Cac" userLabel="DataLabel">
+                    <rect key="frame" x="16" y="174" width="159" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WV7-nh-Bmd">
+                    <rect key="frame" x="80" y="5" width="165" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="e4l-u7-nrc"/>
+                        <constraint firstAttribute="width" constant="165" id="sIC-Ef-yGP"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.13333333333333333" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Huh-u3-Bq4" secondAttribute="trailing" constant="16" id="4We-zO-5LD"/>
+                <constraint firstItem="Huh-u3-Bq4" firstAttribute="top" secondItem="7nI-C4-dNf" secondAttribute="bottom" constant="30" id="8PP-UR-6ac"/>
+                <constraint firstItem="WV7-nh-Bmd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="D7e-Vv-yV0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9oZ-MI-V1Z" secondAttribute="bottom" constant="20" id="cnq-Vh-1xE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7nI-C4-dNf" secondAttribute="trailing" id="klz-NM-UE7"/>
+                <constraint firstItem="Huh-u3-Bq4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="nTW-WQ-uP9"/>
+                <constraint firstItem="7nI-C4-dNf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nne-ro-yKm"/>
+                <constraint firstItem="WV7-nh-Bmd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qOm-pp-jSG"/>
+                <constraint firstItem="7nI-C4-dNf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="66" id="w2H-cw-Tl3"/>
+                <constraint firstItem="9oZ-MI-V1Z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="wf1-cg-Mxq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="DataLabel" destination="oci-CZ-Cac" id="pdU-TR-pDu"/>
+                <outlet property="LogoImageView" destination="WV7-nh-Bmd" id="zmV-sa-Lei"/>
+                <outlet property="descriptionLabel" destination="Huh-u3-Bq4" id="GfT-vz-WBP"/>
+                <outlet property="progresslabel" destination="9oZ-MI-V1Z" id="zv5-YA-OB6"/>
+            </connections>
+            <point key="canvasLocation" x="52.671755725190835" y="70.422535211267615"/>
+        </view>
+    </objects>
+</document>

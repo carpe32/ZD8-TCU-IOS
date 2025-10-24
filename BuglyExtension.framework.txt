@@ -1,0 +1,265 @@
+
+/Users/mahuan/Desktop/App/GCDAsyncSocket/CarLinkChannel/Bugly/BuglyExtension.framework/BuglyExtension(AnaLog.o):
+0000000000000008 S _rqd_LogLevel
+
+/Users/mahuan/Desktop/App/GCDAsyncSocket/CarLinkChannel/Bugly/BuglyExtension.framework/BuglyExtension(CrashReporterLite.o):
+0000000000000e55 t +[CrashReporterLite backtrace]
+0000000000000260 t +[CrashReporterLite enableLog:]
+0000000000000000 t +[CrashReporterLite sharedInstance]
+00000000000000de t +[CrashReporterLite startWithApplicationGroupIdentifier:]
+0000000000000215 t +[CrashReporterLite start]
+0000000000000ffe t -[CrashReporterLite .cxx_destruct]
+0000000000000f9d t -[CrashReporterLite applicationGroupIdentifier]
+0000000000000590 t -[CrashReporterLite hasSavedExceptions]
+0000000000000073 t -[CrashReporterLite init]
+0000000000000762 t -[CrashReporterLite installUncaughtExceptionHandler]
+0000000000000332 t -[CrashReporterLite install]
+00000000000002b4 t -[CrashReporterLite isAppGroupAvilable]
+0000000000000f4d t -[CrashReporterLite isInstalled]
+000000000000083b t -[CrashReporterLite isUncaughtExceptionHandlerInstalled]
+0000000000000f6d t -[CrashReporterLite islogEnabled]
+0000000000000853 t -[CrashReporterLite reportCrashDirectly]
+0000000000000fc1 t -[CrashReporterLite sandboxManager]
+0000000000000f8d t -[CrashReporterLite setAppGroupAvilable:]
+0000000000000fb0 t -[CrashReporterLite setApplicationGroupIdentifier:]
+0000000000000f5d t -[CrashReporterLite setInstalled:]
+0000000000000f7d t -[CrashReporterLite setLogEnabled:]
+0000000000000fd2 t -[CrashReporterLite setSandboxManager:]
+0000000000000622 t -[CrashReporterLite uncaughtExceptionHandler:]
+0000000000000460 t -[CrashReporterLite uninstall]
+000000000000047a t -[CrashReporterLite validateAndSaveCriticalApplicationData:]
+                 U _NSClassFromString
+                 U _NSGetUncaughtExceptionHandler
+                 U _NSLog
+                 U _NSSelectorFromString
+                 U _NSSetUncaughtExceptionHandler
+0000000000001800 S _OBJC_CLASS_$_CrashReporterLite
+                 U _OBJC_CLASS_$_NSDictionary
+                 U _OBJC_CLASS_$_NSFileManager
+                 U _OBJC_CLASS_$_NSInvocation
+                 U _OBJC_CLASS_$_NSKeyedArchiver
+                 U _OBJC_CLASS_$_NSMutableArray
+                 U _OBJC_CLASS_$_NSObject
+                 U _OBJC_CLASS_$_NSString
+                 U _OBJC_CLASS_$_NSURL
+                 U _OBJC_CLASS_$_RqdCrashReporterLiteException
+                 U _OBJC_CLASS_$_RqdExtensionSandboxManager
+0000000000001fb0 S _OBJC_IVAR_$_CrashReporterLite._appGroupAvilable
+0000000000001fb8 S _OBJC_IVAR_$_CrashReporterLite._applicationGroupIdentifier
+0000000000001fa0 S _OBJC_IVAR_$_CrashReporterLite._installed
+0000000000001fa8 S _OBJC_IVAR_$_CrashReporterLite._logEnabled
+0000000000001f98 S _OBJC_IVAR_$_CrashReporterLite._sandboxManager
+0000000000001828 S _OBJC_METACLASS_$_CrashReporterLite
+                 U _OBJC_METACLASS_$_NSObject
+00000000000007b8 t _UncaughtExceptionHandler
+                 U _WatchExtensionExceptionDataKey
+                 U _WatchExtensionHandlerKey
+                 U _WatchExtensionHandlerMessage
+                 U __NSConcreteGlobalBlock
+                 U __NSConcreteStackBlock
+000000000000042c t ___28-[CrashReporterLite install]_block_invoke
+0000000000000030 t ___35+[CrashReporterLite sharedInstance]_block_invoke
+000000000000097e t ___40-[CrashReporterLite reportCrashDirectly]_block_invoke
+0000000000000ccf t ___40-[CrashReporterLite reportCrashDirectly]_block_invoke_2
+                 U ___CFConstantStringClassReference
+0000000000001ec0 s ___block_descriptor_tmp
+0000000000001f30 s ___block_descriptor_tmp124
+0000000000001f60 s ___block_descriptor_tmp143
+0000000000001f00 s ___block_descriptor_tmp43
+0000000000001ee0 s ___block_literal_global
+0000000000000442 t ___copy_helper_block_
+0000000000000ded t ___copy_helper_block_121
+0000000000000e37 t ___copy_helper_block_140
+0000000000000451 t ___destroy_helper_block_
+0000000000000e12 t ___destroy_helper_block_122
+0000000000000e46 t ___destroy_helper_block_141
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U __objc_empty_cache
+                 U _backtrace
+                 U _backtrace_symbols
+                 U _dispatch_async
+                 U _dispatch_get_global_queue
+                 U _dispatch_once
+                 U _free
+                 U _objc_autoreleaseReturnValue
+                 U _objc_getProperty
+                 U _objc_msgSend
+                 U _objc_msgSendSuper2
+                 U _objc_release
+                 U _objc_retain
+                 U _objc_retainAutoreleaseReturnValue
+                 U _objc_retainAutoreleasedReturnValue
+                 U _objc_retainBlock
+                 U _objc_setProperty_nonatomic_copy
+                 U _objc_storeStrong
+0000000000002d20 b _previousUncaughtExceptionHandler
+0000000000002d10 b _sharedInstance.onceToken
+0000000000002d18 b _sharedInstance.sharedInstance_
+0000000000002040 s l_OBJC_$_CLASS_METHODS_CrashReporterLite
+0000000000002108 s l_OBJC_$_INSTANCE_METHODS_CrashReporterLite
+00000000000022f0 s l_OBJC_$_INSTANCE_VARIABLES_CrashReporterLite
+0000000000002398 s l_OBJC_$_PROP_LIST_CrashReporterLite
+00000000000023f0 s l_OBJC_CLASS_RO_$_CrashReporterLite
+00000000000020c0 s l_OBJC_METACLASS_RO_$_CrashReporterLite
+
+/Users/mahuan/Desktop/App/GCDAsyncSocket/CarLinkChannel/Bugly/BuglyExtension.framework/BuglyExtension(RqdExtensionSandboxManager.o):
+0000000000000000 t +[RqdExtensionSandboxManager sharedManager]
+0000000000000f74 t -[RqdExtensionSandboxManager .cxx_destruct]
+0000000000000699 t -[RqdExtensionSandboxManager allExceptionFileURLFromAppGroup:]
+0000000000000363 t -[RqdExtensionSandboxManager appGroupDirectoryPath]
+0000000000000f2e t -[RqdExtensionSandboxManager applicationGroupIdentifier]
+0000000000000b3c t -[RqdExtensionSandboxManager deleteAllExceptionsInAppGroup:]
+0000000000000cd7 t -[RqdExtensionSandboxManager deleteFiles:]
+00000000000001b0 t -[RqdExtensionSandboxManager documentDirectoryPath]
+0000000000000e45 t -[RqdExtensionSandboxManager exceptionFromFileURL:]
+000000000000045d t -[RqdExtensionSandboxManager filePathFromAppGroup:]
+0000000000000149 t -[RqdExtensionSandboxManager fullTimeFileNameStringWith:]
+0000000000000073 t -[RqdExtensionSandboxManager init]
+00000000000000b4 t -[RqdExtensionSandboxManager isAppGroupAvilable]
+0000000000000f52 t -[RqdExtensionSandboxManager savedExceptionsCount]
+0000000000000f41 t -[RqdExtensionSandboxManager setApplicationGroupIdentifier:]
+0000000000000f63 t -[RqdExtensionSandboxManager setSavedExceptionsCount:]
+000000000000055e t -[RqdExtensionSandboxManager writeException:]
+                 U _NSSearchPathForDirectoriesInDomains
+                 U _NSURLCreationDateKey
+                 U _NSURLIsDirectoryKey
+                 U _NSURLNameKey
+                 U _OBJC_CLASS_$_NSArray
+                 U _OBJC_CLASS_$_NSBundle
+                 U _OBJC_CLASS_$_NSData
+                 U _OBJC_CLASS_$_NSDate
+                 U _OBJC_CLASS_$_NSFileManager
+                 U _OBJC_CLASS_$_NSKeyedArchiver
+                 U _OBJC_CLASS_$_NSKeyedUnarchiver
+                 U _OBJC_CLASS_$_NSMutableArray
+                 U _OBJC_CLASS_$_NSObject
+                 U _OBJC_CLASS_$_NSString
+                 U _OBJC_CLASS_$_NSURL
+                 U _OBJC_CLASS_$_RqdCrashReporterLiteException
+0000000000000f98 S _OBJC_CLASS_$_RqdExtensionSandboxManager
+0000000000001750 S _OBJC_IVAR_$_RqdExtensionSandboxManager._applicationGroupIdentifier
+0000000000001748 S _OBJC_IVAR_$_RqdExtensionSandboxManager._savedExceptionsCount
+                 U _OBJC_METACLASS_$_NSObject
+0000000000000fc0 S _OBJC_METACLASS_$_RqdExtensionSandboxManager
+                 U __NSConcreteGlobalBlock
+0000000000000030 t ___43+[RqdExtensionSandboxManager sharedManager]_block_invoke
+                 U ___CFConstantStringClassReference
+0000000000001700 s ___block_descriptor_tmp
+0000000000001720 s ___block_literal_global
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U __objc_empty_cache
+                 U _dispatch_once
+                 U _localtime
+                 U _objc_autoreleaseReturnValue
+                 U _objc_enumerationMutation
+                 U _objc_getProperty
+                 U _objc_msgSend
+                 U _objc_msgSendSuper2
+                 U _objc_release
+                 U _objc_retain
+                 U _objc_retainAutoreleaseReturnValue
+                 U _objc_retainAutoreleasedReturnValue
+                 U _objc_setProperty_nonatomic_copy
+                 U _objc_storeStrong
+00000000000020b0 b _sharedManager.onceToken
+00000000000020a8 b _sharedManager.sharedInstance_
+0000000000001880 s l_OBJC_$_CLASS_METHODS_RqdExtensionSandboxManager
+00000000000018e8 s l_OBJC_$_INSTANCE_METHODS_RqdExtensionSandboxManager
+0000000000001a70 s l_OBJC_$_INSTANCE_VARIABLES_RqdExtensionSandboxManager
+0000000000001ab8 s l_OBJC_$_PROP_LIST_RqdExtensionSandboxManager
+0000000000001ae0 s l_OBJC_CLASS_RO_$_RqdExtensionSandboxManager
+00000000000018a0 s l_OBJC_METACLASS_RO_$_RqdExtensionSandboxManager
+
+/Users/mahuan/Desktop/App/GCDAsyncSocket/CarLinkChannel/Bugly/BuglyExtension.framework/BuglyExtension(RqdCrashReporterLiteException.o):
+0000000000001468 t -[RqdCrashReporterLiteException .cxx_destruct]
+000000000000135f t -[RqdCrashReporterLiteException appId]
+000000000000093b t -[RqdCrashReporterLiteException appVersion]
+00000000000013fe t -[RqdCrashReporterLiteException baseAddr]
+00000000000008af t -[RqdCrashReporterLiteException bundleId]
+000000000000133b t -[RqdCrashReporterLiteException callStack]
+00000000000013b6 t -[RqdCrashReporterLiteException cpuArch]
+0000000000000afa t -[RqdCrashReporterLiteException description]
+00000000000004b1 t -[RqdCrashReporterLiteException encodeWithCoder:]
+00000000000013da t -[RqdCrashReporterLiteException execUUID]
+0000000000000e01 t -[RqdCrashReporterLiteException extensionType]
+0000000000001072 t -[RqdCrashReporterLiteException fetchArchInfo]
+00000000000011ec t -[RqdCrashReporterLiteException getcpu:subType:]
+0000000000000000 t -[RqdCrashReporterLiteException initWithCoder:]
+0000000000000335 t -[RqdCrashReporterLiteException initWithException:]
+00000000000012e2 t -[RqdCrashReporterLiteException name]
+0000000000000823 t -[RqdCrashReporterLiteException processName]
+0000000000001306 t -[RqdCrashReporterLiteException reason]
+0000000000001259 t -[RqdCrashReporterLiteException rqd_encode16:size:]
+0000000000001372 t -[RqdCrashReporterLiteException setAppId:]
+0000000000001394 t -[RqdCrashReporterLiteException setAppVersion:]
+0000000000001411 t -[RqdCrashReporterLiteException setBaseAddr:]
+0000000000001383 t -[RqdCrashReporterLiteException setBundleId:]
+000000000000134e t -[RqdCrashReporterLiteException setCallStack:]
+00000000000013c9 t -[RqdCrashReporterLiteException setCpuArch:]
+00000000000013ed t -[RqdCrashReporterLiteException setExecUUID:]
+0000000000001433 t -[RqdCrashReporterLiteException setExtensionType:]
+00000000000012f5 t -[RqdCrashReporterLiteException setName:]
+00000000000013a5 t -[RqdCrashReporterLiteException setProcessName:]
+0000000000001319 t -[RqdCrashReporterLiteException setReason:]
+000000000000132a t -[RqdCrashReporterLiteException setThreadName:]
+0000000000001456 t -[RqdCrashReporterLiteException setTime:]
+0000000000001422 t -[RqdCrashReporterLiteException setTypeString:]
+0000000000000797 t -[RqdCrashReporterLiteException threadName]
+0000000000001444 t -[RqdCrashReporterLiteException time]
+0000000000000c7b t -[RqdCrashReporterLiteException typeString]
+                 U _OBJC_CLASS_$_NSArray
+                 U _OBJC_CLASS_$_NSBundle
+                 U _OBJC_CLASS_$_NSDate
+                 U _OBJC_CLASS_$_NSObject
+                 U _OBJC_CLASS_$_NSProcessInfo
+                 U _OBJC_CLASS_$_NSString
+                 U _OBJC_CLASS_$_NSThread
+0000000000002068 S _OBJC_CLASS_$_RqdCrashReporterLiteException
+00000000000026d8 S _OBJC_IVAR_$_RqdCrashReporterLiteException._appId
+00000000000026a8 S _OBJC_IVAR_$_RqdCrashReporterLiteException._appVersion
+00000000000026f0 S _OBJC_IVAR_$_RqdCrashReporterLiteException._baseAddr
+00000000000026a0 S _OBJC_IVAR_$_RqdCrashReporterLiteException._bundleId
+00000000000026d0 S _OBJC_IVAR_$_RqdCrashReporterLiteException._callStack
+00000000000026e0 S _OBJC_IVAR_$_RqdCrashReporterLiteException._cpuArch
+00000000000026e8 S _OBJC_IVAR_$_RqdCrashReporterLiteException._execUUID
+00000000000026b8 S _OBJC_IVAR_$_RqdCrashReporterLiteException._extensionType
+00000000000026c0 S _OBJC_IVAR_$_RqdCrashReporterLiteException._name
+0000000000002698 S _OBJC_IVAR_$_RqdCrashReporterLiteException._processName
+00000000000026c8 S _OBJC_IVAR_$_RqdCrashReporterLiteException._reason
+0000000000002690 S _OBJC_IVAR_$_RqdCrashReporterLiteException._threadName
+00000000000026f8 S _OBJC_IVAR_$_RqdCrashReporterLiteException._time
+00000000000026b0 S _OBJC_IVAR_$_RqdCrashReporterLiteException._typeString
+                 U _OBJC_METACLASS_$_NSObject
+0000000000002090 S _OBJC_METACLASS_$_RqdCrashReporterLiteException
+0000000000002060 S _WatchExtensionExceptionDataKey
+0000000000002050 S _WatchExtensionHandlerKey
+0000000000002058 S _WatchExtensionHandlerMessage
+                 U ___CFConstantStringClassReference
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+                 U __dyld_get_image_header
+                 U __dyld_image_count
+                 U __objc_empty_cache
+                 U _kCFBundleVersionKey
+                 U _objc_autoreleaseReturnValue
+                 U _objc_getProperty
+                 U _objc_msgSend
+                 U _objc_msgSendSuper2
+                 U _objc_release
+                 U _objc_retain
+                 U _objc_retainAutoreleaseReturnValue
+                 U _objc_retainAutoreleasedReturnValue
+                 U _objc_setProperty_nonatomic_copy
+                 U _objc_storeStrong
+0000000000002878 s l_OBJC_$_INSTANCE_METHODS_RqdCrashReporterLiteException
+0000000000002be0 s l_OBJC_$_INSTANCE_VARIABLES_RqdCrashReporterLiteException
+0000000000002da8 s l_OBJC_$_PROP_LIST_RqdCrashReporterLiteException
+00000000000027d0 s l_OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCoding
+0000000000002808 s l_OBJC_$_PROTOCOL_METHOD_TYPES_NSCoding
+0000000000002818 s l_OBJC_CLASS_PROTOCOLS_$_RqdCrashReporterLiteException
+0000000000002e90 s l_OBJC_CLASS_RO_$_RqdCrashReporterLiteException
+0000000000002f30 S l_OBJC_LABEL_PROTOCOL_$_NSCoding
+0000000000002830 s l_OBJC_METACLASS_RO_$_RqdCrashReporterLiteException
+0000000000002ed8 S l_OBJC_PROTOCOL_$_NSCoding

@@ -1,0 +1,2288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		003E6A222A56CFD800B59ED7 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 003E6A212A56CFD700B59ED7 /* libBaiduMobStat.a */; };
+		003E6A282A56D1E400B59ED7 /* RunScript.md in Resources */ = {isa = PBXBuildFile; fileRef = 003E6A272A56D1E400B59ED7 /* RunScript.md */; };
+		A11A92562CA92565001C3007 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A11A92552CA92565001C3007 /* LoadingView.m */; };
+		A1490D362DAF85B700BEC195 /* CustomLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1490D352DAF85B700BEC195 /* CustomLogFormatter.m */; };
+		A176D97D2CA17E62003DA1A5 /* AutoNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D97C2CA17E62003DA1A5 /* AutoNetworkService.m */; };
+		A176D9812CA17F0A003DA1A5 /* VehicleLoaclNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9802CA17F0A003DA1A5 /* VehicleLoaclNetworkManager.m */; };
+		A176D9842CA17F43003DA1A5 /* TcpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9832CA17F43003DA1A5 /* TcpBase.m */; };
+		A176D9872CA17F94003DA1A5 /* UdpBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9862CA17F94003DA1A5 /* UdpBase.m */; };
+		A176D98B2CA1802F003DA1A5 /* UDSPackageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D98A2CA1802F003DA1A5 /* UDSPackageHandle.m */; };
+		A176D98E2CA180C2003DA1A5 /* UdsStructured.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D98D2CA180C2003DA1A5 /* UdsStructured.m */; };
+		A176D9912CA180EA003DA1A5 /* UDSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9902CA180EA003DA1A5 /* UDSQueue.m */; };
+		A176D9942CA1814B003DA1A5 /* NetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9932CA1814B003DA1A5 /* NetworkTool.m */; };
+		A176D9992CA1842D003DA1A5 /* UDSResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9982CA1842D003DA1A5 /* UDSResponse.m */; };
+		A176D99D2CA1847F003DA1A5 /* FirmwareDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D99C2CA1847F003DA1A5 /* FirmwareDataManager.m */; };
+		A176D9A12CA184FF003DA1A5 /* FlashBlockInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9A02CA184FF003DA1A5 /* FlashBlockInfo.m */; };
+		A176D9A42CA1852B003DA1A5 /* FlashInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9A32CA1852B003DA1A5 /* FlashInfo.m */; };
+		A176D9A82CA18557003DA1A5 /* OperationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9A72CA18557003DA1A5 /* OperationResult.m */; };
+		A176D9AB2CA18700003DA1A5 /* VehicleClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9AA2CA18700003DA1A5 /* VehicleClass1.m */; };
+		A176D9B62CA18774003DA1A5 /* VehicleClass6.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9AC2CA18774003DA1A5 /* VehicleClass6.m */; };
+		A176D9B72CA18774003DA1A5 /* VehicleClass5.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9AD2CA18774003DA1A5 /* VehicleClass5.m */; };
+		A176D9B82CA18774003DA1A5 /* VehicleClass3.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9AF2CA18774003DA1A5 /* VehicleClass3.m */; };
+		A176D9B92CA18774003DA1A5 /* VehicleClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9B12CA18774003DA1A5 /* VehicleClass2.m */; };
+		A176D9BA2CA18774003DA1A5 /* VehicleClass4.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9B32CA18774003DA1A5 /* VehicleClass4.m */; };
+		A176D9BD2CA187CE003DA1A5 /* LicenseKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9BB2CA187CE003DA1A5 /* LicenseKeyManager.m */; };
+		A176D9C22CA1884D003DA1A5 /* UDSProtocolDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9BF2CA1884D003DA1A5 /* UDSProtocolDispatcher.m */; };
+		A176D9C32CA1884D003DA1A5 /* UDSOperationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9C02CA1884D003DA1A5 /* UDSOperationResult.m */; };
+		A176D9C72CA1888B003DA1A5 /* HTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9C52CA1888B003DA1A5 /* HTTPManager.m */; };
+		A176D9CD2CA188C3003DA1A5 /* UploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9CB2CA188C3003DA1A5 /* UploadManager.m */; };
+		A176D9CE2CA188C3003DA1A5 /* XmlProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9CC2CA188C3003DA1A5 /* XmlProcess.m */; };
+		A176D9D22CA18948003DA1A5 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9D12CA18948003DA1A5 /* GDataXMLNode.m */; };
+		A176D9D62CA2CC1A003DA1A5 /* BINFileProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = A176D9D52CA2CC1A003DA1A5 /* BINFileProcess.m */; };
+		A188499A2D267C4000BF8AFE /* ReplayKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A18849992D267C4000BF8AFE /* ReplayKitManager.m */; };
+		A1A958D82DB7626A0097BC3F /* PopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A958D72DB7626A0097BC3F /* PopWindow.m */; };
+		A1A958DC2DB77E2D0097BC3F /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A958DB2DB77E2D0097BC3F /* VersionManager.m */; };
+		A1D904822E17D6AB00E59EA4 /* KeyChainProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D904812E17D6AB00E59EA4 /* KeyChainProcess.m */; };
+		C13D403D6761878396C517E1 /* Pods_CarLinkChannel_CarLinkChannelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74950CDFC8C13EC5F795134C /* Pods_CarLinkChannel_CarLinkChannelUITests.framework */; };
+		C705D82729D6ACF2006C2B59 /* aeskey.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80429D6ACF2006C2B59 /* aeskey.m */; };
+		C705D82829D6ACF2006C2B59 /* hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80629D6ACF2006C2B59 /* hmac.m */; };
+		C705D82929D6ACF2006C2B59 /* aescrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80929D6ACF2006C2B59 /* aescrypt.m */; };
+		C705D82A29D6ACF2006C2B59 /* fileenc.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80A29D6ACF2006C2B59 /* fileenc.m */; };
+		C705D82B29D6ACF3006C2B59 /* sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80D29D6ACF2006C2B59 /* sha1.m */; };
+		C705D82C29D6ACF3006C2B59 /* prng.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D81329D6ACF2006C2B59 /* prng.m */; };
+		C705D82D29D6ACF3006C2B59 /* pwd2key.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D81429D6ACF2006C2B59 /* pwd2key.m */; };
+		C705D82E29D6ACF3006C2B59 /* aestab.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D81529D6ACF2006C2B59 /* aestab.m */; };
+		C705D82F29D6ACF3006C2B59 /* entropy.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D81829D6ACF2006C2B59 /* entropy.m */; };
+		C705D83029D6ACF3006C2B59 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C705D81929D6ACF2006C2B59 /* README.md */; };
+		C705D83129D6ACF3006C2B59 /* unzip.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D81B29D6ACF2006C2B59 /* unzip.m */; };
+		C705D83229D6ACF3006C2B59 /* zip.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D81C29D6ACF2006C2B59 /* zip.m */; };
+		C705D83329D6ACF3006C2B59 /* ioapi.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D81D29D6ACF2006C2B59 /* ioapi.m */; };
+		C705D83429D6ACF3006C2B59 /* mztools.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D81E29D6ACF2006C2B59 /* mztools.m */; };
+		C705D83529D6ACF3006C2B59 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D82429D6ACF2006C2B59 /* SSZipArchive.m */; };
+		C705D83829D6B7DF006C2B59 /* TuneContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D83729D6B7DF006C2B59 /* TuneContentViewController.m */; };
+		C710EBD82A4C30BC004CAA7D /* WarnPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C710EBD72A4C30BC004CAA7D /* WarnPopView.xib */; };
+		C710EBE22A4E9B1A004CAA7D /* ahocorasick.c in Sources */ = {isa = PBXBuildFile; fileRef = C710EBDF2A4E9B1A004CAA7D /* ahocorasick.c */; };
+		C710EBE32A4E9B1A004CAA7D /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = C710EBE02A4E9B1A004CAA7D /* node.c */; };
+		C710EBE42A4E9B1A004CAA7D /* STCObfuscator.m in Sources */ = {isa = PBXBuildFile; fileRef = C710EBE12A4E9B1A004CAA7D /* STCObfuscator.m */; };
+		C7143BAD2A42DE1B008C6388 /* exportVideoSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7143BAC2A42DE1A008C6388 /* exportVideoSelectView.xib */; };
+		C71CC29C2A08A8E70076F3A6 /* EGSHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CC29B2A08A8E70076F3A6 /* EGSHealthViewController.m */; };
+		C71CC2A02A08DF160076F3A6 /* FaultCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CC29F2A08DF160076F3A6 /* FaultCodeViewController.m */; };
+		C71CC2A42A08EA510076F3A6 /* FaultCodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CC2A32A08EA510076F3A6 /* FaultCodeTableViewCell.m */; };
+		C71CC2A62A0A03CB0076F3A6 /* wait.gif in Resources */ = {isa = PBXBuildFile; fileRef = C71CC2A52A0A03CB0076F3A6 /* wait.gif */; };
+		C7368F2C2A56CB1E00F76BE6 /* UserFeedBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F2A2A56CB1D00F76BE6 /* UserFeedBack.framework */; };
+		C7368F2E2A56CB7200F76BE6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F2D2A56CB7200F76BE6 /* JavaScriptCore.framework */; };
+		C7368F2F2A56CB7A00F76BE6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE091D2A0D02180083C46F /* Security.framework */; };
+		C7368F312A56CB8200F76BE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F302A56CB8100F76BE6 /* CoreLocation.framework */; };
+		C7368F322A56CB8800F76BE6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE091B2A0D02100083C46F /* SystemConfiguration.framework */; };
+		C7368F342A56CB9000F76BE6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F332A56CB8F00F76BE6 /* CoreTelephony.framework */; };
+		C7368F362A56CB9800F76BE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F352A56CB9700F76BE6 /* CoreGraphics.framework */; };
+		C7368F382A56CBA000F76BE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F372A56CBA000F76BE6 /* UIKit.framework */; };
+		C7368F392A56CBAB00F76BE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A566F029D1A87D002A6B54 /* Foundation.framework */; };
+		C7368F3B2A56CBBD00F76BE6 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F3A2A56CBB400F76BE6 /* libz.1.2.5.tbd */; };
+		C73A2EBA2A247AAF00A3E9F0 /* 29-05-2023 14:09.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73A2EB92A247AAF00A3E9F0 /* 29-05-2023 14:09.txt */; };
+		C73A2EC82A2761E800A3E9F0 /* 50.WAV in Resources */ = {isa = PBXBuildFile; fileRef = C73A2EC62A2761E800A3E9F0 /* 50.WAV */; };
+		C73A2EC92A2761E800A3E9F0 /* 100.WAV in Resources */ = {isa = PBXBuildFile; fileRef = C73A2EC72A2761E800A3E9F0 /* 100.WAV */; };
+		C73A2ECB2A27634900A3E9F0 /* ready.WAV in Resources */ = {isa = PBXBuildFile; fileRef = C73A2ECA2A27634800A3E9F0 /* ready.WAV */; };
+		C745AB8829CD8B0A00CF3C67 /* LuaInvoke.m in Sources */ = {isa = PBXBuildFile; fileRef = C745AB8729CD8B0A00CF3C67 /* LuaInvoke.m */; };
+		C745AB9529CDA33F00CF3C67 /* BMWJobParse.lua in Resources */ = {isa = PBXBuildFile; fileRef = C745AB9229CDA33E00CF3C67 /* BMWJobParse.lua */; };
+		C745AB9629CDA33F00CF3C67 /* FormatUtility.lua in Resources */ = {isa = PBXBuildFile; fileRef = C745AB9329CDA33E00CF3C67 /* FormatUtility.lua */; };
+		C745AB9729CDA33F00CF3C67 /* dkjson.lua in Resources */ = {isa = PBXBuildFile; fileRef = C745AB9429CDA33F00CF3C67 /* dkjson.lua */; };
+		C745AD0229CDA59F00CF3C67 /* LuaBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = C745ACFF29CDA59E00CF3C67 /* LuaBridge.m */; };
+		C74C2D0D2A0DF07E009DD9B9 /* FTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C74C2D0B2A0DF07D009DD9B9 /* FTPManager.m */; };
+		C74C2D112A0DF4EB009DD9B9 /* FTPInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C74C2D102A0DF4EB009DD9B9 /* FTPInteractive.m */; };
+		C76F23252A1B5B8C002437AF /* SpeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C76F23242A1B5B8C002437AF /* SpeedView.m */; };
+		C76F23292A1CC8AE002437AF /* SpeedTestInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76F23282A1CC8AE002437AF /* SpeedTestInfoViewController.m */; };
+		C76F232B2A1CCEC6002437AF /* TcuTunningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C76F232A2A1CCEC6002437AF /* TcuTunningView.xib */; };
+		C77621C429F6906D00C8C075 /* LeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77621C329F6906D00C8C075 /* LeftMenuView.m */; };
+		C77621C629F695ED00C8C075 /* SpeedTestHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77621C529F695ED00C8C075 /* SpeedTestHeaderView.xib */; };
+		C77621C829F77BE000C8C075 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77621C729F77BE000C8C075 /* AVFoundation.framework */; };
+		C77621CC29F7A83800C8C075 /* SpeedTestInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C77621CB29F7A83800C8C075 /* SpeedTestInteractive.m */; };
+		C77621D129F7ABED00C8C075 /* SpeedVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77621D029F7ABED00C8C075 /* SpeedVideoViewController.m */; };
+		C77621D829F7CC8800C8C075 /* SpeedTestTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77621D729F7CC8800C8C075 /* SpeedTestTopView.xib */; };
+		C77621DA29F7D10F00C8C075 /* SpeedTestBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77621D929F7D10F00C8C075 /* SpeedTestBottomView.xib */; };
+		C77621DD29F7E45D00C8C075 /* TcpSpeedTestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C77621DC29F7E45D00C8C075 /* TcpSpeedTestHandler.m */; };
+		C77A39E329FCCC0000A5516E /* XTDebugControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A39E129FCCC0000A5516E /* XTDebugControl.m */; };
+		C77A39E629FCCC1900A5516E /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A39E529FCCC1900A5516E /* UIViewController+Test.m */; };
+		C77A39E929FCCC2000A5516E /* UIImage+ImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A39E729FCCC2000A5516E /* UIImage+ImageBuffer.m */; };
+		C77A39EC29FCCCBD00A5516E /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A39EB29FCCCBD00A5516E /* UIView+MJExtension.m */; };
+		C77A618A29FA7C41006F3772 /* utils.lua in Resources */ = {isa = PBXBuildFile; fileRef = C77A618929FA7C41006F3772 /* utils.lua */; };
+		C78AF57629FF86720059F4F7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78AF57529FF86720059F4F7 /* CFNetwork.framework */; };
+		C792E1CB29F1419C0063E7FA /* UIImageView+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = C792E1CA29F1419C0063E7FA /* UIImageView+Tool.m */; };
+		C79A5BEF29F94B0300CD822D /* SpeedSetInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79A5BEE29F94B0300CD822D /* SpeedSetInformationView.xib */; };
+		C79A5BF129FA3ADD00CD822D /* zd8-5.gif in Resources */ = {isa = PBXBuildFile; fileRef = C79A5BF029FA3ADD00CD822D /* zd8-5.gif */; };
+		C79A5BF329FA420C00CD822D /* red-waiting.gif in Resources */ = {isa = PBXBuildFile; fileRef = C79A5BF229FA420C00CD822D /* red-waiting.gif */; };
+		C7A4ADB429D4134F00BBA8AD /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A4ADB329D4134F00BBA8AD /* NetworkInterface.m */; };
+		C7A4ADB829D4326400BBA8AD /* ActivationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A4ADB729D4326400BBA8AD /* ActivationView.m */; };
+		C7A4ADBA29D4329400BBA8AD /* ActivationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A4ADB929D4329400BBA8AD /* ActivationView.xib */; };
+		C7A4ADBE29D4528C00BBA8AD /* SoftwarePackageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A4ADBD29D4528C00BBA8AD /* SoftwarePackageViewController.m */; };
+		C7A4ADC229D452B600BBA8AD /* informationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A4ADC129D452B600BBA8AD /* informationView.m */; };
+		C7A4ADC429D452C400BBA8AD /* informationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A4ADC329D452C400BBA8AD /* informationView.xib */; };
+		C7A4ADC729D456C600BBA8AD /* SoftwareDownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A4ADC629D456C600BBA8AD /* SoftwareDownloadView.m */; };
+		C7A4ADC929D4570400BBA8AD /* SoftwareDownloadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A4ADC829D4570400BBA8AD /* SoftwareDownloadView.xib */; };
+		C7A4ADCD29D459DA00BBA8AD /* SoftwareTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A4ADCB29D459DA00BBA8AD /* SoftwareTableCell.m */; };
+		C7A4ADCE29D459DA00BBA8AD /* SoftwareTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A4ADCC29D459DA00BBA8AD /* SoftwareTableCell.xib */; };
+		C7A4ADD329D531FE00BBA8AD /* WaitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A4ADD229D531FE00BBA8AD /* WaitView.m */; };
+		C7A4ADD529D5320900BBA8AD /* WaitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A4ADD429D5320900BBA8AD /* WaitView.xib */; };
+		C7A566B929D14500002A6B54 /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5667629D144EA002A6B54 /* lauxlib.c */; };
+		C7A566BA29D14500002A6B54 /* liolib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5667F29D144EB002A6B54 /* liolib.c */; };
+		C7A566BB29D14500002A6B54 /* lopcodes.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668029D144EB002A6B54 /* lopcodes.c */; };
+		C7A566BC29D14500002A6B54 /* lstate.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668129D144EB002A6B54 /* lstate.c */; };
+		C7A566BD29D14500002A6B54 /* lobject.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668329D144EB002A6B54 /* lobject.c */; };
+		C7A566BE29D14500002A6B54 /* lmathlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668529D144EB002A6B54 /* lmathlib.c */; };
+		C7A566BF29D14500002A6B54 /* loadlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668729D144EB002A6B54 /* loadlib.c */; };
+		C7A566C029D14500002A6B54 /* lvm.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668829D144EB002A6B54 /* lvm.c */; };
+		C7A566C129D14500002A6B54 /* lfunc.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668929D144EB002A6B54 /* lfunc.c */; };
+		C7A566C229D14500002A6B54 /* lstrlib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668A29D144EB002A6B54 /* lstrlib.c */; };
+		C7A566C329D14500002A6B54 /* lua.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668C29D144EB002A6B54 /* lua.c */; };
+		C7A566C429D14500002A6B54 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5668E29D144EB002A6B54 /* linit.c */; };
+		C7A566C529D14500002A6B54 /* lstring.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5669129D144EB002A6B54 /* lstring.c */; };
+		C7A566C629D14500002A6B54 /* lundump.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5669329D144EB002A6B54 /* lundump.c */; };
+		C7A566C729D14500002A6B54 /* lctype.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5669429D144EB002A6B54 /* lctype.c */; };
+		C7A566C829D14500002A6B54 /* luac.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5669729D144EB002A6B54 /* luac.c */; };
+		C7A566C929D14500002A6B54 /* ltable.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5669929D144EB002A6B54 /* ltable.c */; };
+		C7A566CA29D14500002A6B54 /* ldump.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5669B29D144EB002A6B54 /* ldump.c */; };
+		C7A566CB29D14500002A6B54 /* loslib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A5669F29D144EB002A6B54 /* loslib.c */; };
+		C7A566CC29D14500002A6B54 /* lgc.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566A029D144EB002A6B54 /* lgc.c */; };
+		C7A566CD29D14500002A6B54 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566A129D144EB002A6B54 /* lzio.c */; };
+		C7A566CE29D14500002A6B54 /* ldblib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566A229D144EB002A6B54 /* ldblib.c */; };
+		C7A566CF29D14500002A6B54 /* lutf8lib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566A329D144EB002A6B54 /* lutf8lib.c */; };
+		C7A566D029D14500002A6B54 /* lmem.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566A429D144EB002A6B54 /* lmem.c */; };
+		C7A566D129D14500002A6B54 /* lcorolib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566A729D144EB002A6B54 /* lcorolib.c */; };
+		C7A566D229D14500002A6B54 /* lcode.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566A929D144EB002A6B54 /* lcode.c */; };
+		C7A566D329D14500002A6B54 /* ltablib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566AA29D144EB002A6B54 /* ltablib.c */; };
+		C7A566D429D14500002A6B54 /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566AB29D144EB002A6B54 /* lapi.c */; };
+		C7A566D529D14500002A6B54 /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566AC29D144EB002A6B54 /* lbaselib.c */; };
+		C7A566D629D14500002A6B54 /* ldebug.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566AE29D144EB002A6B54 /* ldebug.c */; };
+		C7A566D729D14500002A6B54 /* lparser.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566B129D144EB002A6B54 /* lparser.c */; };
+		C7A566D829D14500002A6B54 /* llex.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566B229D144EB002A6B54 /* llex.c */; };
+		C7A566D929D14500002A6B54 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566B429D144EB002A6B54 /* ltm.c */; };
+		C7A566DA29D14500002A6B54 /* ldo.c in Sources */ = {isa = PBXBuildFile; fileRef = C7A566B629D144EB002A6B54 /* ldo.c */; };
+		C7A566DD29D145CC002A6B54 /* PrePareLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A566DC29D145CC002A6B54 /* PrePareLoadingViewController.m */; };
+		C7A566E029D161AE002A6B54 /* ConnectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A566DF29D161AE002A6B54 /* ConnectionViewController.m */; };
+		C7A566E329D16D97002A6B54 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A566E229D16D97002A6B54 /* NavigationView.m */; };
+		C7A566E529D16DA9002A6B54 /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A566E429D16DA9002A6B54 /* NavigationView.xib */; };
+		C7A566EF29D1A7BD002A6B54 /* CarLinkChannelPrefixHeader.pch in Resources */ = {isa = PBXBuildFile; fileRef = C7A566EE29D1A486002A6B54 /* CarLinkChannelPrefixHeader.pch */; };
+		C7A566F129D1A87E002A6B54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A566F029D1A87D002A6B54 /* Foundation.framework */; };
+		C7D7843E29CC248900A0F764 /* NSData+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D7843D29CC248900A0F764 /* NSData+Category.m */; };
+		C7D7844C29CC496E00A0F764 /* Documentation.html in Resources */ = {isa = PBXBuildFile; fileRef = C7D7844729CC496E00A0F764 /* Documentation.html */; };
+		C7D7844D29CC496E00A0F764 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D7844829CC496E00A0F764 /* GCDAsyncUdpSocket.m */; };
+		C7D7844E29CC496E00A0F764 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D7844929CC496E00A0F764 /* GCDAsyncSocket.m */; };
+		C7D7845129CC5D7700A0F764 /* TcpParserHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D7845029CC5D7700A0F764 /* TcpParserHandler.m */; };
+		C7DA8C932A037B2400C753B7 /* EnterDiagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DA8C922A037B2400C753B7 /* EnterDiagnostic.m */; };
+		C7DA8C952A037C0C00C753B7 /* EnterDiagnostic.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DA8C942A037C0C00C753B7 /* EnterDiagnostic.xib */; };
+		C7DA8C992A03886700C753B7 /* ConnectionPersenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DA8C982A03886700C753B7 /* ConnectionPersenter.m */; };
+		C7DA8C9B2A03975400C753B7 /* CompletedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DA8C9A2A03975400C753B7 /* CompletedView.xib */; };
+		C7DA8C9D2A039A7300C753B7 /* TransportModeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DA8C9C2A039A7300C753B7 /* TransportModeView.xib */; };
+		C7DA8CA02A039EA000C753B7 /* TransportModeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DA8C9F2A039EA000C753B7 /* TransportModeView.m */; };
+		C7DA8CA52A06503E00C753B7 /* CompletedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DA8CA42A06503E00C753B7 /* CompletedView.m */; };
+		C7DE091C2A0D02110083C46F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE091B2A0D02100083C46F /* SystemConfiguration.framework */; };
+		C7DE091E2A0D02190083C46F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE091D2A0D02180083C46F /* Security.framework */; };
+		C7DE09212A0D023A0083C46F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE09202A0D02320083C46F /* libc++.tbd */; };
+		C7DE09222A0D02420083C46F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE091F2A0D02250083C46F /* libz.tbd */; };
+		C7DE09242A0D02B00083C46F /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE09232A0D02B00083C46F /* Bugly.framework */; };
+		C7E3A5C029D580E6008D92E8 /* BallRotationProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E3A5BE29D580E6008D92E8 /* BallRotationProgressBar.m */; };
+		C7E3A5C329D581DC008D92E8 /* EcuInstallView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E3A5C229D581DC008D92E8 /* EcuInstallView.m */; };
+		C7E3A5C529D581E8008D92E8 /* EcuInstallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7E3A5C429D581E8008D92E8 /* EcuInstallView.xib */; };
+		C7E3A5CF29D5A93F008D92E8 /* PackageDownloadInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E3A5CE29D5A93F008D92E8 /* PackageDownloadInteractive.m */; };
+		C7E3A5D429D5AE37008D92E8 /* PackageDownPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E3A5D329D5AE37008D92E8 /* PackageDownPresenter.m */; };
+		C7EA659829CAA67D0095286A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA659729CAA67D0095286A /* AppDelegate.m */; };
+		C7EA659B29CAA67D0095286A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA659A29CAA67D0095286A /* SceneDelegate.m */; };
+		C7EA659E29CAA67D0095286A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA659D29CAA67D0095286A /* ViewController.m */; };
+		C7EA65A129CAA67D0095286A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA659F29CAA67D0095286A /* Main.storyboard */; };
+		C7EA65A329CAA6810095286A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EA65A229CAA6810095286A /* Assets.xcassets */; };
+		C7EA65A629CAA6810095286A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA65A429CAA6810095286A /* LaunchScreen.storyboard */; };
+		C7EA65A929CAA6810095286A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA65A829CAA6810095286A /* main.m */; };
+		C7EA65B329CAA6810095286A /* CarLinkChannelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA65B229CAA6810095286A /* CarLinkChannelTests.m */; };
+		C7EA65BD29CAA6810095286A /* CarLinkChannelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA65BC29CAA6810095286A /* CarLinkChannelUITests.m */; };
+		C7EA65BF29CAA6810095286A /* CarLinkChannelUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EA65BE29CAA6810095286A /* CarLinkChannelUITestsLaunchTests.m */; };
+		C7EF6EB12A1F716A00393E4B /* EmptyHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7EF6EB02A1F716A00393E4B /* EmptyHistoryView.xib */; };
+		C7F3E92429F668EB00A12E5E /* LeftMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F3E92329F668EB00A12E5E /* LeftMenuView.xib */; };
+		C7F3E92F29F67F6400A12E5E /* SpeedTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F3E92E29F67F6400A12E5E /* SpeedTestViewController.m */; };
+		C7F726EF29D2DCF200ED23CC /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F726EE29D2DCF200ED23CC /* HttpClient.m */; };
+		E826642127505898A9542A52 /* Pods_CarLinkChannel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C96E6976C5795AD6DE96B69 /* Pods_CarLinkChannel.framework */; };
+		FA036CA78AC23A718140816D /* Pods_CarLinkChannelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADF9596994968FB22FC1883 /* Pods_CarLinkChannelTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7EA65AF29CAA6810095286A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7EA658B29CAA67D0095286A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7EA659229CAA67D0095286A;
+			remoteInfo = CarLinkChannel;
+		};
+		C7EA65B929CAA6810095286A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7EA658B29CAA67D0095286A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7EA659229CAA67D0095286A;
+			remoteInfo = CarLinkChannel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		003E6A202A56BB9000B59ED7 /* STCDefination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCDefination.h; sourceTree = SOURCE_ROOT; };
+		003E6A212A56CFD700B59ED7 /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
+		003E6A272A56D1E400B59ED7 /* RunScript.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RunScript.md; sourceTree = "<group>"; };
+		03C78E26B0C486C459C2E296 /* Pods-CarLinkChannelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarLinkChannelTests.release.xcconfig"; path = "Target Support Files/Pods-CarLinkChannelTests/Pods-CarLinkChannelTests.release.xcconfig"; sourceTree = "<group>"; };
+		1E69C1B0DE5CE3A7063545A3 /* Pods-CarLinkChannel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarLinkChannel.release.xcconfig"; path = "Target Support Files/Pods-CarLinkChannel/Pods-CarLinkChannel.release.xcconfig"; sourceTree = "<group>"; };
+		2C96E6976C5795AD6DE96B69 /* Pods_CarLinkChannel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarLinkChannel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74950CDFC8C13EC5F795134C /* Pods_CarLinkChannel_CarLinkChannelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarLinkChannel_CarLinkChannelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8648051F4DE896E76D7FF118 /* Pods-CarLinkChannel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarLinkChannel.debug.xcconfig"; path = "Target Support Files/Pods-CarLinkChannel/Pods-CarLinkChannel.debug.xcconfig"; sourceTree = "<group>"; };
+		A11A92542CA92565001C3007 /* LoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		A11A92552CA92565001C3007 /* LoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		A1490D342DAF85B700BEC195 /* CustomLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomLogFormatter.h; sourceTree = "<group>"; };
+		A1490D352DAF85B700BEC195 /* CustomLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomLogFormatter.m; sourceTree = "<group>"; };
+		A176D97B2CA17E62003DA1A5 /* AutoNetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoNetworkService.h; sourceTree = "<group>"; };
+		A176D97C2CA17E62003DA1A5 /* AutoNetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoNetworkService.m; sourceTree = "<group>"; };
+		A176D97F2CA17F0A003DA1A5 /* VehicleLoaclNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VehicleLoaclNetworkManager.h; sourceTree = "<group>"; };
+		A176D9802CA17F0A003DA1A5 /* VehicleLoaclNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VehicleLoaclNetworkManager.m; sourceTree = "<group>"; };
+		A176D9822CA17F43003DA1A5 /* TcpBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TcpBase.h; sourceTree = "<group>"; };
+		A176D9832CA17F43003DA1A5 /* TcpBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TcpBase.m; sourceTree = "<group>"; };
+		A176D9852CA17F94003DA1A5 /* UdpBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UdpBase.h; sourceTree = "<group>"; };
+		A176D9862CA17F94003DA1A5 /* UdpBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UdpBase.m; sourceTree = "<group>"; };
+		A176D9892CA1802F003DA1A5 /* UDSPackageHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDSPackageHandle.h; sourceTree = "<group>"; };
+		A176D98A2CA1802F003DA1A5 /* UDSPackageHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDSPackageHandle.m; sourceTree = "<group>"; };
+		A176D98C2CA180C2003DA1A5 /* UdsStructured.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UdsStructured.h; sourceTree = "<group>"; };
+		A176D98D2CA180C2003DA1A5 /* UdsStructured.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UdsStructured.m; sourceTree = "<group>"; };
+		A176D98F2CA180EA003DA1A5 /* UDSQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDSQueue.h; sourceTree = "<group>"; };
+		A176D9902CA180EA003DA1A5 /* UDSQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDSQueue.m; sourceTree = "<group>"; };
+		A176D9922CA1814B003DA1A5 /* NetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkTool.h; sourceTree = "<group>"; };
+		A176D9932CA1814B003DA1A5 /* NetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkTool.m; sourceTree = "<group>"; };
+		A176D9962CA1821E003DA1A5 /* VehicleTypeProgramming.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VehicleTypeProgramming.h; sourceTree = "<group>"; };
+		A176D9972CA1842D003DA1A5 /* UDSResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDSResponse.h; sourceTree = "<group>"; };
+		A176D9982CA1842D003DA1A5 /* UDSResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDSResponse.m; sourceTree = "<group>"; };
+		A176D99B2CA1847F003DA1A5 /* FirmwareDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirmwareDataManager.h; sourceTree = "<group>"; };
+		A176D99C2CA1847F003DA1A5 /* FirmwareDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirmwareDataManager.m; sourceTree = "<group>"; };
+		A176D99F2CA184FF003DA1A5 /* FlashBlockInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashBlockInfo.h; sourceTree = "<group>"; };
+		A176D9A02CA184FF003DA1A5 /* FlashBlockInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashBlockInfo.m; sourceTree = "<group>"; };
+		A176D9A22CA1852B003DA1A5 /* FlashInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashInfo.h; sourceTree = "<group>"; };
+		A176D9A32CA1852B003DA1A5 /* FlashInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashInfo.m; sourceTree = "<group>"; };
+		A176D9A62CA18557003DA1A5 /* OperationResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationResult.h; sourceTree = "<group>"; };
+		A176D9A72CA18557003DA1A5 /* OperationResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationResult.m; sourceTree = "<group>"; };
+		A176D9A92CA18700003DA1A5 /* VehicleClass1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VehicleClass1.h; sourceTree = "<group>"; };
+		A176D9AA2CA18700003DA1A5 /* VehicleClass1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VehicleClass1.m; sourceTree = "<group>"; };
+		A176D9AC2CA18774003DA1A5 /* VehicleClass6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleClass6.m; sourceTree = "<group>"; };
+		A176D9AD2CA18774003DA1A5 /* VehicleClass5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleClass5.m; sourceTree = "<group>"; };
+		A176D9AE2CA18774003DA1A5 /* VehicleClass2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleClass2.h; sourceTree = "<group>"; };
+		A176D9AF2CA18774003DA1A5 /* VehicleClass3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleClass3.m; sourceTree = "<group>"; };
+		A176D9B02CA18774003DA1A5 /* VehicleClass3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleClass3.h; sourceTree = "<group>"; };
+		A176D9B12CA18774003DA1A5 /* VehicleClass2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleClass2.m; sourceTree = "<group>"; };
+		A176D9B22CA18774003DA1A5 /* VehicleClass6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleClass6.h; sourceTree = "<group>"; };
+		A176D9B32CA18774003DA1A5 /* VehicleClass4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleClass4.m; sourceTree = "<group>"; };
+		A176D9B42CA18774003DA1A5 /* VehicleClass5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleClass5.h; sourceTree = "<group>"; };
+		A176D9B52CA18774003DA1A5 /* VehicleClass4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleClass4.h; sourceTree = "<group>"; };
+		A176D9BB2CA187CE003DA1A5 /* LicenseKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicenseKeyManager.m; sourceTree = "<group>"; };
+		A176D9BC2CA187CE003DA1A5 /* LicenseKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicenseKeyManager.h; sourceTree = "<group>"; };
+		A176D9BE2CA1884D003DA1A5 /* UDSOperationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDSOperationResult.h; sourceTree = "<group>"; };
+		A176D9BF2CA1884D003DA1A5 /* UDSProtocolDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDSProtocolDispatcher.m; sourceTree = "<group>"; };
+		A176D9C02CA1884D003DA1A5 /* UDSOperationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDSOperationResult.m; sourceTree = "<group>"; };
+		A176D9C12CA1884D003DA1A5 /* UDSProtocolDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDSProtocolDispatcher.h; sourceTree = "<group>"; };
+		A176D9C52CA1888B003DA1A5 /* HTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPManager.m; sourceTree = "<group>"; };
+		A176D9C62CA1888B003DA1A5 /* HTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPManager.h; sourceTree = "<group>"; };
+		A176D9C92CA188C3003DA1A5 /* UploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadManager.h; sourceTree = "<group>"; };
+		A176D9CA2CA188C3003DA1A5 /* XmlProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlProcess.h; sourceTree = "<group>"; };
+		A176D9CB2CA188C3003DA1A5 /* UploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadManager.m; sourceTree = "<group>"; };
+		A176D9CC2CA188C3003DA1A5 /* XmlProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlProcess.m; sourceTree = "<group>"; };
+		A176D9D02CA18948003DA1A5 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		A176D9D12CA18948003DA1A5 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		A176D9D42CA2CC1A003DA1A5 /* BINFileProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BINFileProcess.h; sourceTree = "<group>"; };
+		A176D9D52CA2CC1A003DA1A5 /* BINFileProcess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BINFileProcess.m; sourceTree = "<group>"; };
+		A18849982D267C4000BF8AFE /* ReplayKitManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplayKitManager.h; sourceTree = "<group>"; };
+		A18849992D267C4000BF8AFE /* ReplayKitManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReplayKitManager.m; sourceTree = "<group>"; };
+		A1A958D62DB7626A0097BC3F /* PopWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopWindow.h; sourceTree = "<group>"; };
+		A1A958D72DB7626A0097BC3F /* PopWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopWindow.m; sourceTree = "<group>"; };
+		A1A958DA2DB77E2D0097BC3F /* VersionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VersionManager.h; sourceTree = "<group>"; };
+		A1A958DB2DB77E2D0097BC3F /* VersionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
+		A1D904802E17D6AB00E59EA4 /* KeyChainProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyChainProcess.h; sourceTree = "<group>"; };
+		A1D904812E17D6AB00E59EA4 /* KeyChainProcess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyChainProcess.m; sourceTree = "<group>"; };
+		C7002F8F29ED3BC800131836 /* CarLinkChannel.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = CarLinkChannel.entitlements; sourceTree = "<group>"; };
+		C705D80229D6ACF2006C2B59 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		C705D80429D6ACF2006C2B59 /* aeskey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aeskey.m; sourceTree = "<group>"; };
+		C705D80529D6ACF2006C2B59 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		C705D80629D6ACF2006C2B59 /* hmac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hmac.m; sourceTree = "<group>"; };
+		C705D80729D6ACF2006C2B59 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		C705D80829D6ACF2006C2B59 /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		C705D80929D6ACF2006C2B59 /* aescrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aescrypt.m; sourceTree = "<group>"; };
+		C705D80A29D6ACF2006C2B59 /* fileenc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fileenc.m; sourceTree = "<group>"; };
+		C705D80B29D6ACF2006C2B59 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		C705D80C29D6ACF2006C2B59 /* aes_via_ace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_via_ace.h; sourceTree = "<group>"; };
+		C705D80D29D6ACF2006C2B59 /* sha1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sha1.m; sourceTree = "<group>"; };
+		C705D80E29D6ACF2006C2B59 /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		C705D80F29D6ACF2006C2B59 /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
+		C705D81029D6ACF2006C2B59 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		C705D81129D6ACF2006C2B59 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		C705D81229D6ACF2006C2B59 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		C705D81329D6ACF2006C2B59 /* prng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prng.m; sourceTree = "<group>"; };
+		C705D81429D6ACF2006C2B59 /* pwd2key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pwd2key.m; sourceTree = "<group>"; };
+		C705D81529D6ACF2006C2B59 /* aestab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aestab.m; sourceTree = "<group>"; };
+		C705D81629D6ACF2006C2B59 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		C705D81729D6ACF2006C2B59 /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		C705D81829D6ACF2006C2B59 /* entropy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = entropy.m; sourceTree = "<group>"; };
+		C705D81929D6ACF2006C2B59 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C705D81B29D6ACF2006C2B59 /* unzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = unzip.m; sourceTree = "<group>"; };
+		C705D81C29D6ACF2006C2B59 /* zip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zip.m; sourceTree = "<group>"; };
+		C705D81D29D6ACF2006C2B59 /* ioapi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ioapi.m; sourceTree = "<group>"; };
+		C705D81E29D6ACF2006C2B59 /* mztools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mztools.m; sourceTree = "<group>"; };
+		C705D81F29D6ACF2006C2B59 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		C705D82029D6ACF2006C2B59 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		C705D82129D6ACF2006C2B59 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		C705D82229D6ACF2006C2B59 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		C705D82329D6ACF2006C2B59 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		C705D82429D6ACF2006C2B59 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		C705D82529D6ACF2006C2B59 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		C705D82629D6ACF2006C2B59 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		C705D83629D6B7DF006C2B59 /* TuneContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuneContentViewController.h; sourceTree = "<group>"; };
+		C705D83729D6B7DF006C2B59 /* TuneContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuneContentViewController.m; sourceTree = "<group>"; };
+		C710EBD72A4C30BC004CAA7D /* WarnPopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarnPopView.xib; sourceTree = "<group>"; };
+		C710EBDA2A4E9B1A004CAA7D /* STCObfuscator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCObfuscator.h; sourceTree = "<group>"; };
+		C710EBDC2A4E9B1A004CAA7D /* actypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = actypes.h; sourceTree = "<group>"; };
+		C710EBDD2A4E9B1A004CAA7D /* ahocorasick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ahocorasick.h; sourceTree = "<group>"; };
+		C710EBDE2A4E9B1A004CAA7D /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		C710EBDF2A4E9B1A004CAA7D /* ahocorasick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ahocorasick.c; sourceTree = "<group>"; };
+		C710EBE02A4E9B1A004CAA7D /* node.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = node.c; sourceTree = "<group>"; };
+		C710EBE12A4E9B1A004CAA7D /* STCObfuscator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCObfuscator.m; sourceTree = "<group>"; };
+		C7143BAC2A42DE1A008C6388 /* exportVideoSelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = exportVideoSelectView.xib; sourceTree = "<group>"; };
+		C71CC29A2A08A8E70076F3A6 /* EGSHealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGSHealthViewController.h; sourceTree = "<group>"; };
+		C71CC29B2A08A8E70076F3A6 /* EGSHealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGSHealthViewController.m; sourceTree = "<group>"; };
+		C71CC29E2A08DF160076F3A6 /* FaultCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaultCodeViewController.h; sourceTree = "<group>"; };
+		C71CC29F2A08DF160076F3A6 /* FaultCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaultCodeViewController.m; sourceTree = "<group>"; };
+		C71CC2A22A08EA510076F3A6 /* FaultCodeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaultCodeTableViewCell.h; sourceTree = "<group>"; };
+		C71CC2A32A08EA510076F3A6 /* FaultCodeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaultCodeTableViewCell.m; sourceTree = "<group>"; };
+		C71CC2A52A0A03CB0076F3A6 /* wait.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wait.gif; sourceTree = "<group>"; };
+		C7368F292A56CB1D00F76BE6 /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
+		C7368F2A2A56CB1D00F76BE6 /* UserFeedBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UserFeedBack.framework; sourceTree = "<group>"; };
+		C7368F2D2A56CB7200F76BE6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C7368F302A56CB8100F76BE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C7368F332A56CB8F00F76BE6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C7368F352A56CB9700F76BE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C7368F372A56CBA000F76BE6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C7368F3A2A56CBB400F76BE6 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		C73A2EB92A247AAF00A3E9F0 /* 29-05-2023 14:09.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "29-05-2023 14:09.txt"; sourceTree = "<group>"; };
+		C73A2EC62A2761E800A3E9F0 /* 50.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 50.WAV; sourceTree = "<group>"; };
+		C73A2EC72A2761E800A3E9F0 /* 100.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 100.WAV; sourceTree = "<group>"; };
+		C73A2ECA2A27634800A3E9F0 /* ready.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ready.WAV; sourceTree = "<group>"; };
+		C745AB8629CD8B0A00CF3C67 /* LuaInvoke.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LuaInvoke.h; sourceTree = "<group>"; };
+		C745AB8729CD8B0A00CF3C67 /* LuaInvoke.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuaInvoke.m; sourceTree = "<group>"; };
+		C745AB9229CDA33E00CF3C67 /* BMWJobParse.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BMWJobParse.lua; sourceTree = "<group>"; };
+		C745AB9329CDA33E00CF3C67 /* FormatUtility.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FormatUtility.lua; sourceTree = "<group>"; };
+		C745AB9429CDA33F00CF3C67 /* dkjson.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dkjson.lua; sourceTree = "<group>"; };
+		C745ACFF29CDA59E00CF3C67 /* LuaBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaBridge.m; sourceTree = "<group>"; };
+		C745AD0029CDA59F00CF3C67 /* LuaBridgeInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaBridgeInternal.h; sourceTree = "<group>"; };
+		C745AD0129CDA59F00CF3C67 /* LuaBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaBridge.h; sourceTree = "<group>"; };
+		C74C2D0B2A0DF07D009DD9B9 /* FTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPManager.m; sourceTree = "<group>"; };
+		C74C2D0C2A0DF07D009DD9B9 /* FTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPManager.h; sourceTree = "<group>"; };
+		C74C2D0F2A0DF4EB009DD9B9 /* FTPInteractive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPInteractive.h; sourceTree = "<group>"; };
+		C74C2D102A0DF4EB009DD9B9 /* FTPInteractive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPInteractive.m; sourceTree = "<group>"; };
+		C767DE4329CAF5D0002F5F1C /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		C76F23232A1B5B8C002437AF /* SpeedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeedView.h; sourceTree = "<group>"; };
+		C76F23242A1B5B8C002437AF /* SpeedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedView.m; sourceTree = "<group>"; };
+		C76F23272A1CC8AE002437AF /* SpeedTestInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeedTestInfoViewController.h; sourceTree = "<group>"; };
+		C76F23282A1CC8AE002437AF /* SpeedTestInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedTestInfoViewController.m; sourceTree = "<group>"; };
+		C76F232A2A1CCEC6002437AF /* TcuTunningView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TcuTunningView.xib; sourceTree = "<group>"; };
+		C77621C229F6906D00C8C075 /* LeftMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftMenuView.h; sourceTree = "<group>"; };
+		C77621C329F6906D00C8C075 /* LeftMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftMenuView.m; sourceTree = "<group>"; };
+		C77621C529F695ED00C8C075 /* SpeedTestHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeedTestHeaderView.xib; sourceTree = "<group>"; };
+		C77621C729F77BE000C8C075 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C77621CA29F7A83800C8C075 /* SpeedTestInteractive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeedTestInteractive.h; sourceTree = "<group>"; };
+		C77621CB29F7A83800C8C075 /* SpeedTestInteractive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedTestInteractive.m; sourceTree = "<group>"; };
+		C77621CF29F7ABED00C8C075 /* SpeedVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeedVideoViewController.h; sourceTree = "<group>"; };
+		C77621D029F7ABED00C8C075 /* SpeedVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedVideoViewController.m; sourceTree = "<group>"; };
+		C77621D729F7CC8800C8C075 /* SpeedTestTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeedTestTopView.xib; sourceTree = "<group>"; };
+		C77621D929F7D10F00C8C075 /* SpeedTestBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeedTestBottomView.xib; sourceTree = "<group>"; };
+		C77621DB29F7E45D00C8C075 /* TcpSpeedTestHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TcpSpeedTestHandler.h; sourceTree = "<group>"; };
+		C77621DC29F7E45D00C8C075 /* TcpSpeedTestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TcpSpeedTestHandler.m; sourceTree = "<group>"; };
+		C77A39E129FCCC0000A5516E /* XTDebugControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTDebugControl.m; sourceTree = "<group>"; };
+		C77A39E229FCCC0000A5516E /* XTDebugControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTDebugControl.h; sourceTree = "<group>"; };
+		C77A39E429FCCC1800A5516E /* UIViewController+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
+		C77A39E529FCCC1900A5516E /* UIViewController+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
+		C77A39E729FCCC2000A5516E /* UIImage+ImageBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageBuffer.m"; sourceTree = "<group>"; };
+		C77A39E829FCCC2000A5516E /* UIImage+ImageBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageBuffer.h"; sourceTree = "<group>"; };
+		C77A39EA29FCCCBD00A5516E /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		C77A39EB29FCCCBD00A5516E /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		C77A618929FA7C41006F3772 /* utils.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = utils.lua; sourceTree = "<group>"; };
+		C78AF57529FF86720059F4F7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C792E1C929F1419C0063E7FA /* UIImageView+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Tool.h"; sourceTree = "<group>"; };
+		C792E1CA29F1419C0063E7FA /* UIImageView+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Tool.m"; sourceTree = "<group>"; };
+		C792E1CE29F259650063E7FA /* TcpInstallHandleDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TcpInstallHandleDelegate.h; sourceTree = "<group>"; };
+		C79A5BEE29F94B0300CD822D /* SpeedSetInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeedSetInformationView.xib; sourceTree = "<group>"; };
+		C79A5BF029FA3ADD00CD822D /* zd8-5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "zd8-5.gif"; sourceTree = "<group>"; };
+		C79A5BF229FA420C00CD822D /* red-waiting.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "red-waiting.gif"; sourceTree = "<group>"; };
+		C7A4ADB229D4134F00BBA8AD /* NetworkInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkInterface.h; sourceTree = "<group>"; };
+		C7A4ADB329D4134F00BBA8AD /* NetworkInterface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkInterface.m; sourceTree = "<group>"; };
+		C7A4ADB629D4326400BBA8AD /* ActivationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivationView.h; sourceTree = "<group>"; };
+		C7A4ADB729D4326400BBA8AD /* ActivationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivationView.m; sourceTree = "<group>"; };
+		C7A4ADB929D4329400BBA8AD /* ActivationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivationView.xib; sourceTree = "<group>"; };
+		C7A4ADBC29D4528C00BBA8AD /* SoftwarePackageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoftwarePackageViewController.h; sourceTree = "<group>"; };
+		C7A4ADBD29D4528C00BBA8AD /* SoftwarePackageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoftwarePackageViewController.m; sourceTree = "<group>"; };
+		C7A4ADC029D452B600BBA8AD /* informationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = informationView.h; sourceTree = "<group>"; };
+		C7A4ADC129D452B600BBA8AD /* informationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = informationView.m; sourceTree = "<group>"; };
+		C7A4ADC329D452C400BBA8AD /* informationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = informationView.xib; sourceTree = "<group>"; };
+		C7A4ADC529D456C600BBA8AD /* SoftwareDownloadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoftwareDownloadView.h; sourceTree = "<group>"; };
+		C7A4ADC629D456C600BBA8AD /* SoftwareDownloadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoftwareDownloadView.m; sourceTree = "<group>"; };
+		C7A4ADC829D4570400BBA8AD /* SoftwareDownloadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoftwareDownloadView.xib; sourceTree = "<group>"; };
+		C7A4ADCA29D459DA00BBA8AD /* SoftwareTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoftwareTableCell.h; sourceTree = "<group>"; };
+		C7A4ADCB29D459DA00BBA8AD /* SoftwareTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoftwareTableCell.m; sourceTree = "<group>"; };
+		C7A4ADCC29D459DA00BBA8AD /* SoftwareTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoftwareTableCell.xib; sourceTree = "<group>"; };
+		C7A4ADD129D531FE00BBA8AD /* WaitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitView.h; sourceTree = "<group>"; };
+		C7A4ADD229D531FE00BBA8AD /* WaitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitView.m; sourceTree = "<group>"; };
+		C7A4ADD429D5320900BBA8AD /* WaitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitView.xib; sourceTree = "<group>"; };
+		C7A5667629D144EA002A6B54 /* lauxlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lauxlib.c; sourceTree = "<group>"; };
+		C7A5667729D144EA002A6B54 /* lmem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lmem.h; sourceTree = "<group>"; };
+		C7A5667B29D144EB002A6B54 /* llimits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = llimits.h; sourceTree = "<group>"; };
+		C7A5667C29D144EB002A6B54 /* luaconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		C7A5667D29D144EB002A6B54 /* lzio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lzio.h; sourceTree = "<group>"; };
+		C7A5667E29D144EB002A6B54 /* lgc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lgc.h; sourceTree = "<group>"; };
+		C7A5667F29D144EB002A6B54 /* liolib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = liolib.c; sourceTree = "<group>"; };
+		C7A5668029D144EB002A6B54 /* lopcodes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lopcodes.c; sourceTree = "<group>"; };
+		C7A5668129D144EB002A6B54 /* lstate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lstate.c; sourceTree = "<group>"; };
+		C7A5668229D144EB002A6B54 /* lua.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
+		C7A5668329D144EB002A6B54 /* lobject.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lobject.c; sourceTree = "<group>"; };
+		C7A5668429D144EB002A6B54 /* lualib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
+		C7A5668529D144EB002A6B54 /* lmathlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lmathlib.c; sourceTree = "<group>"; };
+		C7A5668629D144EB002A6B54 /* lopnames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lopnames.h; sourceTree = "<group>"; };
+		C7A5668729D144EB002A6B54 /* loadlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loadlib.c; sourceTree = "<group>"; };
+		C7A5668829D144EB002A6B54 /* lvm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lvm.c; sourceTree = "<group>"; };
+		C7A5668929D144EB002A6B54 /* lfunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lfunc.c; sourceTree = "<group>"; };
+		C7A5668A29D144EB002A6B54 /* lstrlib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lstrlib.c; sourceTree = "<group>"; };
+		C7A5668B29D144EB002A6B54 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		C7A5668C29D144EB002A6B54 /* lua.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lua.c; sourceTree = "<group>"; };
+		C7A5668D29D144EB002A6B54 /* ldebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ldebug.h; sourceTree = "<group>"; };
+		C7A5668E29D144EB002A6B54 /* linit.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linit.c; sourceTree = "<group>"; };
+		C7A5668F29D144EB002A6B54 /* lcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lcode.h; sourceTree = "<group>"; };
+		C7A5669029D144EB002A6B54 /* lapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lapi.h; sourceTree = "<group>"; };
+		C7A5669129D144EB002A6B54 /* lstring.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lstring.c; sourceTree = "<group>"; };
+		C7A5669229D144EB002A6B54 /* ldo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ldo.h; sourceTree = "<group>"; };
+		C7A5669329D144EB002A6B54 /* lundump.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lundump.c; sourceTree = "<group>"; };
+		C7A5669429D144EB002A6B54 /* lctype.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lctype.c; sourceTree = "<group>"; };
+		C7A5669529D144EB002A6B54 /* ljumptab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ljumptab.h; sourceTree = "<group>"; };
+		C7A5669629D144EB002A6B54 /* llex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = llex.h; sourceTree = "<group>"; };
+		C7A5669729D144EB002A6B54 /* luac.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = luac.c; sourceTree = "<group>"; };
+		C7A5669829D144EB002A6B54 /* ltm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ltm.h; sourceTree = "<group>"; };
+		C7A5669929D144EB002A6B54 /* ltable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ltable.c; sourceTree = "<group>"; };
+		C7A5669A29D144EB002A6B54 /* lparser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lparser.h; sourceTree = "<group>"; };
+		C7A5669B29D144EB002A6B54 /* ldump.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldump.c; sourceTree = "<group>"; };
+		C7A5669C29D144EB002A6B54 /* lobject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lobject.h; sourceTree = "<group>"; };
+		C7A5669D29D144EB002A6B54 /* lstate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lstate.h; sourceTree = "<group>"; };
+		C7A5669E29D144EB002A6B54 /* lopcodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lopcodes.h; sourceTree = "<group>"; };
+		C7A5669F29D144EB002A6B54 /* loslib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loslib.c; sourceTree = "<group>"; };
+		C7A566A029D144EB002A6B54 /* lgc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lgc.c; sourceTree = "<group>"; };
+		C7A566A129D144EB002A6B54 /* lzio.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lzio.c; sourceTree = "<group>"; };
+		C7A566A229D144EB002A6B54 /* ldblib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldblib.c; sourceTree = "<group>"; };
+		C7A566A329D144EB002A6B54 /* lutf8lib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lutf8lib.c; sourceTree = "<group>"; };
+		C7A566A429D144EB002A6B54 /* lmem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lmem.c; sourceTree = "<group>"; };
+		C7A566A529D144EB002A6B54 /* lauxlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
+		C7A566A629D144EB002A6B54 /* lvm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lvm.h; sourceTree = "<group>"; };
+		C7A566A729D144EB002A6B54 /* lcorolib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lcorolib.c; sourceTree = "<group>"; };
+		C7A566A829D144EB002A6B54 /* lstring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lstring.h; sourceTree = "<group>"; };
+		C7A566A929D144EB002A6B54 /* lcode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lcode.c; sourceTree = "<group>"; };
+		C7A566AA29D144EB002A6B54 /* ltablib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ltablib.c; sourceTree = "<group>"; };
+		C7A566AB29D144EB002A6B54 /* lapi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lapi.c; sourceTree = "<group>"; };
+		C7A566AC29D144EB002A6B54 /* lbaselib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lbaselib.c; sourceTree = "<group>"; };
+		C7A566AD29D144EB002A6B54 /* lua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
+		C7A566AE29D144EB002A6B54 /* ldebug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldebug.c; sourceTree = "<group>"; };
+		C7A566AF29D144EB002A6B54 /* lfunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lfunc.h; sourceTree = "<group>"; };
+		C7A566B029D144EB002A6B54 /* lprefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lprefix.h; sourceTree = "<group>"; };
+		C7A566B129D144EB002A6B54 /* lparser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lparser.c; sourceTree = "<group>"; };
+		C7A566B229D144EB002A6B54 /* llex.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = llex.c; sourceTree = "<group>"; };
+		C7A566B329D144EB002A6B54 /* ltable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ltable.h; sourceTree = "<group>"; };
+		C7A566B429D144EB002A6B54 /* ltm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ltm.c; sourceTree = "<group>"; };
+		C7A566B529D144EB002A6B54 /* lctype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lctype.h; sourceTree = "<group>"; };
+		C7A566B629D144EB002A6B54 /* ldo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ldo.c; sourceTree = "<group>"; };
+		C7A566B729D144EB002A6B54 /* lundump.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lundump.h; sourceTree = "<group>"; };
+		C7A566DB29D145CC002A6B54 /* PrePareLoadingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrePareLoadingViewController.h; sourceTree = "<group>"; };
+		C7A566DC29D145CC002A6B54 /* PrePareLoadingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrePareLoadingViewController.m; sourceTree = "<group>"; };
+		C7A566DE29D161AE002A6B54 /* ConnectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionViewController.h; sourceTree = "<group>"; };
+		C7A566DF29D161AE002A6B54 /* ConnectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionViewController.m; sourceTree = "<group>"; };
+		C7A566E129D16D97002A6B54 /* NavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
+		C7A566E229D16D97002A6B54 /* NavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
+		C7A566E429D16DA9002A6B54 /* NavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
+		C7A566E729D194D4002A6B54 /* Constents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constents.h; sourceTree = "<group>"; };
+		C7A566EE29D1A486002A6B54 /* CarLinkChannelPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarLinkChannelPrefixHeader.pch; sourceTree = "<group>"; };
+		C7A566F029D1A87D002A6B54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C7D7843C29CC248800A0F764 /* NSData+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Category.h"; sourceTree = "<group>"; };
+		C7D7843D29CC248900A0F764 /* NSData+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Category.m"; sourceTree = "<group>"; };
+		C7D7843F29CC489E00A0F764 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		C7D7844729CC496E00A0F764 /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
+		C7D7844829CC496E00A0F764 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		C7D7844929CC496E00A0F764 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		C7D7844A29CC496E00A0F764 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		C7D7844B29CC496E00A0F764 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		C7D7844F29CC5D7700A0F764 /* TcpParserHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TcpParserHandler.h; sourceTree = "<group>"; };
+		C7D7845029CC5D7700A0F764 /* TcpParserHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TcpParserHandler.m; sourceTree = "<group>"; };
+		C7DA8C912A037B2400C753B7 /* EnterDiagnostic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterDiagnostic.h; sourceTree = "<group>"; };
+		C7DA8C922A037B2400C753B7 /* EnterDiagnostic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterDiagnostic.m; sourceTree = "<group>"; };
+		C7DA8C942A037C0C00C753B7 /* EnterDiagnostic.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterDiagnostic.xib; sourceTree = "<group>"; };
+		C7DA8C972A03886700C753B7 /* ConnectionPersenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionPersenter.h; sourceTree = "<group>"; };
+		C7DA8C982A03886700C753B7 /* ConnectionPersenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionPersenter.m; sourceTree = "<group>"; };
+		C7DA8C9A2A03975400C753B7 /* CompletedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompletedView.xib; sourceTree = "<group>"; };
+		C7DA8C9C2A039A7300C753B7 /* TransportModeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransportModeView.xib; sourceTree = "<group>"; };
+		C7DA8C9E2A039EA000C753B7 /* TransportModeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransportModeView.h; sourceTree = "<group>"; };
+		C7DA8C9F2A039EA000C753B7 /* TransportModeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransportModeView.m; sourceTree = "<group>"; };
+		C7DA8CA32A06503E00C753B7 /* CompletedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompletedView.h; sourceTree = "<group>"; };
+		C7DA8CA42A06503E00C753B7 /* CompletedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompletedView.m; sourceTree = "<group>"; };
+		C7DE091B2A0D02100083C46F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C7DE091D2A0D02180083C46F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C7DE091F2A0D02250083C46F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C7DE09202A0D02320083C46F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C7DE09232A0D02B00083C46F /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		C7E3A5BE29D580E6008D92E8 /* BallRotationProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallRotationProgressBar.m; sourceTree = "<group>"; };
+		C7E3A5BF29D580E6008D92E8 /* BallRotationProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallRotationProgressBar.h; sourceTree = "<group>"; };
+		C7E3A5C129D581DC008D92E8 /* EcuInstallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcuInstallView.h; sourceTree = "<group>"; };
+		C7E3A5C229D581DC008D92E8 /* EcuInstallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EcuInstallView.m; sourceTree = "<group>"; };
+		C7E3A5C429D581E8008D92E8 /* EcuInstallView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EcuInstallView.xib; sourceTree = "<group>"; };
+		C7E3A5CD29D5A93F008D92E8 /* PackageDownloadInteractive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackageDownloadInteractive.h; sourceTree = "<group>"; };
+		C7E3A5CE29D5A93F008D92E8 /* PackageDownloadInteractive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PackageDownloadInteractive.m; sourceTree = "<group>"; };
+		C7E3A5D229D5AE37008D92E8 /* PackageDownPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackageDownPresenter.h; sourceTree = "<group>"; };
+		C7E3A5D329D5AE37008D92E8 /* PackageDownPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PackageDownPresenter.m; sourceTree = "<group>"; };
+		C7EA659329CAA67D0095286A /* ZD8 TCU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZD8 TCU.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EA659629CAA67D0095286A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C7EA659729CAA67D0095286A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C7EA659929CAA67D0095286A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		C7EA659A29CAA67D0095286A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		C7EA659C29CAA67D0095286A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C7EA659D29CAA67D0095286A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C7EA65A029CAA67D0095286A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7EA65A229CAA6810095286A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7EA65A529CAA6810095286A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7EA65A729CAA6810095286A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7EA65A829CAA6810095286A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7EA65AE29CAA6810095286A /* CarLinkChannelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarLinkChannelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EA65B229CAA6810095286A /* CarLinkChannelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarLinkChannelTests.m; sourceTree = "<group>"; };
+		C7EA65B829CAA6810095286A /* CarLinkChannelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarLinkChannelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EA65BC29CAA6810095286A /* CarLinkChannelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarLinkChannelUITests.m; sourceTree = "<group>"; };
+		C7EA65BE29CAA6810095286A /* CarLinkChannelUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarLinkChannelUITestsLaunchTests.m; sourceTree = "<group>"; };
+		C7EF6EB02A1F716A00393E4B /* EmptyHistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyHistoryView.xib; sourceTree = "<group>"; };
+		C7F3E92329F668EB00A12E5E /* LeftMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftMenuView.xib; sourceTree = "<group>"; };
+		C7F3E92D29F67F6400A12E5E /* SpeedTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeedTestViewController.h; sourceTree = "<group>"; };
+		C7F3E92E29F67F6400A12E5E /* SpeedTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeedTestViewController.m; sourceTree = "<group>"; };
+		C7F726ED29D2DCF200ED23CC /* HttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		C7F726EE29D2DCF200ED23CC /* HttpClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		C7F726F029D2FECC00ED23CC /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		D694B358508137E31BC44E63 /* Pods-CarLinkChannel-CarLinkChannelUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarLinkChannel-CarLinkChannelUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarLinkChannel-CarLinkChannelUITests/Pods-CarLinkChannel-CarLinkChannelUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB26915988B647DD4210051F /* Pods-CarLinkChannel-CarLinkChannelUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarLinkChannel-CarLinkChannelUITests.release.xcconfig"; path = "Target Support Files/Pods-CarLinkChannel-CarLinkChannelUITests/Pods-CarLinkChannel-CarLinkChannelUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DBCF62CF3ED23EAC732FC519 /* Pods-CarLinkChannelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarLinkChannelTests.debug.xcconfig"; path = "Target Support Files/Pods-CarLinkChannelTests/Pods-CarLinkChannelTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FADF9596994968FB22FC1883 /* Pods_CarLinkChannelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarLinkChannelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7EA659029CAA67D0095286A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7368F382A56CBA000F76BE6 /* UIKit.framework in Frameworks */,
+				C7368F322A56CB8800F76BE6 /* SystemConfiguration.framework in Frameworks */,
+				C78AF57629FF86720059F4F7 /* CFNetwork.framework in Frameworks */,
+				C7DE09222A0D02420083C46F /* libz.tbd in Frameworks */,
+				C7368F362A56CB9800F76BE6 /* CoreGraphics.framework in Frameworks */,
+				003E6A222A56CFD800B59ED7 /* libBaiduMobStat.a in Frameworks */,
+				C7368F342A56CB9000F76BE6 /* CoreTelephony.framework in Frameworks */,
+				C7368F392A56CBAB00F76BE6 /* Foundation.framework in Frameworks */,
+				C7DE09212A0D023A0083C46F /* libc++.tbd in Frameworks */,
+				C7368F312A56CB8200F76BE6 /* CoreLocation.framework in Frameworks */,
+				C7DE091C2A0D02110083C46F /* SystemConfiguration.framework in Frameworks */,
+				C7368F2F2A56CB7A00F76BE6 /* Security.framework in Frameworks */,
+				C7A566F129D1A87E002A6B54 /* Foundation.framework in Frameworks */,
+				C7368F2C2A56CB1E00F76BE6 /* UserFeedBack.framework in Frameworks */,
+				C7368F2E2A56CB7200F76BE6 /* JavaScriptCore.framework in Frameworks */,
+				C7DE091E2A0D02190083C46F /* Security.framework in Frameworks */,
+				C7368F3B2A56CBBD00F76BE6 /* libz.1.2.5.tbd in Frameworks */,
+				C7DE09242A0D02B00083C46F /* Bugly.framework in Frameworks */,
+				C77621C829F77BE000C8C075 /* AVFoundation.framework in Frameworks */,
+				E826642127505898A9542A52 /* Pods_CarLinkChannel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA65AB29CAA6810095286A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA036CA78AC23A718140816D /* Pods_CarLinkChannelTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA65B529CAA6810095286A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C13D403D6761878396C517E1 /* Pods_CarLinkChannel_CarLinkChannelUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A11A92532CA92546001C3007 /* TOOLView */ = {
+			isa = PBXGroup;
+			children = (
+				A11A92542CA92565001C3007 /* LoadingView.h */,
+				A11A92552CA92565001C3007 /* LoadingView.m */,
+			);
+			path = TOOLView;
+			sourceTree = "<group>";
+		};
+		A176D97A2CA17DB3003DA1A5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A1A958D92DB77E150097BC3F /* VehicleRecognizer */,
+				A176D9D32CA2CC0E003DA1A5 /* BinFIle */,
+				A176D97E2CA17EF7003DA1A5 /* Base */,
+				A176D9882CA18014003DA1A5 /* UDS */,
+				A176D9952CA181F9003DA1A5 /* ClassificationClass */,
+				A176D9C82CA188A7003DA1A5 /* Upload */,
+				A176D9C42CA1886E003DA1A5 /* HTTP */,
+				A176D97B2CA17E62003DA1A5 /* AutoNetworkService.h */,
+				A176D97C2CA17E62003DA1A5 /* AutoNetworkService.m */,
+				A176D9BC2CA187CE003DA1A5 /* LicenseKeyManager.h */,
+				A176D9BB2CA187CE003DA1A5 /* LicenseKeyManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A176D97E2CA17EF7003DA1A5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A176D97F2CA17F0A003DA1A5 /* VehicleLoaclNetworkManager.h */,
+				A176D9802CA17F0A003DA1A5 /* VehicleLoaclNetworkManager.m */,
+				A176D9822CA17F43003DA1A5 /* TcpBase.h */,
+				A176D9832CA17F43003DA1A5 /* TcpBase.m */,
+				A176D9852CA17F94003DA1A5 /* UdpBase.h */,
+				A176D9862CA17F94003DA1A5 /* UdpBase.m */,
+				A176D9922CA1814B003DA1A5 /* NetworkTool.h */,
+				A176D9932CA1814B003DA1A5 /* NetworkTool.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A176D9882CA18014003DA1A5 /* UDS */ = {
+			isa = PBXGroup;
+			children = (
+				A176D9892CA1802F003DA1A5 /* UDSPackageHandle.h */,
+				A176D98A2CA1802F003DA1A5 /* UDSPackageHandle.m */,
+				A176D98C2CA180C2003DA1A5 /* UdsStructured.h */,
+				A176D98D2CA180C2003DA1A5 /* UdsStructured.m */,
+				A176D98F2CA180EA003DA1A5 /* UDSQueue.h */,
+				A176D9902CA180EA003DA1A5 /* UDSQueue.m */,
+				A176D9972CA1842D003DA1A5 /* UDSResponse.h */,
+				A176D9982CA1842D003DA1A5 /* UDSResponse.m */,
+			);
+			path = UDS;
+			sourceTree = "<group>";
+		};
+		A176D9952CA181F9003DA1A5 /* ClassificationClass */ = {
+			isa = PBXGroup;
+			children = (
+				A176D99E2CA184E6003DA1A5 /* DataManager */,
+				A176D9A92CA18700003DA1A5 /* VehicleClass1.h */,
+				A176D9AA2CA18700003DA1A5 /* VehicleClass1.m */,
+				A176D9AE2CA18774003DA1A5 /* VehicleClass2.h */,
+				A176D9B12CA18774003DA1A5 /* VehicleClass2.m */,
+				A176D9B02CA18774003DA1A5 /* VehicleClass3.h */,
+				A176D9AF2CA18774003DA1A5 /* VehicleClass3.m */,
+				A176D9B52CA18774003DA1A5 /* VehicleClass4.h */,
+				A176D9B32CA18774003DA1A5 /* VehicleClass4.m */,
+				A176D9B42CA18774003DA1A5 /* VehicleClass5.h */,
+				A176D9AD2CA18774003DA1A5 /* VehicleClass5.m */,
+				A176D9B22CA18774003DA1A5 /* VehicleClass6.h */,
+				A176D9AC2CA18774003DA1A5 /* VehicleClass6.m */,
+				A176D9962CA1821E003DA1A5 /* VehicleTypeProgramming.h */,
+				A176D99B2CA1847F003DA1A5 /* FirmwareDataManager.h */,
+				A176D99C2CA1847F003DA1A5 /* FirmwareDataManager.m */,
+			);
+			path = ClassificationClass;
+			sourceTree = "<group>";
+		};
+		A176D99E2CA184E6003DA1A5 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A176D9BE2CA1884D003DA1A5 /* UDSOperationResult.h */,
+				A176D9C02CA1884D003DA1A5 /* UDSOperationResult.m */,
+				A176D9C12CA1884D003DA1A5 /* UDSProtocolDispatcher.h */,
+				A176D9BF2CA1884D003DA1A5 /* UDSProtocolDispatcher.m */,
+				A176D99F2CA184FF003DA1A5 /* FlashBlockInfo.h */,
+				A176D9A02CA184FF003DA1A5 /* FlashBlockInfo.m */,
+				A176D9A22CA1852B003DA1A5 /* FlashInfo.h */,
+				A176D9A32CA1852B003DA1A5 /* FlashInfo.m */,
+				A176D9A62CA18557003DA1A5 /* OperationResult.h */,
+				A176D9A72CA18557003DA1A5 /* OperationResult.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		A176D9C42CA1886E003DA1A5 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				A176D9C62CA1888B003DA1A5 /* HTTPManager.h */,
+				A176D9C52CA1888B003DA1A5 /* HTTPManager.m */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		A176D9C82CA188A7003DA1A5 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				A176D9C92CA188C3003DA1A5 /* UploadManager.h */,
+				A176D9CB2CA188C3003DA1A5 /* UploadManager.m */,
+				A176D9CA2CA188C3003DA1A5 /* XmlProcess.h */,
+				A176D9CC2CA188C3003DA1A5 /* XmlProcess.m */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		A176D9CF2CA1891C003DA1A5 /* XMLNode */ = {
+			isa = PBXGroup;
+			children = (
+				A176D9D02CA18948003DA1A5 /* GDataXMLNode.h */,
+				A176D9D12CA18948003DA1A5 /* GDataXMLNode.m */,
+			);
+			path = XMLNode;
+			sourceTree = "<group>";
+		};
+		A176D9D32CA2CC0E003DA1A5 /* BinFIle */ = {
+			isa = PBXGroup;
+			children = (
+				A176D9D42CA2CC1A003DA1A5 /* BINFileProcess.h */,
+				A176D9D52CA2CC1A003DA1A5 /* BINFileProcess.m */,
+			);
+			path = BinFIle;
+			sourceTree = "<group>";
+		};
+		A1A958D52DB762590097BC3F /* General */ = {
+			isa = PBXGroup;
+			children = (
+				A1A958D62DB7626A0097BC3F /* PopWindow.h */,
+				A1A958D72DB7626A0097BC3F /* PopWindow.m */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		A1A958D92DB77E150097BC3F /* VehicleRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				A1A958DA2DB77E2D0097BC3F /* VersionManager.h */,
+				A1A958DB2DB77E2D0097BC3F /* VersionManager.m */,
+			);
+			path = VehicleRecognizer;
+			sourceTree = "<group>";
+		};
+		A1D9047F2E17D69300E59EA4 /* TOOL */ = {
+			isa = PBXGroup;
+			children = (
+				A1D904802E17D6AB00E59EA4 /* KeyChainProcess.h */,
+				A1D904812E17D6AB00E59EA4 /* KeyChainProcess.m */,
+			);
+			path = TOOL;
+			sourceTree = "<group>";
+		};
+		AAF3C54E486B72B8EB51B0C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8648051F4DE896E76D7FF118 /* Pods-CarLinkChannel.debug.xcconfig */,
+				1E69C1B0DE5CE3A7063545A3 /* Pods-CarLinkChannel.release.xcconfig */,
+				D694B358508137E31BC44E63 /* Pods-CarLinkChannel-CarLinkChannelUITests.debug.xcconfig */,
+				DB26915988B647DD4210051F /* Pods-CarLinkChannel-CarLinkChannelUITests.release.xcconfig */,
+				DBCF62CF3ED23EAC732FC519 /* Pods-CarLinkChannelTests.debug.xcconfig */,
+				03C78E26B0C486C459C2E296 /* Pods-CarLinkChannelTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C705D80129D6ACD2006C2B59 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				C705D80329D6ACF2006C2B59 /* aes */,
+				C705D81A29D6ACF2006C2B59 /* minizip */,
+				C705D81929D6ACF2006C2B59 /* README.md */,
+				C705D82629D6ACF2006C2B59 /* SSZipArchive.h */,
+				C705D82429D6ACF2006C2B59 /* SSZipArchive.m */,
+				C705D82529D6ACF2006C2B59 /* SSZipCommon.h */,
+				C705D80229D6ACF2006C2B59 /* ZipArchive.h */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		C705D80329D6ACF2006C2B59 /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				C705D80429D6ACF2006C2B59 /* aeskey.m */,
+				C705D80529D6ACF2006C2B59 /* prng.h */,
+				C705D80629D6ACF2006C2B59 /* hmac.m */,
+				C705D80729D6ACF2006C2B59 /* aestab.h */,
+				C705D80829D6ACF2006C2B59 /* pwd2key.h */,
+				C705D80929D6ACF2006C2B59 /* aescrypt.m */,
+				C705D80A29D6ACF2006C2B59 /* fileenc.m */,
+				C705D80B29D6ACF2006C2B59 /* aesopt.h */,
+				C705D80C29D6ACF2006C2B59 /* aes_via_ace.h */,
+				C705D80D29D6ACF2006C2B59 /* sha1.m */,
+				C705D80E29D6ACF2006C2B59 /* brg_types.h */,
+				C705D80F29D6ACF2006C2B59 /* entropy.h */,
+				C705D81029D6ACF2006C2B59 /* hmac.h */,
+				C705D81129D6ACF2006C2B59 /* brg_endian.h */,
+				C705D81229D6ACF2006C2B59 /* aes.h */,
+				C705D81329D6ACF2006C2B59 /* prng.m */,
+				C705D81429D6ACF2006C2B59 /* pwd2key.m */,
+				C705D81529D6ACF2006C2B59 /* aestab.m */,
+				C705D81629D6ACF2006C2B59 /* sha1.h */,
+				C705D81729D6ACF2006C2B59 /* fileenc.h */,
+				C705D81829D6ACF2006C2B59 /* entropy.m */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		C705D81A29D6ACF2006C2B59 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				C705D81B29D6ACF2006C2B59 /* unzip.m */,
+				C705D81C29D6ACF2006C2B59 /* zip.m */,
+				C705D81D29D6ACF2006C2B59 /* ioapi.m */,
+				C705D81E29D6ACF2006C2B59 /* mztools.m */,
+				C705D81F29D6ACF2006C2B59 /* crypt.h */,
+				C705D82029D6ACF2006C2B59 /* zip.h */,
+				C705D82129D6ACF2006C2B59 /* unzip.h */,
+				C705D82229D6ACF2006C2B59 /* mztools.h */,
+				C705D82329D6ACF2006C2B59 /* ioapi.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		C710EBD62A4C309C004CAA7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C710EBD72A4C30BC004CAA7D /* WarnPopView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C710EBD92A4E9B1A004CAA7D /* STCObfuscator */ = {
+			isa = PBXGroup;
+			children = (
+				A176D9CF2CA1891C003DA1A5 /* XMLNode */,
+				C74C2D0A2A0DEF4C009DD9B9 /* FTP */,
+				C710EBDB2A4E9B1A004CAA7D /* ahocorasick */,
+				C710EBDA2A4E9B1A004CAA7D /* STCObfuscator.h */,
+				C710EBE12A4E9B1A004CAA7D /* STCObfuscator.m */,
+			);
+			path = STCObfuscator;
+			sourceTree = "<group>";
+		};
+		C710EBDB2A4E9B1A004CAA7D /* ahocorasick */ = {
+			isa = PBXGroup;
+			children = (
+				C710EBDC2A4E9B1A004CAA7D /* actypes.h */,
+				C710EBDD2A4E9B1A004CAA7D /* ahocorasick.h */,
+				C710EBDE2A4E9B1A004CAA7D /* node.h */,
+				C710EBDF2A4E9B1A004CAA7D /* ahocorasick.c */,
+				C710EBE02A4E9B1A004CAA7D /* node.c */,
+			);
+			path = ahocorasick;
+			sourceTree = "<group>";
+		};
+		C71CC2992A08A85D0076F3A6 /* EGS Health */ = {
+			isa = PBXGroup;
+			children = (
+				C71CC29A2A08A8E70076F3A6 /* EGSHealthViewController.h */,
+				C71CC29B2A08A8E70076F3A6 /* EGSHealthViewController.m */,
+			);
+			path = "EGS Health";
+			sourceTree = "<group>";
+		};
+		C71CC29D2A08DEFB0076F3A6 /* Fault Code */ = {
+			isa = PBXGroup;
+			children = (
+				C71CC2A12A08EA3D0076F3A6 /* View */,
+				C71CC29E2A08DF160076F3A6 /* FaultCodeViewController.h */,
+				C71CC29F2A08DF160076F3A6 /* FaultCodeViewController.m */,
+			);
+			path = "Fault Code";
+			sourceTree = "<group>";
+		};
+		C71CC2A12A08EA3D0076F3A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C71CC2A22A08EA510076F3A6 /* FaultCodeTableViewCell.h */,
+				C71CC2A32A08EA510076F3A6 /* FaultCodeTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7368F272A56CB0800F76BE6 /* Baidu */ = {
+			isa = PBXGroup;
+			children = (
+				C7368F292A56CB1D00F76BE6 /* BaiduMobStat.h */,
+				003E6A212A56CFD700B59ED7 /* libBaiduMobStat.a */,
+				C7368F2A2A56CB1D00F76BE6 /* UserFeedBack.framework */,
+			);
+			path = Baidu;
+			sourceTree = "<group>";
+		};
+		C745AB7F29CD758D00CF3C67 /* LuaScript */ = {
+			isa = PBXGroup;
+			children = (
+				C77A618929FA7C41006F3772 /* utils.lua */,
+				C745AB9229CDA33E00CF3C67 /* BMWJobParse.lua */,
+				C745AB9429CDA33F00CF3C67 /* dkjson.lua */,
+				C745AB9329CDA33E00CF3C67 /* FormatUtility.lua */,
+			);
+			path = LuaScript;
+			sourceTree = "<group>";
+		};
+		C74C2D0A2A0DEF4C009DD9B9 /* FTP */ = {
+			isa = PBXGroup;
+			children = (
+				C74C2D0C2A0DF07D009DD9B9 /* FTPManager.h */,
+				C74C2D0B2A0DF07D009DD9B9 /* FTPManager.m */,
+			);
+			path = FTP;
+			sourceTree = "<group>";
+		};
+		C767DE4229CAF5CF002F5F1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7368F3A2A56CBB400F76BE6 /* libz.1.2.5.tbd */,
+				C7368F372A56CBA000F76BE6 /* UIKit.framework */,
+				C7368F352A56CB9700F76BE6 /* CoreGraphics.framework */,
+				C7368F332A56CB8F00F76BE6 /* CoreTelephony.framework */,
+				C7368F302A56CB8100F76BE6 /* CoreLocation.framework */,
+				C7368F2D2A56CB7200F76BE6 /* JavaScriptCore.framework */,
+				C7DE09202A0D02320083C46F /* libc++.tbd */,
+				C7DE091F2A0D02250083C46F /* libz.tbd */,
+				C7DE091D2A0D02180083C46F /* Security.framework */,
+				C7DE091B2A0D02100083C46F /* SystemConfiguration.framework */,
+				C78AF57529FF86720059F4F7 /* CFNetwork.framework */,
+				C77621C729F77BE000C8C075 /* AVFoundation.framework */,
+				C7F726F029D2FECC00ED23CC /* Network.framework */,
+				C7A566F029D1A87D002A6B54 /* Foundation.framework */,
+				C767DE4329CAF5D0002F5F1C /* ExternalAccessory.framework */,
+				2C96E6976C5795AD6DE96B69 /* Pods_CarLinkChannel.framework */,
+				74950CDFC8C13EC5F795134C /* Pods_CarLinkChannel_CarLinkChannelUITests.framework */,
+				FADF9596994968FB22FC1883 /* Pods_CarLinkChannelTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C76F23262A1CC886002437AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C76F23272A1CC8AE002437AF /* SpeedTestInfoViewController.h */,
+				C76F23282A1CC8AE002437AF /* SpeedTestInfoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C77621C929F7A7A100C8C075 /* Interactive */ = {
+			isa = PBXGroup;
+			children = (
+				C77621CA29F7A83800C8C075 /* SpeedTestInteractive.h */,
+				C77621CB29F7A83800C8C075 /* SpeedTestInteractive.m */,
+			);
+			path = Interactive;
+			sourceTree = "<group>";
+		};
+		C77621CD29F7ABC200C8C075 /* SpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				C77621D629F7CC4500C8C075 /* View */,
+				C77621C929F7A7A100C8C075 /* Interactive */,
+				C77621CE29F7ABD300C8C075 /* SpeedController */,
+				A18849982D267C4000BF8AFE /* ReplayKitManager.h */,
+				A18849992D267C4000BF8AFE /* ReplayKitManager.m */,
+			);
+			path = SpeedTest;
+			sourceTree = "<group>";
+		};
+		C77621CE29F7ABD300C8C075 /* SpeedController */ = {
+			isa = PBXGroup;
+			children = (
+				C77621CF29F7ABED00C8C075 /* SpeedVideoViewController.h */,
+				C77621D029F7ABED00C8C075 /* SpeedVideoViewController.m */,
+			);
+			path = SpeedController;
+			sourceTree = "<group>";
+		};
+		C77621D629F7CC4500C8C075 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C77621D729F7CC8800C8C075 /* SpeedTestTopView.xib */,
+				C77621D929F7D10F00C8C075 /* SpeedTestBottomView.xib */,
+				C76F23232A1B5B8C002437AF /* SpeedView.h */,
+				C76F23242A1B5B8C002437AF /* SpeedView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C77A39E029FCCBDE00A5516E /* DebugTool */ = {
+			isa = PBXGroup;
+			children = (
+				C77A39E829FCCC2000A5516E /* UIImage+ImageBuffer.h */,
+				C77A39E729FCCC2000A5516E /* UIImage+ImageBuffer.m */,
+				C77A39E429FCCC1800A5516E /* UIViewController+Test.h */,
+				C77A39E529FCCC1900A5516E /* UIViewController+Test.m */,
+				C77A39E229FCCC0000A5516E /* XTDebugControl.h */,
+				C77A39E129FCCC0000A5516E /* XTDebugControl.m */,
+				C77A39EA29FCCCBD00A5516E /* UIView+MJExtension.h */,
+				C77A39EB29FCCCBD00A5516E /* UIView+MJExtension.m */,
+			);
+			path = DebugTool;
+			sourceTree = "<group>";
+		};
+		C79A5BEC29F94AAE00CD822D /* SpeedTestInformation */ = {
+			isa = PBXGroup;
+			children = (
+				C76F23262A1CC886002437AF /* Controller */,
+				C79A5BED29F94AF400CD822D /* View */,
+			);
+			path = SpeedTestInformation;
+			sourceTree = "<group>";
+		};
+		C79A5BED29F94AF400CD822D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C79A5BEE29F94B0300CD822D /* SpeedSetInformationView.xib */,
+				C76F232A2A1CCEC6002437AF /* TcuTunningView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7A4ADB129D4133000BBA8AD /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C7A4ADB229D4134F00BBA8AD /* NetworkInterface.h */,
+				C7A4ADB329D4134F00BBA8AD /* NetworkInterface.m */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		C7A4ADB529D4324700BBA8AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3A5BF29D580E6008D92E8 /* BallRotationProgressBar.h */,
+				C7E3A5BE29D580E6008D92E8 /* BallRotationProgressBar.m */,
+				C792E1C929F1419C0063E7FA /* UIImageView+Tool.h */,
+				C792E1CA29F1419C0063E7FA /* UIImageView+Tool.m */,
+				C7E3A5C129D581DC008D92E8 /* EcuInstallView.h */,
+				C7E3A5C229D581DC008D92E8 /* EcuInstallView.m */,
+				C7E3A5C429D581E8008D92E8 /* EcuInstallView.xib */,
+				C7A4ADB629D4326400BBA8AD /* ActivationView.h */,
+				C7A4ADB729D4326400BBA8AD /* ActivationView.m */,
+				C7A4ADB929D4329400BBA8AD /* ActivationView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7A4ADBB29D4526100BBA8AD /* SoftwrePackageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3A5D129D5AE22008D92E8 /* Presenter */,
+				C7E3A5CC29D5A8F5008D92E8 /* InterActive */,
+				C7A4ADBF29D4529300BBA8AD /* View */,
+				C7A4ADBC29D4528C00BBA8AD /* SoftwarePackageViewController.h */,
+				C7A4ADBD29D4528C00BBA8AD /* SoftwarePackageViewController.m */,
+			);
+			path = SoftwrePackageViewController;
+			sourceTree = "<group>";
+		};
+		C7A4ADBF29D4529300BBA8AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7A4ADC029D452B600BBA8AD /* informationView.h */,
+				C7A4ADC129D452B600BBA8AD /* informationView.m */,
+				C7A4ADC329D452C400BBA8AD /* informationView.xib */,
+				C7A4ADC529D456C600BBA8AD /* SoftwareDownloadView.h */,
+				C7A4ADC629D456C600BBA8AD /* SoftwareDownloadView.m */,
+				C7A4ADC829D4570400BBA8AD /* SoftwareDownloadView.xib */,
+				C7A4ADCA29D459DA00BBA8AD /* SoftwareTableCell.h */,
+				C7A4ADCB29D459DA00BBA8AD /* SoftwareTableCell.m */,
+				C7A4ADCC29D459DA00BBA8AD /* SoftwareTableCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7A4ADCF29D45F2900BBA8AD /* Tuning Content */ = {
+			isa = PBXGroup;
+			children = (
+				C710EBD62A4C309C004CAA7D /* View */,
+				C705D83629D6B7DF006C2B59 /* TuneContentViewController.h */,
+				C705D83729D6B7DF006C2B59 /* TuneContentViewController.m */,
+			);
+			path = "Tuning Content";
+			sourceTree = "<group>";
+		};
+		C7A4ADD029D531D000BBA8AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7A4ADD129D531FE00BBA8AD /* WaitView.h */,
+				C7A4ADD229D531FE00BBA8AD /* WaitView.m */,
+				C7A4ADD429D5320900BBA8AD /* WaitView.xib */,
+				C7143BAC2A42DE1A008C6388 /* exportVideoSelectView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7A5667529D144EA002A6B54 /* Lua */ = {
+			isa = PBXGroup;
+			children = (
+				C7A5667629D144EA002A6B54 /* lauxlib.c */,
+				C7A5667729D144EA002A6B54 /* lmem.h */,
+				C7A5667B29D144EB002A6B54 /* llimits.h */,
+				C7A5667C29D144EB002A6B54 /* luaconf.h */,
+				C7A5667D29D144EB002A6B54 /* lzio.h */,
+				C7A5667E29D144EB002A6B54 /* lgc.h */,
+				C7A5667F29D144EB002A6B54 /* liolib.c */,
+				C7A5668029D144EB002A6B54 /* lopcodes.c */,
+				C7A5668129D144EB002A6B54 /* lstate.c */,
+				C7A5668229D144EB002A6B54 /* lua.hpp */,
+				C7A5668329D144EB002A6B54 /* lobject.c */,
+				C7A5668429D144EB002A6B54 /* lualib.h */,
+				C7A5668529D144EB002A6B54 /* lmathlib.c */,
+				C7A5668629D144EB002A6B54 /* lopnames.h */,
+				C7A5668729D144EB002A6B54 /* loadlib.c */,
+				C7A5668829D144EB002A6B54 /* lvm.c */,
+				C7A5668929D144EB002A6B54 /* lfunc.c */,
+				C7A5668A29D144EB002A6B54 /* lstrlib.c */,
+				C7A5668B29D144EB002A6B54 /* Makefile */,
+				C7A5668C29D144EB002A6B54 /* lua.c */,
+				C7A5668D29D144EB002A6B54 /* ldebug.h */,
+				C7A5668E29D144EB002A6B54 /* linit.c */,
+				C7A5668F29D144EB002A6B54 /* lcode.h */,
+				C7A5669029D144EB002A6B54 /* lapi.h */,
+				C7A5669129D144EB002A6B54 /* lstring.c */,
+				C7A5669229D144EB002A6B54 /* ldo.h */,
+				C7A5669329D144EB002A6B54 /* lundump.c */,
+				C7A5669429D144EB002A6B54 /* lctype.c */,
+				C7A5669529D144EB002A6B54 /* ljumptab.h */,
+				C7A5669629D144EB002A6B54 /* llex.h */,
+				C7A5669729D144EB002A6B54 /* luac.c */,
+				C7A5669829D144EB002A6B54 /* ltm.h */,
+				C7A5669929D144EB002A6B54 /* ltable.c */,
+				C7A5669A29D144EB002A6B54 /* lparser.h */,
+				C7A5669B29D144EB002A6B54 /* ldump.c */,
+				C7A5669C29D144EB002A6B54 /* lobject.h */,
+				C7A5669D29D144EB002A6B54 /* lstate.h */,
+				C7A5669E29D144EB002A6B54 /* lopcodes.h */,
+				C7A5669F29D144EB002A6B54 /* loslib.c */,
+				C7A566A029D144EB002A6B54 /* lgc.c */,
+				C7A566A129D144EB002A6B54 /* lzio.c */,
+				C7A566A229D144EB002A6B54 /* ldblib.c */,
+				C7A566A329D144EB002A6B54 /* lutf8lib.c */,
+				C7A566A429D144EB002A6B54 /* lmem.c */,
+				C7A566A529D144EB002A6B54 /* lauxlib.h */,
+				C7A566A629D144EB002A6B54 /* lvm.h */,
+				C7A566A729D144EB002A6B54 /* lcorolib.c */,
+				C7A566A829D144EB002A6B54 /* lstring.h */,
+				C7A566A929D144EB002A6B54 /* lcode.c */,
+				C7A566AA29D144EB002A6B54 /* ltablib.c */,
+				C7A566AB29D144EB002A6B54 /* lapi.c */,
+				C7A566AC29D144EB002A6B54 /* lbaselib.c */,
+				C7A566AD29D144EB002A6B54 /* lua.h */,
+				C7A566AE29D144EB002A6B54 /* ldebug.c */,
+				C7A566AF29D144EB002A6B54 /* lfunc.h */,
+				C7A566B029D144EB002A6B54 /* lprefix.h */,
+				C7A566B129D144EB002A6B54 /* lparser.c */,
+				C7A566B229D144EB002A6B54 /* llex.c */,
+				C7A566B329D144EB002A6B54 /* ltable.h */,
+				C7A566B429D144EB002A6B54 /* ltm.c */,
+				C7A566B529D144EB002A6B54 /* lctype.h */,
+				C7A566B629D144EB002A6B54 /* ldo.c */,
+				C7A566B729D144EB002A6B54 /* lundump.h */,
+			);
+			path = Lua;
+			sourceTree = "<group>";
+		};
+		C7A566E829D19691002A6B54 /* PrePareLoadingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7A4ADD029D531D000BBA8AD /* View */,
+				C7A566DB29D145CC002A6B54 /* PrePareLoadingViewController.h */,
+				C7A566DC29D145CC002A6B54 /* PrePareLoadingViewController.m */,
+			);
+			path = PrePareLoadingViewController;
+			sourceTree = "<group>";
+		};
+		C7A566E929D196D3002A6B54 /* ConnectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7DA8C962A0387EA00C753B7 /* Persenter */,
+				C7E3A5C629D5877F008D92E8 /* Interactive */,
+				C7A4ADB529D4324700BBA8AD /* View */,
+				C7A566DE29D161AE002A6B54 /* ConnectionViewController.h */,
+				C7A566DF29D161AE002A6B54 /* ConnectionViewController.m */,
+			);
+			path = ConnectionViewController;
+			sourceTree = "<group>";
+		};
+		C7D7844629CC496E00A0F764 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				C7D7844729CC496E00A0F764 /* Documentation.html */,
+				C7D7844829CC496E00A0F764 /* GCDAsyncUdpSocket.m */,
+				C7D7844929CC496E00A0F764 /* GCDAsyncSocket.m */,
+				C7D7844A29CC496E00A0F764 /* GCDAsyncUdpSocket.h */,
+				C7D7844B29CC496E00A0F764 /* GCDAsyncSocket.h */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		C7DA8C962A0387EA00C753B7 /* Persenter */ = {
+			isa = PBXGroup;
+			children = (
+				C7DA8C972A03886700C753B7 /* ConnectionPersenter.h */,
+				C7DA8C982A03886700C753B7 /* ConnectionPersenter.m */,
+			);
+			path = Persenter;
+			sourceTree = "<group>";
+		};
+		C7DE091A2A0D02020083C46F /* Bugly */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE09232A0D02B00083C46F /* Bugly.framework */,
+			);
+			path = Bugly;
+			sourceTree = "<group>";
+		};
+		C7E3A5C629D5877F008D92E8 /* Interactive */ = {
+			isa = PBXGroup;
+			children = (
+				C74C2D0F2A0DF4EB009DD9B9 /* FTPInteractive.h */,
+				C74C2D102A0DF4EB009DD9B9 /* FTPInteractive.m */,
+			);
+			path = Interactive;
+			sourceTree = "<group>";
+		};
+		C7E3A5CC29D5A8F5008D92E8 /* InterActive */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3A5CD29D5A93F008D92E8 /* PackageDownloadInteractive.h */,
+				C7E3A5CE29D5A93F008D92E8 /* PackageDownloadInteractive.m */,
+			);
+			path = InterActive;
+			sourceTree = "<group>";
+		};
+		C7E3A5D129D5AE22008D92E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3A5D229D5AE37008D92E8 /* PackageDownPresenter.h */,
+				C7E3A5D329D5AE37008D92E8 /* PackageDownPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C7EA658A29CAA67D0095286A = {
+			isa = PBXGroup;
+			children = (
+				C7EA659529CAA67D0095286A /* CarLinkChannel */,
+				C7EA65B129CAA6810095286A /* CarLinkChannelTests */,
+				C7EA65BB29CAA6810095286A /* CarLinkChannelUITests */,
+				C7EA659429CAA67D0095286A /* Products */,
+				C767DE4229CAF5CF002F5F1C /* Frameworks */,
+				AAF3C54E486B72B8EB51B0C9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C7EA659429CAA67D0095286A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA659329CAA67D0095286A /* ZD8 TCU.app */,
+				C7EA65AE29CAA6810095286A /* CarLinkChannelTests.xctest */,
+				C7EA65B829CAA6810095286A /* CarLinkChannelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7EA659529CAA67D0095286A /* CarLinkChannel */ = {
+			isa = PBXGroup;
+			children = (
+				A1D9047F2E17D69300E59EA4 /* TOOL */,
+				A1A958D52DB762590097BC3F /* General */,
+				A11A92532CA92546001C3007 /* TOOLView */,
+				A176D97A2CA17DB3003DA1A5 /* Network */,
+				C7368F272A56CB0800F76BE6 /* Baidu */,
+				C73A2EB92A247AAF00A3E9F0 /* 29-05-2023 14:09.txt */,
+				C73A2ECA2A27634800A3E9F0 /* ready.WAV */,
+				C73A2EC62A2761E800A3E9F0 /* 50.WAV */,
+				C73A2EC72A2761E800A3E9F0 /* 100.WAV */,
+				C710EBD92A4E9B1A004CAA7D /* STCObfuscator */,
+				C7DE091A2A0D02020083C46F /* Bugly */,
+				C71CC29D2A08DEFB0076F3A6 /* Fault Code */,
+				C71CC2992A08A85D0076F3A6 /* EGS Health */,
+				C77A39E029FCCBDE00A5516E /* DebugTool */,
+				C79A5BEC29F94AAE00CD822D /* SpeedTestInformation */,
+				C77621CD29F7ABC200C8C075 /* SpeedTest */,
+				C7F3E92129F668D100A12E5E /* LeftMenu */,
+				C7002F8F29ED3BC800131836 /* CarLinkChannel.entitlements */,
+				C79A5BF029FA3ADD00CD822D /* zd8-5.gif */,
+				C79A5BF229FA420C00CD822D /* red-waiting.gif */,
+				C71CC2A52A0A03CB0076F3A6 /* wait.gif */,
+				C705D80129D6ACD2006C2B59 /* SSZipArchive */,
+				C7A4ADCF29D45F2900BBA8AD /* Tuning Content */,
+				C7A4ADBB29D4526100BBA8AD /* SoftwrePackageViewController */,
+				C7A4ADB129D4133000BBA8AD /* Provider */,
+				C7F726EC29D2DCE000ED23CC /* Http */,
+				C7A566E929D196D3002A6B54 /* ConnectionViewController */,
+				C7A566E829D19691002A6B54 /* PrePareLoadingViewController */,
+				C7A5667529D144EA002A6B54 /* Lua */,
+				C745AB7F29CD758D00CF3C67 /* LuaScript */,
+				C7EA65CB29CAA8F40095286A /* AsyncSocket */,
+				C7EA659629CAA67D0095286A /* AppDelegate.h */,
+				C7EA659729CAA67D0095286A /* AppDelegate.m */,
+				003E6A272A56D1E400B59ED7 /* RunScript.md */,
+				003E6A202A56BB9000B59ED7 /* STCDefination.h */,
+				C7EA659929CAA67D0095286A /* SceneDelegate.h */,
+				C7EA659A29CAA67D0095286A /* SceneDelegate.m */,
+				C7EA659C29CAA67D0095286A /* ViewController.h */,
+				C7EA659D29CAA67D0095286A /* ViewController.m */,
+				C7D7844F29CC5D7700A0F764 /* TcpParserHandler.h */,
+				C7D7845029CC5D7700A0F764 /* TcpParserHandler.m */,
+				C77621DB29F7E45D00C8C075 /* TcpSpeedTestHandler.h */,
+				C77621DC29F7E45D00C8C075 /* TcpSpeedTestHandler.m */,
+				C792E1CE29F259650063E7FA /* TcpInstallHandleDelegate.h */,
+				C745AD0129CDA59F00CF3C67 /* LuaBridge.h */,
+				C745ACFF29CDA59E00CF3C67 /* LuaBridge.m */,
+				C7A566EE29D1A486002A6B54 /* CarLinkChannelPrefixHeader.pch */,
+				C745AD0029CDA59F00CF3C67 /* LuaBridgeInternal.h */,
+				C745AB8629CD8B0A00CF3C67 /* LuaInvoke.h */,
+				C745AB8729CD8B0A00CF3C67 /* LuaInvoke.m */,
+				C7D7843C29CC248800A0F764 /* NSData+Category.h */,
+				C7D7843D29CC248900A0F764 /* NSData+Category.m */,
+				C7EA659F29CAA67D0095286A /* Main.storyboard */,
+				C7A566E729D194D4002A6B54 /* Constents.h */,
+				C7EA65A229CAA6810095286A /* Assets.xcassets */,
+				C7EA65A429CAA6810095286A /* LaunchScreen.storyboard */,
+				C7EA65A729CAA6810095286A /* Info.plist */,
+				C7EA65A829CAA6810095286A /* main.m */,
+				C7A566E129D16D97002A6B54 /* NavigationView.h */,
+				C7A566E229D16D97002A6B54 /* NavigationView.m */,
+				C7A566E429D16DA9002A6B54 /* NavigationView.xib */,
+				A1490D342DAF85B700BEC195 /* CustomLogFormatter.h */,
+				A1490D352DAF85B700BEC195 /* CustomLogFormatter.m */,
+			);
+			path = CarLinkChannel;
+			sourceTree = "<group>";
+		};
+		C7EA65B129CAA6810095286A /* CarLinkChannelTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA65B229CAA6810095286A /* CarLinkChannelTests.m */,
+			);
+			path = CarLinkChannelTests;
+			sourceTree = "<group>";
+		};
+		C7EA65BB29CAA6810095286A /* CarLinkChannelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA65BC29CAA6810095286A /* CarLinkChannelUITests.m */,
+				C7EA65BE29CAA6810095286A /* CarLinkChannelUITestsLaunchTests.m */,
+			);
+			path = CarLinkChannelUITests;
+			sourceTree = "<group>";
+		};
+		C7EA65CB29CAA8F40095286A /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				C7D7843F29CC489E00A0F764 /* CocoaAsyncSocket.h */,
+				C7D7844629CC496E00A0F764 /* GCD */,
+			);
+			path = AsyncSocket;
+			sourceTree = "<group>";
+		};
+		C7F3E92129F668D100A12E5E /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C7F3E92C29F67F4700A12E5E /* Controller */,
+				C7F3E92229F668DC00A12E5E /* View */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		C7F3E92229F668DC00A12E5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7F3E92329F668EB00A12E5E /* LeftMenuView.xib */,
+				C77621C229F6906D00C8C075 /* LeftMenuView.h */,
+				C77621C329F6906D00C8C075 /* LeftMenuView.m */,
+				C77621C529F695ED00C8C075 /* SpeedTestHeaderView.xib */,
+				C7DA8C912A037B2400C753B7 /* EnterDiagnostic.h */,
+				C7DA8C922A037B2400C753B7 /* EnterDiagnostic.m */,
+				C7DA8C942A037C0C00C753B7 /* EnterDiagnostic.xib */,
+				C7DA8CA32A06503E00C753B7 /* CompletedView.h */,
+				C7DA8CA42A06503E00C753B7 /* CompletedView.m */,
+				C7DA8C9A2A03975400C753B7 /* CompletedView.xib */,
+				C7DA8C9E2A039EA000C753B7 /* TransportModeView.h */,
+				C7DA8C9F2A039EA000C753B7 /* TransportModeView.m */,
+				C7DA8C9C2A039A7300C753B7 /* TransportModeView.xib */,
+				C7EF6EB02A1F716A00393E4B /* EmptyHistoryView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7F3E92C29F67F4700A12E5E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C7F3E92D29F67F6400A12E5E /* SpeedTestViewController.h */,
+				C7F3E92E29F67F6400A12E5E /* SpeedTestViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C7F726EC29D2DCE000ED23CC /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				C7F726ED29D2DCF200ED23CC /* HttpClient.h */,
+				C7F726EE29D2DCF200ED23CC /* HttpClient.m */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7EA659229CAA67D0095286A /* CarLinkChannel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EA65C229CAA6810095286A /* Build configuration list for PBXNativeTarget "CarLinkChannel" */;
+			buildPhases = (
+				A4CE8EB6D2D547280E0469C1 /* [CP] Check Pods Manifest.lock */,
+				C7EA658F29CAA67D0095286A /* Sources */,
+				C7EA659029CAA67D0095286A /* Frameworks */,
+				C7EA659129CAA67D0095286A /* Resources */,
+				003E6A1F2A55700300B59ED7 /* ShellScript */,
+				520445E9B8A38AEC47FBDFF9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarLinkChannel;
+			productName = CarLinkChannel;
+			productReference = C7EA659329CAA67D0095286A /* ZD8 TCU.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7EA65AD29CAA6810095286A /* CarLinkChannelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EA65C529CAA6810095286A /* Build configuration list for PBXNativeTarget "CarLinkChannelTests" */;
+			buildPhases = (
+				6F195D97EEC5EDFCAB9075F3 /* [CP] Check Pods Manifest.lock */,
+				C7EA65AA29CAA6810095286A /* Sources */,
+				C7EA65AB29CAA6810095286A /* Frameworks */,
+				C7EA65AC29CAA6810095286A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7EA65B029CAA6810095286A /* PBXTargetDependency */,
+			);
+			name = CarLinkChannelTests;
+			productName = CarLinkChannelTests;
+			productReference = C7EA65AE29CAA6810095286A /* CarLinkChannelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7EA65B729CAA6810095286A /* CarLinkChannelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7EA65C829CAA6810095286A /* Build configuration list for PBXNativeTarget "CarLinkChannelUITests" */;
+			buildPhases = (
+				CB886DE5AEC5F82681F8F3ED /* [CP] Check Pods Manifest.lock */,
+				C7EA65B429CAA6810095286A /* Sources */,
+				C7EA65B529CAA6810095286A /* Frameworks */,
+				C7EA65B629CAA6810095286A /* Resources */,
+				2866D62F0123A9137ADF3A75 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7EA65BA29CAA6810095286A /* PBXTargetDependency */,
+			);
+			name = CarLinkChannelUITests;
+			productName = CarLinkChannelUITests;
+			productReference = C7EA65B829CAA6810095286A /* CarLinkChannelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7EA658B29CAA67D0095286A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C7EA659229CAA67D0095286A = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1610;
+					};
+					C7EA65AD29CAA6810095286A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C7EA659229CAA67D0095286A;
+					};
+					C7EA65B729CAA6810095286A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C7EA659229CAA67D0095286A;
+					};
+				};
+			};
+			buildConfigurationList = C7EA658E29CAA67D0095286A /* Build configuration list for PBXProject "CarLinkChannel" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7EA658A29CAA67D0095286A;
+			productRefGroup = C7EA659429CAA67D0095286A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7EA659229CAA67D0095286A /* CarLinkChannel */,
+				C7EA65AD29CAA6810095286A /* CarLinkChannelTests */,
+				C7EA65B729CAA6810095286A /* CarLinkChannelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7EA659129CAA67D0095286A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C79A5BEF29F94B0300CD822D /* SpeedSetInformationView.xib in Resources */,
+				003E6A282A56D1E400B59ED7 /* RunScript.md in Resources */,
+				C7E3A5C529D581E8008D92E8 /* EcuInstallView.xib in Resources */,
+				C77621DA29F7D10F00C8C075 /* SpeedTestBottomView.xib in Resources */,
+				C7A566EF29D1A7BD002A6B54 /* CarLinkChannelPrefixHeader.pch in Resources */,
+				C7A4ADD529D5320900BBA8AD /* WaitView.xib in Resources */,
+				C7EA65A629CAA6810095286A /* LaunchScreen.storyboard in Resources */,
+				C73A2EC92A2761E800A3E9F0 /* 100.WAV in Resources */,
+				C7143BAD2A42DE1B008C6388 /* exportVideoSelectView.xib in Resources */,
+				C76F232B2A1CCEC6002437AF /* TcuTunningView.xib in Resources */,
+				C7A4ADBA29D4329400BBA8AD /* ActivationView.xib in Resources */,
+				C7DA8C9B2A03975400C753B7 /* CompletedView.xib in Resources */,
+				C7A4ADC429D452C400BBA8AD /* informationView.xib in Resources */,
+				C7F3E92429F668EB00A12E5E /* LeftMenuView.xib in Resources */,
+				C7A4ADCE29D459DA00BBA8AD /* SoftwareTableCell.xib in Resources */,
+				C7EA65A329CAA6810095286A /* Assets.xcassets in Resources */,
+				C7EA65A129CAA67D0095286A /* Main.storyboard in Resources */,
+				C73A2ECB2A27634900A3E9F0 /* ready.WAV in Resources */,
+				C71CC2A62A0A03CB0076F3A6 /* wait.gif in Resources */,
+				C77621D829F7CC8800C8C075 /* SpeedTestTopView.xib in Resources */,
+				C7DA8C952A037C0C00C753B7 /* EnterDiagnostic.xib in Resources */,
+				C745AB9729CDA33F00CF3C67 /* dkjson.lua in Resources */,
+				C705D83029D6ACF3006C2B59 /* README.md in Resources */,
+				C710EBD82A4C30BC004CAA7D /* WarnPopView.xib in Resources */,
+				C7D7844C29CC496E00A0F764 /* Documentation.html in Resources */,
+				C745AB9629CDA33F00CF3C67 /* FormatUtility.lua in Resources */,
+				C7DA8C9D2A039A7300C753B7 /* TransportModeView.xib in Resources */,
+				C7A566E529D16DA9002A6B54 /* NavigationView.xib in Resources */,
+				C7EF6EB12A1F716A00393E4B /* EmptyHistoryView.xib in Resources */,
+				C73A2EC82A2761E800A3E9F0 /* 50.WAV in Resources */,
+				C745AB9529CDA33F00CF3C67 /* BMWJobParse.lua in Resources */,
+				C7A4ADC929D4570400BBA8AD /* SoftwareDownloadView.xib in Resources */,
+				C73A2EBA2A247AAF00A3E9F0 /* 29-05-2023 14:09.txt in Resources */,
+				C79A5BF129FA3ADD00CD822D /* zd8-5.gif in Resources */,
+				C77A618A29FA7C41006F3772 /* utils.lua in Resources */,
+				C77621C629F695ED00C8C075 /* SpeedTestHeaderView.xib in Resources */,
+				C79A5BF329FA420C00CD822D /* red-waiting.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA65AC29CAA6810095286A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA65B629CAA6810095286A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		003E6A1F2A55700300B59ED7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		2866D62F0123A9137ADF3A75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarLinkChannel-CarLinkChannelUITests/Pods-CarLinkChannel-CarLinkChannelUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarLinkChannel-CarLinkChannelUITests/Pods-CarLinkChannel-CarLinkChannelUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarLinkChannel-CarLinkChannelUITests/Pods-CarLinkChannel-CarLinkChannelUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		520445E9B8A38AEC47FBDFF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarLinkChannel/Pods-CarLinkChannel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarLinkChannel/Pods-CarLinkChannel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarLinkChannel/Pods-CarLinkChannel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F195D97EEC5EDFCAB9075F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarLinkChannelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4CE8EB6D2D547280E0469C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarLinkChannel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB886DE5AEC5F82681F8F3ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarLinkChannel-CarLinkChannelUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7EA658F29CAA67D0095286A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C710EBE42A4E9B1A004CAA7D /* STCObfuscator.m in Sources */,
+				C710EBE32A4E9B1A004CAA7D /* node.c in Sources */,
+				A176D97D2CA17E62003DA1A5 /* AutoNetworkService.m in Sources */,
+				C77621DD29F7E45D00C8C075 /* TcpSpeedTestHandler.m in Sources */,
+				A1D904822E17D6AB00E59EA4 /* KeyChainProcess.m in Sources */,
+				C7A566B929D14500002A6B54 /* lauxlib.c in Sources */,
+				A176D9B62CA18774003DA1A5 /* VehicleClass6.m in Sources */,
+				A176D9A42CA1852B003DA1A5 /* FlashInfo.m in Sources */,
+				C7A566BA29D14500002A6B54 /* liolib.c in Sources */,
+				C7A566BB29D14500002A6B54 /* lopcodes.c in Sources */,
+				C7A566BC29D14500002A6B54 /* lstate.c in Sources */,
+				C705D83829D6B7DF006C2B59 /* TuneContentViewController.m in Sources */,
+				C705D83329D6ACF3006C2B59 /* ioapi.m in Sources */,
+				A176D9A82CA18557003DA1A5 /* OperationResult.m in Sources */,
+				C71CC29C2A08A8E70076F3A6 /* EGSHealthViewController.m in Sources */,
+				C7A566BD29D14500002A6B54 /* lobject.c in Sources */,
+				A11A92562CA92565001C3007 /* LoadingView.m in Sources */,
+				A176D9BD2CA187CE003DA1A5 /* LicenseKeyManager.m in Sources */,
+				C7F726EF29D2DCF200ED23CC /* HttpClient.m in Sources */,
+				C7A566BE29D14500002A6B54 /* lmathlib.c in Sources */,
+				A176D9B72CA18774003DA1A5 /* VehicleClass5.m in Sources */,
+				C7A566BF29D14500002A6B54 /* loadlib.c in Sources */,
+				C7A4ADCD29D459DA00BBA8AD /* SoftwareTableCell.m in Sources */,
+				A176D9D22CA18948003DA1A5 /* GDataXMLNode.m in Sources */,
+				C77621C429F6906D00C8C075 /* LeftMenuView.m in Sources */,
+				C7A4ADBE29D4528C00BBA8AD /* SoftwarePackageViewController.m in Sources */,
+				A176D9BA2CA18774003DA1A5 /* VehicleClass4.m in Sources */,
+				A176D9942CA1814B003DA1A5 /* NetworkTool.m in Sources */,
+				C71CC2A42A08EA510076F3A6 /* FaultCodeTableViewCell.m in Sources */,
+				A176D9872CA17F94003DA1A5 /* UdpBase.m in Sources */,
+				C77621CC29F7A83800C8C075 /* SpeedTestInteractive.m in Sources */,
+				A176D9912CA180EA003DA1A5 /* UDSQueue.m in Sources */,
+				C705D83429D6ACF3006C2B59 /* mztools.m in Sources */,
+				C7A566C029D14500002A6B54 /* lvm.c in Sources */,
+				C7DA8CA02A039EA000C753B7 /* TransportModeView.m in Sources */,
+				C7A566C129D14500002A6B54 /* lfunc.c in Sources */,
+				C7A566C229D14500002A6B54 /* lstrlib.c in Sources */,
+				A176D9AB2CA18700003DA1A5 /* VehicleClass1.m in Sources */,
+				A176D9992CA1842D003DA1A5 /* UDSResponse.m in Sources */,
+				C77A39E629FCCC1900A5516E /* UIViewController+Test.m in Sources */,
+				C76F23252A1B5B8C002437AF /* SpeedView.m in Sources */,
+				C7A4ADD329D531FE00BBA8AD /* WaitView.m in Sources */,
+				C76F23292A1CC8AE002437AF /* SpeedTestInfoViewController.m in Sources */,
+				C705D82E29D6ACF3006C2B59 /* aestab.m in Sources */,
+				A176D9A12CA184FF003DA1A5 /* FlashBlockInfo.m in Sources */,
+				C7A566DD29D145CC002A6B54 /* PrePareLoadingViewController.m in Sources */,
+				C705D82929D6ACF2006C2B59 /* aescrypt.m in Sources */,
+				C7A566C329D14500002A6B54 /* lua.c in Sources */,
+				A176D9B82CA18774003DA1A5 /* VehicleClass3.m in Sources */,
+				C7A566C429D14500002A6B54 /* linit.c in Sources */,
+				A1A958D82DB7626A0097BC3F /* PopWindow.m in Sources */,
+				C7A566C529D14500002A6B54 /* lstring.c in Sources */,
+				C7E3A5C329D581DC008D92E8 /* EcuInstallView.m in Sources */,
+				C7A566C629D14500002A6B54 /* lundump.c in Sources */,
+				C710EBE22A4E9B1A004CAA7D /* ahocorasick.c in Sources */,
+				A176D9812CA17F0A003DA1A5 /* VehicleLoaclNetworkManager.m in Sources */,
+				C7A566C729D14500002A6B54 /* lctype.c in Sources */,
+				C705D83529D6ACF3006C2B59 /* SSZipArchive.m in Sources */,
+				C7A566C829D14500002A6B54 /* luac.c in Sources */,
+				C7A566E329D16D97002A6B54 /* NavigationView.m in Sources */,
+				C7A566C929D14500002A6B54 /* ltable.c in Sources */,
+				C705D83229D6ACF3006C2B59 /* zip.m in Sources */,
+				A176D98E2CA180C2003DA1A5 /* UdsStructured.m in Sources */,
+				C7A566CA29D14500002A6B54 /* ldump.c in Sources */,
+				C7A566CB29D14500002A6B54 /* loslib.c in Sources */,
+				A176D9C72CA1888B003DA1A5 /* HTTPManager.m in Sources */,
+				A1490D362DAF85B700BEC195 /* CustomLogFormatter.m in Sources */,
+				C7A566CC29D14500002A6B54 /* lgc.c in Sources */,
+				C7A4ADC729D456C600BBA8AD /* SoftwareDownloadView.m in Sources */,
+				C7A566CD29D14500002A6B54 /* lzio.c in Sources */,
+				C7DA8C932A037B2400C753B7 /* EnterDiagnostic.m in Sources */,
+				C7A4ADC229D452B600BBA8AD /* informationView.m in Sources */,
+				C705D82F29D6ACF3006C2B59 /* entropy.m in Sources */,
+				C7A566CE29D14500002A6B54 /* ldblib.c in Sources */,
+				C7A566CF29D14500002A6B54 /* lutf8lib.c in Sources */,
+				C77A39E329FCCC0000A5516E /* XTDebugControl.m in Sources */,
+				A176D9D62CA2CC1A003DA1A5 /* BINFileProcess.m in Sources */,
+				C7A566D029D14500002A6B54 /* lmem.c in Sources */,
+				C705D83129D6ACF3006C2B59 /* unzip.m in Sources */,
+				C7F3E92F29F67F6400A12E5E /* SpeedTestViewController.m in Sources */,
+				C7A566D129D14500002A6B54 /* lcorolib.c in Sources */,
+				A176D9C32CA1884D003DA1A5 /* UDSOperationResult.m in Sources */,
+				C705D82829D6ACF2006C2B59 /* hmac.m in Sources */,
+				C71CC2A02A08DF160076F3A6 /* FaultCodeViewController.m in Sources */,
+				C705D82729D6ACF2006C2B59 /* aeskey.m in Sources */,
+				A176D9B92CA18774003DA1A5 /* VehicleClass2.m in Sources */,
+				C7E3A5C029D580E6008D92E8 /* BallRotationProgressBar.m in Sources */,
+				C7E3A5D429D5AE37008D92E8 /* PackageDownPresenter.m in Sources */,
+				C7A566D229D14500002A6B54 /* lcode.c in Sources */,
+				A176D9842CA17F43003DA1A5 /* TcpBase.m in Sources */,
+				C7A566D329D14500002A6B54 /* ltablib.c in Sources */,
+				C7A566D429D14500002A6B54 /* lapi.c in Sources */,
+				C7A566D529D14500002A6B54 /* lbaselib.c in Sources */,
+				C7A4ADB429D4134F00BBA8AD /* NetworkInterface.m in Sources */,
+				C7DA8CA52A06503E00C753B7 /* CompletedView.m in Sources */,
+				C7A566D629D14500002A6B54 /* ldebug.c in Sources */,
+				C7A566D729D14500002A6B54 /* lparser.c in Sources */,
+				A176D98B2CA1802F003DA1A5 /* UDSPackageHandle.m in Sources */,
+				C7A566D829D14500002A6B54 /* llex.c in Sources */,
+				C7A566D929D14500002A6B54 /* ltm.c in Sources */,
+				C7A566DA29D14500002A6B54 /* ldo.c in Sources */,
+				C77621D129F7ABED00C8C075 /* SpeedVideoViewController.m in Sources */,
+				C705D82D29D6ACF3006C2B59 /* pwd2key.m in Sources */,
+				C745AD0229CDA59F00CF3C67 /* LuaBridge.m in Sources */,
+				C74C2D112A0DF4EB009DD9B9 /* FTPInteractive.m in Sources */,
+				C792E1CB29F1419C0063E7FA /* UIImageView+Tool.m in Sources */,
+				C7D7843E29CC248900A0F764 /* NSData+Category.m in Sources */,
+				C705D82A29D6ACF2006C2B59 /* fileenc.m in Sources */,
+				C7E3A5CF29D5A93F008D92E8 /* PackageDownloadInteractive.m in Sources */,
+				C7EA659E29CAA67D0095286A /* ViewController.m in Sources */,
+				C7EA659829CAA67D0095286A /* AppDelegate.m in Sources */,
+				A188499A2D267C4000BF8AFE /* ReplayKitManager.m in Sources */,
+				C7EA65A929CAA6810095286A /* main.m in Sources */,
+				A1A958DC2DB77E2D0097BC3F /* VersionManager.m in Sources */,
+				C7DA8C992A03886700C753B7 /* ConnectionPersenter.m in Sources */,
+				C745AB8829CD8B0A00CF3C67 /* LuaInvoke.m in Sources */,
+				C7D7844D29CC496E00A0F764 /* GCDAsyncUdpSocket.m in Sources */,
+				C7D7844E29CC496E00A0F764 /* GCDAsyncSocket.m in Sources */,
+				C7A4ADB829D4326400BBA8AD /* ActivationView.m in Sources */,
+				C705D82B29D6ACF3006C2B59 /* sha1.m in Sources */,
+				A176D9C22CA1884D003DA1A5 /* UDSProtocolDispatcher.m in Sources */,
+				C77A39E929FCCC2000A5516E /* UIImage+ImageBuffer.m in Sources */,
+				C7EA659B29CAA67D0095286A /* SceneDelegate.m in Sources */,
+				C77A39EC29FCCCBD00A5516E /* UIView+MJExtension.m in Sources */,
+				A176D99D2CA1847F003DA1A5 /* FirmwareDataManager.m in Sources */,
+				C74C2D0D2A0DF07E009DD9B9 /* FTPManager.m in Sources */,
+				A176D9CE2CA188C3003DA1A5 /* XmlProcess.m in Sources */,
+				C7A566E029D161AE002A6B54 /* ConnectionViewController.m in Sources */,
+				C7D7845129CC5D7700A0F764 /* TcpParserHandler.m in Sources */,
+				A176D9CD2CA188C3003DA1A5 /* UploadManager.m in Sources */,
+				C705D82C29D6ACF3006C2B59 /* prng.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA65AA29CAA6810095286A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EA65B329CAA6810095286A /* CarLinkChannelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7EA65B429CAA6810095286A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EA65BD29CAA6810095286A /* CarLinkChannelUITests.m in Sources */,
+				C7EA65BF29CAA6810095286A /* CarLinkChannelUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7EA65B029CAA6810095286A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7EA659229CAA67D0095286A /* CarLinkChannel */;
+			targetProxy = C7EA65AF29CAA6810095286A /* PBXContainerItemProxy */;
+		};
+		C7EA65BA29CAA6810095286A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7EA659229CAA67D0095286A /* CarLinkChannel */;
+			targetProxy = C7EA65B929CAA6810095286A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7EA659F29CAA67D0095286A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7EA65A029CAA67D0095286A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7EA65A429CAA6810095286A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7EA65A529CAA6810095286A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7EA65C029CAA6810095286A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C7EA65C129CAA6810095286A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7EA65C329CAA6810095286A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8648051F4DE896E76D7FF118 /* Pods-CarLinkChannel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC_EXCEPTIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = CarLinkChannel/CarLinkChannelDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2025091601;
+				DEVELOPMENT_TEAM = K8983KUAWD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarLinkChannel",
+					"$(PROJECT_DIR)/CarLinkChannel/Bugly",
+					"$(PROJECT_DIR)/CarLinkChannel/Baidu",
+				);
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CarLinkChannel/CarLinkChannelPrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"LINKMAP_FILE=$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt",
+					"ROOT_PATH=\"${SRCROOT}\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarLinkChannel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "ZD8 TCU";
+				INFOPLIST_KEY_NSCameraUsageDescription = "请允许ZD8访问您的相机";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "ZD8需要使用您的网络适配器以进行安装";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "请允许ZD8访问您的麦克风";
+				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "ZD8需要使用你的网络权限";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "ZD8需要访问您的相册";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CarLinkChannel/Baidu",
+				);
+				MARKETING_VERSION = 2.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zd8;
+				PRODUCT_NAME = "ZD8 TCU";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C7EA65C429CAA6810095286A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E69C1B0DE5CE3A7063545A3 /* Pods-CarLinkChannel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC_EXCEPTIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = CarLinkChannel/CarLinkChannel.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2025091601;
+				DEVELOPMENT_TEAM = K8983KUAWD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarLinkChannel",
+					"$(PROJECT_DIR)/CarLinkChannel/Bugly",
+					"$(PROJECT_DIR)/CarLinkChannel/Baidu",
+				);
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CarLinkChannel/CarLinkChannelPrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CarLinkChannel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "ZD8 TCU";
+				INFOPLIST_KEY_NSCameraUsageDescription = "请允许ZD8访问您的相机";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "ZD8需要使用您的网络适配器以进行安装";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "请允许ZD8访问您的麦克风";
+				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "ZD8需要使用你的网络权限";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "ZD8需要访问您的相册";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CarLinkChannel/Baidu",
+				);
+				MARKETING_VERSION = 2.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zd8;
+				PRODUCT_NAME = "ZD8 TCU";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C7EA65C629CAA6810095286A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBCF62CF3ED23EAC732FC519 /* Pods-CarLinkChannelTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73SG3N75U2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarLinkChannel/Bugly",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peiqing.keyboard.CarLinkChannelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarLinkChannel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarLinkChannel";
+			};
+			name = Debug;
+		};
+		C7EA65C729CAA6810095286A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03C78E26B0C486C459C2E296 /* Pods-CarLinkChannelTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73SG3N75U2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarLinkChannel/Bugly",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peiqing.keyboard.CarLinkChannelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarLinkChannel.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CarLinkChannel";
+			};
+			name = Release;
+		};
+		C7EA65C929CAA6810095286A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D694B358508137E31BC44E63 /* Pods-CarLinkChannel-CarLinkChannelUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73SG3N75U2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarLinkChannel/Bugly",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peiqing.keyboard.CarLinkChannelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarLinkChannel;
+			};
+			name = Debug;
+		};
+		C7EA65CA29CAA6810095286A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB26915988B647DD4210051F /* Pods-CarLinkChannel-CarLinkChannelUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 73SG3N75U2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarLinkChannel/Bugly",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peiqing.keyboard.CarLinkChannelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarLinkChannel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7EA658E29CAA67D0095286A /* Build configuration list for PBXProject "CarLinkChannel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EA65C029CAA6810095286A /* Debug */,
+				C7EA65C129CAA6810095286A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EA65C229CAA6810095286A /* Build configuration list for PBXNativeTarget "CarLinkChannel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EA65C329CAA6810095286A /* Debug */,
+				C7EA65C429CAA6810095286A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EA65C529CAA6810095286A /* Build configuration list for PBXNativeTarget "CarLinkChannelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EA65C629CAA6810095286A /* Debug */,
+				C7EA65C729CAA6810095286A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7EA65C829CAA6810095286A /* Build configuration list for PBXNativeTarget "CarLinkChannelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7EA65C929CAA6810095286A /* Debug */,
+				C7EA65CA29CAA6810095286A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7EA658B29CAA67D0095286A /* Project object */;
+}

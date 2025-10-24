@@ -1,0 +1,33 @@
+cat > .gitignore << 'EOF'
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Xcode
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.hmap
+*.ipa
+
+# macOS
+.DS_Store
+._*
+
+# 大型库文件
+*.a
+*.framework
+
+# 其他
+*.swp
+*~
+EOF
