@@ -9,6 +9,8 @@
 #import "UploadManager.h"
 #import "CustomLogFormatter.h"
 #import "SSZipArchive.h"
+#import "TCUAPIService.h"
+#import "TCUAPIConfig.h"
 
 @interface AppDelegate ()
 
@@ -16,17 +18,17 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.fileLogger = [[DDFileLogger alloc] init];
     self.fileLogger.rollingFrequency = 60 * 60 * 24; // 每 24 小时创建一个新日志文件
     self.fileLogger.logFileManager.maximumNumberOfLogFiles = 3;
     CustomLogFormatter *formatter = [[CustomLogFormatter alloc] init];
     [self.fileLogger setLogFormatter:formatter];
-    
+
     [DDLog addLogger:self.fileLogger];
 
-
+    [[TCUAPIService sharedService] setupSSLWithCertName:CLIENT_CERT_FILENAME
+                                                password:CLIENT_CERT_PASSWORD];
     return YES;
 }
 - (void)applicationWillTerminate:(UIApplication *)application {

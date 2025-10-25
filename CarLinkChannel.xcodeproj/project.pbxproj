@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003E6A222A56CFD800B59ED7 /* libBaiduMobStat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 003E6A212A56CFD700B59ED7 /* libBaiduMobStat.a */; };
 		003E6A282A56D1E400B59ED7 /* RunScript.md in Resources */ = {isa = PBXBuildFile; fileRef = 003E6A272A56D1E400B59ED7 /* RunScript.md */; };
 		A11A92562CA92565001C3007 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A11A92552CA92565001C3007 /* LoadingView.m */; };
 		A1490D362DAF85B700BEC195 /* CustomLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1490D352DAF85B700BEC195 /* CustomLogFormatter.m */; };
@@ -42,6 +41,11 @@
 		A1A958D82DB7626A0097BC3F /* PopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A958D72DB7626A0097BC3F /* PopWindow.m */; };
 		A1A958DC2DB77E2D0097BC3F /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A958DB2DB77E2D0097BC3F /* VersionManager.m */; };
 		A1D904822E17D6AB00E59EA4 /* KeyChainProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D904812E17D6AB00E59EA4 /* KeyChainProcess.m */; };
+		A1FE9D552EAB62480075F288 /* TCUAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D4E2EAB62480075F288 /* TCUAPIResponse.m */; };
+		A1FE9D562EAB62480075F288 /* TCUAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D502EAB62480075F288 /* TCUAPIService.m */; };
+		A1FE9D572EAB62480075F288 /* TCUSSLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D532EAB62480075F288 /* TCUSSLManager.m */; };
+		A1FE9D5C2EAB83210075F288 /* CLIENT-IOS-001.p12 in Resources */ = {isa = PBXBuildFile; fileRef = A1FE9D5B2EAB83210075F288 /* CLIENT-IOS-001.p12 */; };
+		A1FE9D5E2EAB93960075F288 /* TCUVehicleService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D5D2EAB93880075F288 /* TCUVehicleService.m */; };
 		C13D403D6761878396C517E1 /* Pods_CarLinkChannel_CarLinkChannelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74950CDFC8C13EC5F795134C /* Pods_CarLinkChannel_CarLinkChannelUITests.framework */; };
 		C705D82729D6ACF2006C2B59 /* aeskey.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80429D6ACF2006C2B59 /* aeskey.m */; };
 		C705D82829D6ACF2006C2B59 /* hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80629D6ACF2006C2B59 /* hmac.m */; };
@@ -68,7 +72,6 @@
 		C71CC2A02A08DF160076F3A6 /* FaultCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CC29F2A08DF160076F3A6 /* FaultCodeViewController.m */; };
 		C71CC2A42A08EA510076F3A6 /* FaultCodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C71CC2A32A08EA510076F3A6 /* FaultCodeTableViewCell.m */; };
 		C71CC2A62A0A03CB0076F3A6 /* wait.gif in Resources */ = {isa = PBXBuildFile; fileRef = C71CC2A52A0A03CB0076F3A6 /* wait.gif */; };
-		C7368F2C2A56CB1E00F76BE6 /* UserFeedBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F2A2A56CB1D00F76BE6 /* UserFeedBack.framework */; };
 		C7368F2E2A56CB7200F76BE6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F2D2A56CB7200F76BE6 /* JavaScriptCore.framework */; };
 		C7368F2F2A56CB7A00F76BE6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DE091D2A0D02180083C46F /* Security.framework */; };
 		C7368F312A56CB8200F76BE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F302A56CB8100F76BE6 /* CoreLocation.framework */; };
@@ -78,7 +81,6 @@
 		C7368F382A56CBA000F76BE6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F372A56CBA000F76BE6 /* UIKit.framework */; };
 		C7368F392A56CBAB00F76BE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A566F029D1A87D002A6B54 /* Foundation.framework */; };
 		C7368F3B2A56CBBD00F76BE6 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C7368F3A2A56CBB400F76BE6 /* libz.1.2.5.tbd */; };
-		C73A2EBA2A247AAF00A3E9F0 /* 29-05-2023 14:09.txt in Resources */ = {isa = PBXBuildFile; fileRef = C73A2EB92A247AAF00A3E9F0 /* 29-05-2023 14:09.txt */; };
 		C73A2EC82A2761E800A3E9F0 /* 50.WAV in Resources */ = {isa = PBXBuildFile; fileRef = C73A2EC62A2761E800A3E9F0 /* 50.WAV */; };
 		C73A2EC92A2761E800A3E9F0 /* 100.WAV in Resources */ = {isa = PBXBuildFile; fileRef = C73A2EC72A2761E800A3E9F0 /* 100.WAV */; };
 		C73A2ECB2A27634900A3E9F0 /* ready.WAV in Resources */ = {isa = PBXBuildFile; fileRef = C73A2ECA2A27634800A3E9F0 /* ready.WAV */; };
@@ -101,7 +103,6 @@
 		C77621DA29F7D10F00C8C075 /* SpeedTestBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77621D929F7D10F00C8C075 /* SpeedTestBottomView.xib */; };
 		C77621DD29F7E45D00C8C075 /* TcpSpeedTestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C77621DC29F7E45D00C8C075 /* TcpSpeedTestHandler.m */; };
 		C77A39E329FCCC0000A5516E /* XTDebugControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A39E129FCCC0000A5516E /* XTDebugControl.m */; };
-		C77A39E629FCCC1900A5516E /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A39E529FCCC1900A5516E /* UIViewController+Test.m */; };
 		C77A39E929FCCC2000A5516E /* UIImage+ImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A39E729FCCC2000A5516E /* UIImage+ImageBuffer.m */; };
 		C77A39EC29FCCCBD00A5516E /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A39EB29FCCCBD00A5516E /* UIView+MJExtension.m */; };
 		C77A618A29FA7C41006F3772 /* utils.lua in Resources */ = {isa = PBXBuildFile; fileRef = C77A618929FA7C41006F3772 /* utils.lua */; };
@@ -221,7 +222,6 @@
 
 /* Begin PBXFileReference section */
 		003E6A202A56BB9000B59ED7 /* STCDefination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCDefination.h; sourceTree = SOURCE_ROOT; };
-		003E6A212A56CFD700B59ED7 /* libBaiduMobStat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduMobStat.a; sourceTree = "<group>"; };
 		003E6A272A56D1E400B59ED7 /* RunScript.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RunScript.md; sourceTree = "<group>"; };
 		03C78E26B0C486C459C2E296 /* Pods-CarLinkChannelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarLinkChannelTests.release.xcconfig"; path = "Target Support Files/Pods-CarLinkChannelTests/Pods-CarLinkChannelTests.release.xcconfig"; sourceTree = "<group>"; };
 		1E69C1B0DE5CE3A7063545A3 /* Pods-CarLinkChannel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarLinkChannel.release.xcconfig"; path = "Target Support Files/Pods-CarLinkChannel/Pods-CarLinkChannel.release.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +295,16 @@
 		A1A958DB2DB77E2D0097BC3F /* VersionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VersionManager.m; sourceTree = "<group>"; };
 		A1D904802E17D6AB00E59EA4 /* KeyChainProcess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyChainProcess.h; sourceTree = "<group>"; };
 		A1D904812E17D6AB00E59EA4 /* KeyChainProcess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyChainProcess.m; sourceTree = "<group>"; };
+		A1FE9D4C2EAB62480075F288 /* TCUAPIConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUAPIConfig.h; sourceTree = "<group>"; };
+		A1FE9D4D2EAB62480075F288 /* TCUAPIResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUAPIResponse.h; sourceTree = "<group>"; };
+		A1FE9D4E2EAB62480075F288 /* TCUAPIResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUAPIResponse.m; sourceTree = "<group>"; };
+		A1FE9D4F2EAB62480075F288 /* TCUAPIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUAPIService.h; sourceTree = "<group>"; };
+		A1FE9D502EAB62480075F288 /* TCUAPIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUAPIService.m; sourceTree = "<group>"; };
+		A1FE9D522EAB62480075F288 /* TCUSSLManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUSSLManager.h; sourceTree = "<group>"; };
+		A1FE9D532EAB62480075F288 /* TCUSSLManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUSSLManager.m; sourceTree = "<group>"; };
+		A1FE9D5B2EAB83210075F288 /* CLIENT-IOS-001.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CLIENT-IOS-001.p12"; sourceTree = "<group>"; };
+		A1FE9D5D2EAB93880075F288 /* TCUVehicleService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUVehicleService.m; sourceTree = "<group>"; };
+		A1FE9D5F2EAB93990075F288 /* TCUVehicleService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUVehicleService.h; sourceTree = "<group>"; };
 		C7002F8F29ED3BC800131836 /* CarLinkChannel.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = CarLinkChannel.entitlements; sourceTree = "<group>"; };
 		C705D80229D6ACF2006C2B59 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		C705D80429D6ACF2006C2B59 /* aeskey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aeskey.m; sourceTree = "<group>"; };
@@ -349,15 +359,12 @@
 		C71CC2A22A08EA510076F3A6 /* FaultCodeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaultCodeTableViewCell.h; sourceTree = "<group>"; };
 		C71CC2A32A08EA510076F3A6 /* FaultCodeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaultCodeTableViewCell.m; sourceTree = "<group>"; };
 		C71CC2A52A0A03CB0076F3A6 /* wait.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wait.gif; sourceTree = "<group>"; };
-		C7368F292A56CB1D00F76BE6 /* BaiduMobStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobStat.h; sourceTree = "<group>"; };
-		C7368F2A2A56CB1D00F76BE6 /* UserFeedBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UserFeedBack.framework; sourceTree = "<group>"; };
 		C7368F2D2A56CB7200F76BE6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		C7368F302A56CB8100F76BE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C7368F332A56CB8F00F76BE6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		C7368F352A56CB9700F76BE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C7368F372A56CBA000F76BE6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C7368F3A2A56CBB400F76BE6 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
-		C73A2EB92A247AAF00A3E9F0 /* 29-05-2023 14:09.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "29-05-2023 14:09.txt"; sourceTree = "<group>"; };
 		C73A2EC62A2761E800A3E9F0 /* 50.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 50.WAV; sourceTree = "<group>"; };
 		C73A2EC72A2761E800A3E9F0 /* 100.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 100.WAV; sourceTree = "<group>"; };
 		C73A2ECA2A27634800A3E9F0 /* ready.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ready.WAV; sourceTree = "<group>"; };
@@ -393,8 +400,6 @@
 		C77621DC29F7E45D00C8C075 /* TcpSpeedTestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TcpSpeedTestHandler.m; sourceTree = "<group>"; };
 		C77A39E129FCCC0000A5516E /* XTDebugControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTDebugControl.m; sourceTree = "<group>"; };
 		C77A39E229FCCC0000A5516E /* XTDebugControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTDebugControl.h; sourceTree = "<group>"; };
-		C77A39E429FCCC1800A5516E /* UIViewController+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
-		C77A39E529FCCC1900A5516E /* UIViewController+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
 		C77A39E729FCCC2000A5516E /* UIImage+ImageBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageBuffer.m"; sourceTree = "<group>"; };
 		C77A39E829FCCC2000A5516E /* UIImage+ImageBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageBuffer.h"; sourceTree = "<group>"; };
 		C77A39EA29FCCCBD00A5516E /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
@@ -574,7 +579,6 @@
 				C78AF57629FF86720059F4F7 /* CFNetwork.framework in Frameworks */,
 				C7DE09222A0D02420083C46F /* libz.tbd in Frameworks */,
 				C7368F362A56CB9800F76BE6 /* CoreGraphics.framework in Frameworks */,
-				003E6A222A56CFD800B59ED7 /* libBaiduMobStat.a in Frameworks */,
 				C7368F342A56CB9000F76BE6 /* CoreTelephony.framework in Frameworks */,
 				C7368F392A56CBAB00F76BE6 /* Foundation.framework in Frameworks */,
 				C7DE09212A0D023A0083C46F /* libc++.tbd in Frameworks */,
@@ -582,7 +586,6 @@
 				C7DE091C2A0D02110083C46F /* SystemConfiguration.framework in Frameworks */,
 				C7368F2F2A56CB7A00F76BE6 /* Security.framework in Frameworks */,
 				C7A566F129D1A87E002A6B54 /* Foundation.framework in Frameworks */,
-				C7368F2C2A56CB1E00F76BE6 /* UserFeedBack.framework in Frameworks */,
 				C7368F2E2A56CB7200F76BE6 /* JavaScriptCore.framework in Frameworks */,
 				C7DE091E2A0D02190083C46F /* Security.framework in Frameworks */,
 				C7368F3B2A56CBBD00F76BE6 /* libz.1.2.5.tbd in Frameworks */,
@@ -773,6 +776,30 @@
 			path = TOOL;
 			sourceTree = "<group>";
 		};
+		A1FE9D4B2EAB61FF0075F288 /* NewApi */ = {
+			isa = PBXGroup;
+			children = (
+				A1FE9D5F2EAB93990075F288 /* TCUVehicleService.h */,
+				A1FE9D5D2EAB93880075F288 /* TCUVehicleService.m */,
+				A1FE9D4C2EAB62480075F288 /* TCUAPIConfig.h */,
+				A1FE9D4D2EAB62480075F288 /* TCUAPIResponse.h */,
+				A1FE9D4E2EAB62480075F288 /* TCUAPIResponse.m */,
+				A1FE9D4F2EAB62480075F288 /* TCUAPIService.h */,
+				A1FE9D502EAB62480075F288 /* TCUAPIService.m */,
+				A1FE9D522EAB62480075F288 /* TCUSSLManager.h */,
+				A1FE9D532EAB62480075F288 /* TCUSSLManager.m */,
+			);
+			path = NewApi;
+			sourceTree = "<group>";
+		};
+		A1FE9D582EAB75240075F288 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				A1FE9D5B2EAB83210075F288 /* CLIENT-IOS-001.p12 */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
 		AAF3C54E486B72B8EB51B0C9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,16 +931,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C7368F272A56CB0800F76BE6 /* Baidu */ = {
-			isa = PBXGroup;
-			children = (
-				C7368F292A56CB1D00F76BE6 /* BaiduMobStat.h */,
-				003E6A212A56CFD700B59ED7 /* libBaiduMobStat.a */,
-				C7368F2A2A56CB1D00F76BE6 /* UserFeedBack.framework */,
-			);
-			path = Baidu;
-			sourceTree = "<group>";
-		};
 		C745AB7F29CD758D00CF3C67 /* LuaScript */ = {
 			isa = PBXGroup;
 			children = (
@@ -1014,8 +1031,6 @@
 			children = (
 				C77A39E829FCCC2000A5516E /* UIImage+ImageBuffer.h */,
 				C77A39E729FCCC2000A5516E /* UIImage+ImageBuffer.m */,
-				C77A39E429FCCC1800A5516E /* UIViewController+Test.h */,
-				C77A39E529FCCC1900A5516E /* UIViewController+Test.m */,
 				C77A39E229FCCC0000A5516E /* XTDebugControl.h */,
 				C77A39E129FCCC0000A5516E /* XTDebugControl.m */,
 				C77A39EA29FCCCBD00A5516E /* UIView+MJExtension.h */,
@@ -1290,12 +1305,12 @@
 		C7EA659529CAA67D0095286A /* CarLinkChannel */ = {
 			isa = PBXGroup;
 			children = (
+				A1FE9D582EAB75240075F288 /* Certificates */,
+				A1FE9D4B2EAB61FF0075F288 /* NewApi */,
 				A1D9047F2E17D69300E59EA4 /* TOOL */,
 				A1A958D52DB762590097BC3F /* General */,
 				A11A92532CA92546001C3007 /* TOOLView */,
 				A176D97A2CA17DB3003DA1A5 /* Network */,
-				C7368F272A56CB0800F76BE6 /* Baidu */,
-				C73A2EB92A247AAF00A3E9F0 /* 29-05-2023 14:09.txt */,
 				C73A2ECA2A27634800A3E9F0 /* ready.WAV */,
 				C73A2EC62A2761E800A3E9F0 /* 50.WAV */,
 				C73A2EC72A2761E800A3E9F0 /* 100.WAV */,
@@ -1545,6 +1560,7 @@
 				003E6A282A56D1E400B59ED7 /* RunScript.md in Resources */,
 				C7E3A5C529D581E8008D92E8 /* EcuInstallView.xib in Resources */,
 				C77621DA29F7D10F00C8C075 /* SpeedTestBottomView.xib in Resources */,
+				A1FE9D5C2EAB83210075F288 /* CLIENT-IOS-001.p12 in Resources */,
 				C7A566EF29D1A7BD002A6B54 /* CarLinkChannelPrefixHeader.pch in Resources */,
 				C7A4ADD529D5320900BBA8AD /* WaitView.xib in Resources */,
 				C7EA65A629CAA6810095286A /* LaunchScreen.storyboard in Resources */,
@@ -1573,7 +1589,6 @@
 				C73A2EC82A2761E800A3E9F0 /* 50.WAV in Resources */,
 				C745AB9529CDA33F00CF3C67 /* BMWJobParse.lua in Resources */,
 				C7A4ADC929D4570400BBA8AD /* SoftwareDownloadView.xib in Resources */,
-				C73A2EBA2A247AAF00A3E9F0 /* 29-05-2023 14:09.txt in Resources */,
 				C79A5BF129FA3ADD00CD822D /* zd8-5.gif in Resources */,
 				C77A618A29FA7C41006F3772 /* utils.lua in Resources */,
 				C77621C629F695ED00C8C075 /* SpeedTestHeaderView.xib in Resources */,
@@ -1760,6 +1775,7 @@
 				A176D9BA2CA18774003DA1A5 /* VehicleClass4.m in Sources */,
 				A176D9942CA1814B003DA1A5 /* NetworkTool.m in Sources */,
 				C71CC2A42A08EA510076F3A6 /* FaultCodeTableViewCell.m in Sources */,
+				A1FE9D5E2EAB93960075F288 /* TCUVehicleService.m in Sources */,
 				A176D9872CA17F94003DA1A5 /* UdpBase.m in Sources */,
 				C77621CC29F7A83800C8C075 /* SpeedTestInteractive.m in Sources */,
 				A176D9912CA180EA003DA1A5 /* UDSQueue.m in Sources */,
@@ -1770,7 +1786,6 @@
 				C7A566C229D14500002A6B54 /* lstrlib.c in Sources */,
 				A176D9AB2CA18700003DA1A5 /* VehicleClass1.m in Sources */,
 				A176D9992CA1842D003DA1A5 /* UDSResponse.m in Sources */,
-				C77A39E629FCCC1900A5516E /* UIViewController+Test.m in Sources */,
 				C76F23252A1B5B8C002437AF /* SpeedView.m in Sources */,
 				C7A4ADD329D531FE00BBA8AD /* WaitView.m in Sources */,
 				C76F23292A1CC8AE002437AF /* SpeedTestInfoViewController.m in Sources */,
@@ -1847,6 +1862,9 @@
 				A1A958DC2DB77E2D0097BC3F /* VersionManager.m in Sources */,
 				C7DA8C992A03886700C753B7 /* ConnectionPersenter.m in Sources */,
 				C745AB8829CD8B0A00CF3C67 /* LuaInvoke.m in Sources */,
+				A1FE9D552EAB62480075F288 /* TCUAPIResponse.m in Sources */,
+				A1FE9D562EAB62480075F288 /* TCUAPIService.m in Sources */,
+				A1FE9D572EAB62480075F288 /* TCUSSLManager.m in Sources */,
 				C7D7844D29CC496E00A0F764 /* GCDAsyncUdpSocket.m in Sources */,
 				C7D7844E29CC496E00A0F764 /* GCDAsyncSocket.m in Sources */,
 				C7A4ADB829D4326400BBA8AD /* ActivationView.m in Sources */,

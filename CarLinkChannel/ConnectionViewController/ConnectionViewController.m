@@ -18,6 +18,10 @@
 
 #import "EcuInstallView.h"
 #import "SSZipArchive.h"
+#import "TCUAPIService.h"
+#import "TCUAPIConfig.h"
+#import "TCUVehicleService.h"
+
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 @interface ConnectionViewController()<NavigationViewDelegate,LeftMenuDelegate,FlashFeedbackDelegate>
 {
@@ -98,18 +102,436 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewTarget)];
     [self.view addGestureRecognizer:tap];
     [self addAllNotification];
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0), ^{
+//        [self InitVehicleNetwork];
+//        if([self checkEcuSupport:self->VehicleSvt])
+//        {
+//            [self CafdAndMidProcess];
+//            [self DisplayCheckVehicleStatus];
+//            [self checkLicenseAndSetButton];
+//        }
+//    });
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0), ^{
         [self InitVehicleNetwork];
-        if([self checkEcuSupport:self->VehicleSvt])
-        {
-            [self CafdAndMidProcess];
-            [self DisplayCheckVehicleStatus];
-            [self checkLicenseAndSetButton];
-        }
+        [self uploadVehicleInfoAndCheckSupport];  // 新方法
     });
     [self InitInstallView];
     [self storeMacrosInDictionary];
 }
+
+
+- (void)uploadVehicleInfoAndCheckSupport {
+    
+    // 1. 检查VIN和SVT是否已获取
+    if (!self->VehicleVin || self->VehicleVin.length == 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self PrintInformationToDisplayLog:error_prefix :@"未能读取车辆VIN信息"];
+        });
+        return;
+    }
+    
+    if (!self->VehicleSvt || self->VehicleSvt.count == 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self PrintInformationToDisplayLog:error_prefix :@"未能读取车辆SVT信息"];
+        });
+        return;
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self PrintInformationToDisplayLog:info_prefix :@"正在上传车辆信息..."];
+    });
+    
+    // 2. 调用新API上传车辆信息
+    [self uploadVehicleInfoWithCompletion:^(BOOL success, NSString *binFileName, NSError *error) {
+        
+        if (!success || error) {
+            // 上传失败
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *errorMsg = error ? error.localizedDescription : @"车辆信息上传失败";
+                [self PrintInformationToDisplayLog:error_prefix :errorMsg];
+            });
+            return;
+        }
+        
+        // 3. 检查车辆是否支持
+        if ([self checkVehicleSupportWithBinFileName:binFileName]) {
+            // 车辆支持
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self PrintInformationToDisplayLog:info_prefix :@"车辆支持刷写"];
+            });
+            
+            // 4. 继续原有流程
+            [self CafdAndMidProcess];
+            [self DisplayCheckVehicleStatus];
+            
+            // 5. 检查激活状态
+            [self checkActivationStatus];
+            
+        } else {
+            // 车辆不支持
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self PrintInformationToDisplayLog:error_prefix :ECU_UNSUPPORTED];
+            });
+        }
+    }];
+}
+
+//
+//  ConnectionViewController+NewAPI.m
+//  完整的车辆信息上传方法
+//
+
+#pragma mark - 上传车辆信息到服务器
+
+/**
+ * 调用 /api/users/VehicleMsg/info 上传车辆信息
+ * 使用TCUAPIService的公开方法，不直接访问urlSession
+ */
+- (void)uploadVehicleInfoWithCompletion:(void(^)(BOOL success, NSString *binFileName, NSError *error))completion {
+
+    // 1. 参数校验
+    if (!self->VehicleVin || self->VehicleVin.length == 0) {
+        NSError *error = [NSError errorWithDomain:@"TCUConnectionError"
+                                             code:1001
+                                         userInfo:@{NSLocalizedDescriptionKey: @"VIN为空"}];
+        if (completion) completion(NO, nil, error);
+        return;
+    }
+    
+    if (!self->VehicleSvt || self->VehicleSvt.count == 0) {
+        NSError *error = [NSError errorWithDomain:@"TCUConnectionError"
+                                             code:1002
+                                         userInfo:@{NSLocalizedDescriptionKey: @"SVT为空"}];
+        if (completion) completion(NO, nil, error);
+        return;
+    }
+    
+    // 2. 转换SVT数组为字典 ✅ 关键修改
+    NSDictionary *svtDict = [self convertSvtArrayToDictionary:self->VehicleSvt];
+    
+    DDLogInfo(@"[NewAPI] 准备上传车辆信息: VIN=%@, SVT=%@", self->VehicleVin, svtDict);
+    
+    // 3. 转换CAFD数组为字典（如果有）
+    NSDictionary *cafdDict = @{};
+    if (cafdArray && cafdArray.count > 0) {
+        cafdDict = [self convertCafdArrayToDictionary:cafdArray];
+    }
+    
+    // 4. 调用TCUAPIService的方法上传
+    [[TCUVehicleService sharedService] uploadVehicleInfoWithVIN:self->VehicleVin
+                                                        svt:svtDict
+                                                       cafd:cafdDict
+                                                 completion:^(BOOL success, NSString *binFileName, NSError *error) {
+        
+//        // 5. 处理响应
+//        if (error) {
+//            DDLogError(@"[NewAPI] 车辆信息上传失败: %@", error.localizedDescription);
+//            
+//            NSString *errorMessage = error.localizedDescription;
+//            if (error.code == TCUErrorCodeSSLError) {
+//                errorMessage = @"SSL证书未配置";
+//            } else if (error.code == TCUErrorCodeNetworkError) {
+//                errorMessage = @"网络连接失败，请检查网络";
+//            }
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self PrintInformationToDisplayLog:error_prefix :errorMessage];
+//            });
+//            
+//            if (completion) completion(NO, nil, error);
+//            return;
+//        }
+//        
+//        if (success) {
+//            DDLogInfo(@"[NewAPI] 车辆信息上传成功, BinFileName: %@", binFileName);
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self PrintInformationToDisplayLog:info_prefix :@"车辆信息上传成功"];
+//            });
+//            
+//            if (completion) completion(YES, binFileName, nil);
+//        } else {
+//            DDLogError(@"[NewAPI] API返回失败");
+//            
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self PrintInformationToDisplayLog:error_prefix :@"服务器返回失败"];
+//            });
+//            
+//            NSError *apiError = [NSError errorWithDomain:@"TCUAPIError"
+//                                                    code:1003
+//                                                userInfo:@{NSLocalizedDescriptionKey: @"服务器返回失败"}];
+//            if (completion) completion(NO, nil, apiError);
+//        }
+    }];
+}
+#pragma mark - 检查激活状态
+
+/**
+ * 检查本地是否有License，判断是否需要激活
+ */
+- (void)checkActivationStatus {
+    
+    // 从KeyChain读取License
+    NSDictionary *keyDic = [KeyChainProcess getFromKeychainForKey:@"License"];
+    NSString *localLicense = keyDic[self->VehicleVin];
+    
+    if (localLicense && localLicense.length > 0) {
+        // 本地有License，不需要激活
+        DDLogInfo(@"[NewAPI] 本地已有License: %@", localLicense);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self PrintInformationToDisplayLog:info_prefix :@"车辆已激活"];
+            
+            // TODO: 可选 - 调用API验证License是否仍然有效
+            // [self validateLicenseWithServer:localLicense];
+            
+            // 启用下一步按钮
+            [self handleActivatedState];
+        });
+        
+    } else {
+        // 本地没有License，需要激活
+        DDLogInfo(@"[NewAPI] 本地无License，需要激活");
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self PrintInformationToDisplayLog:info_prefix :CAR_NOT_REGISTER_CONTENT];
+            
+            // 启用激活按钮
+            [self handleNeedActivationState];
+        });
+    }
+}
+#pragma mark - 检查车辆是否支持
+
+/**
+ * 根据BinFileName判断车辆是否支持
+ * @param binFileName 从API返回的BinFileName
+ * @return YES=支持, NO=不支持
+ */
+- (BOOL)checkVehicleSupportWithBinFileName:(NSString *)binFileName {
+    
+    // 判断逻辑：
+    // 1. binFileName为nil -> 不支持
+    // 2. binFileName为空字符串 -> 不支持
+    // 3. binFileName有值 -> 支持
+    
+    if (!binFileName || binFileName.length == 0) {
+        DDLogInfo(@"[NewAPI] 车辆不支持: BinFileName为空");
+        return NO;
+    }
+    
+    DDLogInfo(@"[NewAPI] 车辆支持: BinFileName=%@", binFileName);
+    
+    // 保存binFileName供后续使用
+    self->binaryName = binFileName;
+    
+    return YES;
+}
+
+#pragma mark - 辅助方法
+
+/**
+ * 将SVT数组转换为字符串格式
+ * 格式示例: "SWFL_xxx,BTLD_yyy,HWEL_zzz"
+ */
+- (NSString *)convertSvtArrayToString:(NSArray *)svtArray {
+    if (!svtArray || svtArray.count == 0) {
+        return @"";
+    }
+    
+    NSMutableArray *svtStrings = [NSMutableArray array];
+    
+    for (id item in svtArray) {
+        if ([item isKindOfClass:[NSString class]]) {
+            [svtStrings addObject:item];
+        } else if ([item isKindOfClass:[NSDictionary class]]) {
+            // 如果SVT是字典格式，需要提取关键字段
+            NSDictionary *dict = (NSDictionary *)item;
+            NSString *svtString = dict[@"svt"] ?: @"";
+            if (svtString.length > 0) {
+                [svtStrings addObject:svtString];
+            }
+        }
+    }
+    
+    return [svtStrings componentsJoinedByString:@","];
+}
+
+/**
+ * 将SVT数组转换为字典格式
+ *
+ * 输入示例: @[@"SWFL_00001234_002_156_007", @"BTLD_00005678_003_200_001", @"HWEL_000022AE"]
+ * 输出示例: @{
+ *     @"SWFL": @"SWFL_00001234_002_156_007",
+ *     @"BTLD": @"BTLD_00005678_003_200_001",
+ *     @"HWEL": @"HWEL_000022AE"
+ * }
+ */
+- (NSDictionary *)convertSvtArrayToDictionary:(NSArray *)svtArray {
+    if (!svtArray || svtArray.count == 0) {
+        return @{};
+    }
+    
+    NSMutableDictionary *svtDict = [NSMutableDictionary dictionary];
+    NSMutableDictionary *keyCounters = [NSMutableDictionary dictionary];  // 记录每个key出现的次数
+    
+    for (id item in svtArray) {
+        NSString *svtString = nil;
+        
+        if ([item isKindOfClass:[NSString class]]) {
+            svtString = (NSString *)item;
+        } else if ([item isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *dict = (NSDictionary *)item;
+            svtString = dict[@"value"] ?: dict[@"svt"] ?: @"";
+        }
+        
+        if (svtString && svtString.length > 0) {
+            // 提取key和value
+            // "SWFL_00001234_002_156_007" -> key="SWFL", value="00001234_002_156_007"
+            NSArray *components = [svtString componentsSeparatedByString:@"_"];
+            if (components.count > 1) {
+                NSString *baseKey = components[0];  // "SWFL", "BTLD", "HWEL", "CAFD" 等
+                
+                // value是去掉第一个前缀后的部分
+                NSMutableArray *valueComponents = [components mutableCopy];
+                [valueComponents removeObjectAtIndex:0];  // 移除 "SWFL"
+                NSString *value = [valueComponents componentsJoinedByString:@"_"];  // "00001234_002_156_007"
+                
+                // 检查这个key是否已经存在
+                NSInteger count = [keyCounters[baseKey] integerValue];
+                
+                NSString *finalKey;
+                if (count == 0) {
+                    // 第一次出现，使用原始key
+                    finalKey = baseKey;  // "SWFL"
+                    keyCounters[baseKey] = @(1);
+                } else {
+                    // 第N次出现，使用带序号的key
+                    finalKey = [NSString stringWithFormat:@"%@%ld", baseKey, (long)(count + 1)];  // "SWFL2", "SWFL3"...
+                    keyCounters[baseKey] = @(count + 1);
+                }
+                
+                svtDict[finalKey] = value;  // 去掉前缀的值
+            }
+        }
+    }
+    
+    return [svtDict copy];
+}
+
+#pragma mark - 辅助方法（用于排序）
+
+/**
+ * 从key中提取前缀
+ * "SWFL" -> "SWFL"
+ * "SWFL2" -> "SWFL"
+ * "BTLD3" -> "BTLD"
+ */
+- (NSString *)extractPrefix:(NSString *)key {
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^([A-Z]+)"
+                                                                            options:0
+                                                                              error:nil];
+    NSTextCheckingResult *match = [regex firstMatchInString:key
+                                                    options:0
+                                                      range:NSMakeRange(0, key.length)];
+    
+    if (match && match.range.location != NSNotFound) {
+        return [key substringWithRange:match.range];
+    }
+    
+    return key;
+}
+
+/**
+ * 从key中提取序号
+ * "SWFL" -> 0
+ * "SWFL2" -> 2
+ * "BTLD3" -> 3
+ */
+- (NSInteger)extractNumber:(NSString *)key {
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(\\d+)$"
+                                                                            options:0
+                                                                              error:nil];
+    NSTextCheckingResult *match = [regex firstMatchInString:key
+                                                    options:0
+                                                      range:NSMakeRange(0, key.length)];
+    
+    if (match && match.range.location != NSNotFound) {
+        NSString *numberString = [key substringWithRange:match.range];
+        return [numberString integerValue];
+    }
+    
+    return 0;  // 没有序号，返回0（表示第一个）
+}
+
+/**
+ * 将CAFD数组转换为字典格式
+ *
+ * 输入示例: @[@"CAFD_12345678_001_100_050", @"CAFD_FFFFFFFF_255_255_255"]
+ * 输出示例: @{
+ *     @"CAFD": @"CAFD_12345678_001_100_050"
+ * }
+ */
+- (NSDictionary *)convertCafdArrayToDictionary:(NSArray *)cafdArray {
+    if (!cafdArray || cafdArray.count == 0) {
+        return @{};
+    }
+    
+    NSMutableDictionary *cafdDict = [NSMutableDictionary dictionary];
+    
+    for (NSInteger i = 0; i < cafdArray.count; i++) {
+        id item = cafdArray[i];
+        NSString *cafdString = nil;
+        
+        if ([item isKindOfClass:[NSString class]]) {
+            cafdString = (NSString *)item;
+        } else if ([item isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *dict = (NSDictionary *)item;
+            cafdString = dict[@"value"] ?: dict[@"cafd"] ?: @"";
+        }
+        
+        if (cafdString && cafdString.length > 0) {
+            // key格式: cafd1, cafd2, cafd3...
+            NSString *key = [NSString stringWithFormat:@"cafd%ld", (long)(i + 1)];
+            cafdDict[key] = cafdString;
+        }
+    }
+    
+    DDLogInfo(@"[NewAPI] CAFD转换: %ld项 -> %@", (long)cafdArray.count, cafdDict);
+    
+    return [cafdDict copy];
+}
+#pragma mark - 处理激活状态
+
+/**
+ * 处理已激活状态
+ */
+- (void)handleActivatedState {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 禁用激活按钮
+        self.activationButton.enabled = NO;
+        
+        // 启用下一步按钮
+        self.nextButton.enabled = YES;
+        
+        // TODO: 可选 - 检查是否有新的Bin文件更新
+        // [self CheckBinFile];
+    });
+}
+
+/**
+ * 处理需要激活状态
+ */
+- (void)handleNeedActivationState {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 启用激活按钮
+        self.activationButton.enabled = YES;
+        
+        // 禁用下一步按钮
+        self.nextButton.enabled = NO;
+    });
+}
+
 
 -(UIRectEdge)preferredScreenEdgesDeferringSystemGestures{
     return UIRectEdgeBottom;
@@ -741,6 +1163,14 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     });
     self->VehicleSvt = [self.AutoNetworkManager ReadVehicleSvt];
     [self DisplayVersionInformation:self->VehicleSvt];
+    serotype = [self getSeroTypeOnlyCheck];
+    NSLog(@"sero:%d",serotype);
+    DDLogInfo(@"sero : %d",serotype);
+    [self.AutoNetworkManager SetVehicleClass:serotype];
+    if(serotype!=4)
+    {
+        cafdArray = [self.AutoNetworkManager ReadCafd:serotype];
+    }
 }
 
 -(void)CafdAndMidProcess {
