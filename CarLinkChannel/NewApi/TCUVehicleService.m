@@ -51,92 +51,92 @@
         NSLog(@"[VehicleService] ⚠️ VIN长度异常: %lu", (unsigned long)vin.length);
     }
     
-    // 构建请求参数 - svt和cafd是字典对象
-    // 服务器端: public Dictionary<string, string> Svt { get; set; }
-    // 服务器端: public Dictionary<string, string> Cafd { get; set; }
+    // ==================== 关键修复: 添加必需参数 ====================
+    // 构建请求参数 - 对应服务器端 VehicleInfoRequest
+    // 继承自 VehicleRequestBase 的必需字段:
+    //   [Required] public string Vin { get; set; }
+    //   [Required] public string Hwid { get; set; }
+    //   [Required] public Platform Platform { get; set; }  // 0=Windows, 1=iOS
+    // VehicleInfoRequest 自己的字段:
+    //   public Dictionary<string, string> Svt { get; set; }
+    //   public Dictionary<string, string> Cafd { get; set; }
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"vin"] = vin;
     
-    // 添加SVT字典（如果存在）
+    // ✅ 必需参数1: VIN
+    params[@"Vin"] = vin;
+    
+    // ✅ 必需参数2: Hwid (硬件ID - 从MAC地址生成MD5)
+    NSString *hwid = @"IOS_Device";
+    params[@"Hwid"] = hwid;
+    NSLog(@"  HWID: %@", hwid);
+    
+    // ✅ 必需参数3: Platform (1 = iOS)
+    params[@"Platform"] = @(1); // Platform enum: 0=Windows, 1=iOS
+    
+    // 可选参数: SVT字典
     if (svtDict && [svtDict isKindOfClass:[NSDictionary class]]) {
-        params[@"svt"] = svtDict;
+        params[@"Svt"] = svtDict;
     } else {
-        params[@"svt"] = @{}; // 空字典
+        params[@"Svt"] = @{}; // 空字典
     }
     
-    // 添加CAFD字典（如果存在）
+    // 可选参数: CAFD字典
     if (cafdDict && [cafdDict isKindOfClass:[NSDictionary class]]) {
-        params[@"cafd"] = cafdDict;
+        params[@"Cafd"] = cafdDict;
     } else {
-        params[@"cafd"] = @{}; // 空字典
+        params[@"Cafd"] = @{}; // 空字典
     }
+    // ==================== 修复结束 ====================
     
-    NSLog(@"[VehicleService] 📦 请求参数: %@", params);
+    NSLog(@"[VehicleService] 📦 完整请求参数: %@", params);
     
-    // 构建URL - 对应服务器端 [HttpPost("api/vehicle/info")]
+    // 构建URL - 对应服务器端 [HttpPost("api/users/VehicleMsg/info")]
     NSURL *url = API_URL(API_VEHICLE_INFO);
     
     NSLog(@"[VehicleService] 🌐 请求URL: %@", url);
     
-    // 发送POST请求
+    // 发送请求
     [[TCUAPIService sharedService] POST:url
                               parameters:params
                               completion:^(id responseObject, NSError *error) {
         
         if (error) {
             NSLog(@"[VehicleService] ❌ 上传失败: %@", error.localizedDescription);
-            NSLog(@"[VehicleService] 错误详情: %@", error);
-            
             if (completion) {
                 completion(NO, nil, error);
             }
             return;
         }
         
-        NSLog(@"[VehicleService] ✅ 请求成功");
+        // 解析响应
+        NSLog(@"[VehicleService] ✅ 上传成功");
         NSLog(@"[VehicleService] 📥 服务器响应: %@", responseObject);
         
-        // 解析响应 - 服务器返回格式: { success: bool, message: string, id: string }
+        // 提取响应中的ID（如果有）
+        NSString *responseId = nil;
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
-            NSDictionary *response = (NSDictionary *)responseObject;
+            NSDictionary *responseDict = (NSDictionary *)responseObject;
             
-            // 获取响应字段
-            BOOL success = [response[@"success"] boolValue];
-            NSString *message = response[@"message"];
-            NSString *responseId = response[@"id"]; // 车辆数据库ID
-            
-            NSLog(@"[VehicleService] Success: %@", success ? @"YES" : @"NO");
-            NSLog(@"[VehicleService] Message: %@", message ?: @"(无消息)");
-            NSLog(@"[VehicleService] ID: %@", responseId ?: @"(无ID)");
-            
-            if (completion) {
-                if (success) {
-                    // 成功时返回车辆ID
-                    completion(YES, responseId, nil);
-                } else {
-                    // 服务器返回业务错误
-                    NSError *apiError = [NSError errorWithDomain:@"TCUVehicleService"
-                                                            code:500
-                                                        userInfo:@{
-                                                            NSLocalizedDescriptionKey: message ?: @"上传失败",
-                                                            @"serverResponse": response
-                                                        }];
-                    completion(NO, nil, apiError);
+            // 尝试多种可能的ID字段名
+            if (responseDict[@"id"]) {
+                responseId = [NSString stringWithFormat:@"%@", responseDict[@"id"]];
+            } else if (responseDict[@"vehicleId"]) {
+                responseId = [NSString stringWithFormat:@"%@", responseDict[@"vehicleId"]];
+            } else if (responseDict[@"data"]) {
+                // 如果data是字典,尝试从中提取id
+                id dataObj = responseDict[@"data"];
+                if ([dataObj isKindOfClass:[NSDictionary class]]) {
+                    NSDictionary *dataDict = (NSDictionary *)dataObj;
+                    if (dataDict[@"id"]) {
+                        responseId = [NSString stringWithFormat:@"%@", dataDict[@"id"]];
+                    }
                 }
             }
-        } else {
-            // 响应格式不符合预期
-            NSLog(@"[VehicleService] ⚠️ 响应格式异常: %@", [responseObject class]);
-            
-            if (completion) {
-                NSError *formatError = [NSError errorWithDomain:@"TCUVehicleService"
-                                                           code:501
-                                                       userInfo:@{
-                                                           NSLocalizedDescriptionKey: @"服务器响应格式错误",
-                                                           @"response": responseObject ?: @"null"
-                                                       }];
-                completion(NO, nil, formatError);
-            }
+        }
+        
+        if (completion) {
+            completion(YES, responseId, nil);
         }
     }];
 }
