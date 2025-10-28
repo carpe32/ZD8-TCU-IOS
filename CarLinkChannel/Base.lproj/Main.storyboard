@@ -707,6 +707,7 @@
                     </view>
                     <connections>
                         <outlet property="contentTextView" destination="GzK-dE-0yb" id="b4u-mj-eVr"/>
+                        <outlet property="programmingButton" destination="859-Me-aJz" id="Rih-vf-eDT"/>
                         <outlet property="titleLabel" destination="09U-Dp-CMc" id="jr0-So-YKQ"/>
                     </connections>
                 </viewController>

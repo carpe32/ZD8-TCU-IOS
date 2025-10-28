@@ -2,7 +2,7 @@
 //  TuneContentViewController.h
 //  CarLinkChannel
 //
-//  重构版：显示文件夹说明并下载文件
+//  显示文件夹说明，下载并解密，发送数据给刷写模块
 //
 
 #import <UIKit/UIKit.h>
@@ -11,14 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TuneContentViewController : UIViewController
 
-/// 从 SoftwarePackageViewController 传入
-@property (nonatomic, strong) NSString *selectedFolderName;  // 选中的文件夹名（如 "Stage 1"）
-@property (nonatomic, strong) NSString *displayContent;      // 显示内容（show.txt内容）
-@property (nonatomic, strong) NSString *vinString;           // VIN码
+/// 从上一个界面传入的数据
+@property (nonatomic, strong) NSString *selectedFolderName;  // 选中的文件夹名称
+@property (nonatomic, strong) NSString *displayContent;      // 显示内容（show.txt）
+@property (nonatomic, strong) NSString *vinString;           // 车架号
 @property (nonatomic, strong) NSString *license;             // 激活码
 
-/// 旧属性（保留兼容）
-@property (nonatomic, strong) NSString *binFilePath;
+/// 兼容旧版本的属性
+@property (nonatomic, strong, nullable) NSString *binFilePath;  // 旧版本的本地文件路径
 
 @end
 

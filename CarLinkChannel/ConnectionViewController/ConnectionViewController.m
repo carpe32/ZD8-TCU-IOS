@@ -621,8 +621,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 -(void)begininstallPackageNotify:(NSNotification *)notify {
     ProcessCount = 0;
-    AfterProcessPath = notify.userInfo[@"path"];
-    self->LastflashFileName = [AfterProcessPath lastPathComponent];
+    self->LastflashFileName = notify.userInfo[@"fileName"];
     DDLogInfo(@"Handle File : %@" ,self->LastflashFileName);
     [self AddInstallVIewToWindow];
     

@@ -674,7 +674,6 @@
 }
 
 #pragma mark - File Download
-
 - (void)downloadFileWithVIN:(NSString *)vin
                        hwid:(NSString *)hwid
                     license:(NSString *)license
@@ -686,53 +685,139 @@
     NSLog(@"  VIN: %@", vin);
     NSLog(@"  Selected: %@", selectedFile);
     
-    // 构建URL参数
+    // 1️⃣ 构建URL参数（注意使用 ProgramMsg）
     NSDictionary *params = @{
         @"Vin": vin,
-        @"Hwid": hwid,
+        @"Hwid": hwid ?: @"IOS_Device",
         @"Platform": @(1),
         @"License": license,
         @"UserSelected": selectedFile,
-        @"ProgramSha256": programSha256 ?: @""
+        @"ProgramMsg": programSha256 ?: @""  // ✅ 正确的参数名
     };
     
     NSLog(@"[VehicleService] 📦 请求参数: %@", params);
     
-    // 构建URL
-    NSURL *url = API_URL(API_FILE_DOWNLOAD);
-    NSLog(@"[VehicleService] 🚀 发送GET请求: %@", url.absoluteString);
+    // 2️⃣ 构建完整URL（带查询参数）
+    NSURL *baseURL = API_URL(API_FILE_DOWNLOAD);
+    NSURLComponents *components = [NSURLComponents componentsWithURL:baseURL
+                                              resolvingAgainstBaseURL:NO];
+    NSMutableArray<NSURLQueryItem *> *queryItems = [NSMutableArray array];
     
-    // 发送请求（下载会返回二进制数据）
-    [[TCUAPIService sharedService] GET:url parameters:params completion:^(id response, NSError *error) {
+    for (NSString *key in params) {
+        id value = params[key];
+        NSString *valueString = [value isKindOfClass:[NSString class]] ?
+                                value : [NSString stringWithFormat:@"%@", value];
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:key value:valueString]];
+    }
+    
+    components.queryItems = queryItems;
+    NSURL *finalURL = components.URL;
+    
+    NSLog(@"[VehicleService] 🚀 URL: %@", finalURL.absoluteString);
+    
+    // 3️⃣ 创建请求
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:finalURL];
+    request.HTTPMethod = @"GET";
+    [request setValue:@"keep-alive" forHTTPHeaderField:@"Connection"];
+    [request setTimeoutInterval:300.0]; // 5分钟超时
+    
+    // 4️⃣ 检查SSL配置
+    if (![self.apiService isSSLConfigured]) {
+        NSLog(@"[VehicleService] ❌ SSL证书未配置");
+        NSError *error = [NSError errorWithDomain:@"TCUVehicleService"
+                                            code:-1
+                                        userInfo:@{NSLocalizedDescriptionKey: @"SSL not configured"}];
+        if (completion) {
+            completion(NO, nil, error);
+        }
+        return;
+    }
+    
+    // 5️⃣ 获取SSL Identity
+    TCUSSLManager *sslManager = [self.apiService valueForKey:@"sslManager"];
+    SecIdentityRef identity = sslManager.identity;
+    
+    NSLog(@"[VehicleService] 🔐 使用SSL双向认证下载");
+    
+    // 6️⃣ ✅ 关键：直接使用 TCUStreamBasedRequest 下载
+    [TCUStreamBasedRequest performRequest:request
+                             withIdentity:identity
+                               completion:^(NSData *data, NSHTTPURLResponse *response, NSError *error) {
         
+        // 错误处理
         if (error) {
             NSLog(@"[VehicleService] ❌ 下载失败: %@", error.localizedDescription);
             if (completion) {
-                completion(NO, nil, error);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(NO, nil, error);
+                });
             }
             return;
         }
         
-        // 响应应该是NSData
-        if ([response isKindOfClass:[NSData class]]) {
-            NSData *fileData = (NSData *)response;
-            NSLog(@"[VehicleService] ✅ 下载成功: %lu bytes", (unsigned long)fileData.length);
+        // 检查HTTP状态码
+        NSInteger statusCode = response.statusCode;
+        NSLog(@"[VehicleService] 📥 响应状态: %ld", (long)statusCode);
+        
+        if (statusCode < 200 || statusCode >= 300) {
+            NSLog(@"[VehicleService] ❌ HTTP错误: %ld", (long)statusCode);
             
-            if (completion) {
-                completion(YES, fileData, nil);
+            // 尝试解析错误信息
+            NSString *errorMsg = [NSString stringWithFormat:@"HTTP %ld", (long)statusCode];
+            
+            if (data && data.length > 0) {
+                NSError *jsonError = nil;
+                id errorObject = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:0
+                                                                   error:&jsonError];
+                
+                if (!jsonError && [errorObject isKindOfClass:[NSDictionary class]]) {
+                    NSDictionary *errorDict = (NSDictionary *)errorObject;
+                    NSString *message = errorDict[@"message"] ?: errorDict[@"error"];
+                    if (message) {
+                        errorMsg = [NSString stringWithFormat:@"%@: %@", errorMsg, message];
+                    }
+                    NSLog(@"[VehicleService] 错误详情: %@", errorDict);
+                }
             }
-        } else {
-            NSLog(@"[VehicleService] ❌ 响应格式错误: %@", [response class]);
-            NSError *parseError = [NSError errorWithDomain:@"TCUVehicleService"
-                                                      code:500
-                                                  userInfo:@{NSLocalizedDescriptionKey: @"响应不是文件数据"}];
+            
+            NSError *httpError = [NSError errorWithDomain:@"TCUVehicleService"
+                                                    code:statusCode
+                                                userInfo:@{NSLocalizedDescriptionKey: errorMsg}];
             if (completion) {
-                completion(NO, nil, parseError);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(NO, nil, httpError);
+                });
             }
+            return;
+        }
+        
+        // 检查数据
+        if (!data || data.length == 0) {
+            NSLog(@"[VehicleService] ⚠️ 响应数据为空");
+            NSError *emptyError = [NSError errorWithDomain:@"TCUVehicleService"
+                                                     code:-100
+                                                 userInfo:@{NSLocalizedDescriptionKey: @"服务器返回空数据"}];
+            if (completion) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(NO, nil, emptyError);
+                });
+            }
+            return;
+        }
+        
+        // ✅ 成功：返回二进制数据
+        NSLog(@"[VehicleService] ✅ 下载成功: %lu bytes (%.2f MB)",
+              (unsigned long)data.length,
+              data.length / 1024.0 / 1024.0);
+        
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(YES, data, nil);
+            });
         }
     }];
 }
-
 #pragma mark - License Management
 
 
