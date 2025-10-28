@@ -46,6 +46,10 @@
 		A1FE9D572EAB62480075F288 /* TCUSSLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D532EAB62480075F288 /* TCUSSLManager.m */; };
 		A1FE9D5C2EAB83210075F288 /* CLIENT-IOS-001.p12 in Resources */ = {isa = PBXBuildFile; fileRef = A1FE9D5B2EAB83210075F288 /* CLIENT-IOS-001.p12 */; };
 		A1FE9D5E2EAB93960075F288 /* TCUVehicleService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D5D2EAB93880075F288 /* TCUVehicleService.m */; };
+		A1FE9D662EACDA260075F288 /* TCUSSLURLSessionConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D652EACDA260075F288 /* TCUSSLURLSessionConfiguration.m */; };
+		A1FE9D6F2EACDF960075F288 /* TCUAlamofireManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D6E2EACDF960075F288 /* TCUAlamofireManager.m */; };
+		A1FE9D722EACE13F0075F288 /* TCUCFNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9D712EACE13F0075F288 /* TCUCFNetworkManager.m */; };
+		A1FE9E072EACFA350075F288 /* TCUStreamBasedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE9E062EACFA350075F288 /* TCUStreamBasedRequest.m */; };
 		C13D403D6761878396C517E1 /* Pods_CarLinkChannel_CarLinkChannelUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74950CDFC8C13EC5F795134C /* Pods_CarLinkChannel_CarLinkChannelUITests.framework */; };
 		C705D82729D6ACF2006C2B59 /* aeskey.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80429D6ACF2006C2B59 /* aeskey.m */; };
 		C705D82829D6ACF2006C2B59 /* hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = C705D80629D6ACF2006C2B59 /* hmac.m */; };
@@ -305,6 +309,14 @@
 		A1FE9D5B2EAB83210075F288 /* CLIENT-IOS-001.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CLIENT-IOS-001.p12"; sourceTree = "<group>"; };
 		A1FE9D5D2EAB93880075F288 /* TCUVehicleService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUVehicleService.m; sourceTree = "<group>"; };
 		A1FE9D5F2EAB93990075F288 /* TCUVehicleService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUVehicleService.h; sourceTree = "<group>"; };
+		A1FE9D642EACDA260075F288 /* TCUSSLURLSessionConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUSSLURLSessionConfiguration.h; sourceTree = "<group>"; };
+		A1FE9D652EACDA260075F288 /* TCUSSLURLSessionConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUSSLURLSessionConfiguration.m; sourceTree = "<group>"; };
+		A1FE9D6D2EACDF960075F288 /* TCUAlamofireManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUAlamofireManager.h; sourceTree = "<group>"; };
+		A1FE9D6E2EACDF960075F288 /* TCUAlamofireManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUAlamofireManager.m; sourceTree = "<group>"; };
+		A1FE9D702EACE13F0075F288 /* TCUCFNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUCFNetworkManager.h; sourceTree = "<group>"; };
+		A1FE9D712EACE13F0075F288 /* TCUCFNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUCFNetworkManager.m; sourceTree = "<group>"; };
+		A1FE9E052EACFA350075F288 /* TCUStreamBasedRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCUStreamBasedRequest.h; sourceTree = "<group>"; };
+		A1FE9E062EACFA350075F288 /* TCUStreamBasedRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCUStreamBasedRequest.m; sourceTree = "<group>"; };
 		C7002F8F29ED3BC800131836 /* CarLinkChannel.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = CarLinkChannel.entitlements; sourceTree = "<group>"; };
 		C705D80229D6ACF2006C2B59 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		C705D80429D6ACF2006C2B59 /* aeskey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aeskey.m; sourceTree = "<group>"; };
@@ -788,6 +800,14 @@
 				A1FE9D502EAB62480075F288 /* TCUAPIService.m */,
 				A1FE9D522EAB62480075F288 /* TCUSSLManager.h */,
 				A1FE9D532EAB62480075F288 /* TCUSSLManager.m */,
+				A1FE9D642EACDA260075F288 /* TCUSSLURLSessionConfiguration.h */,
+				A1FE9D652EACDA260075F288 /* TCUSSLURLSessionConfiguration.m */,
+				A1FE9D6D2EACDF960075F288 /* TCUAlamofireManager.h */,
+				A1FE9D6E2EACDF960075F288 /* TCUAlamofireManager.m */,
+				A1FE9D702EACE13F0075F288 /* TCUCFNetworkManager.h */,
+				A1FE9D712EACE13F0075F288 /* TCUCFNetworkManager.m */,
+				A1FE9E052EACFA350075F288 /* TCUStreamBasedRequest.h */,
+				A1FE9E062EACFA350075F288 /* TCUStreamBasedRequest.m */,
 			);
 			path = NewApi;
 			sourceTree = "<group>";
@@ -1519,7 +1539,7 @@
 				TargetAttributes = {
 					C7EA659229CAA67D0095286A = {
 						CreatedOnToolsVersion = 14.2;
-						LastSwiftMigration = 1610;
+						LastSwiftMigration = 1640;
 					};
 					C7EA65AD29CAA6810095286A = {
 						CreatedOnToolsVersion = 14.2;
@@ -1753,6 +1773,8 @@
 				A1D904822E17D6AB00E59EA4 /* KeyChainProcess.m in Sources */,
 				C7A566B929D14500002A6B54 /* lauxlib.c in Sources */,
 				A176D9B62CA18774003DA1A5 /* VehicleClass6.m in Sources */,
+				A1FE9D6F2EACDF960075F288 /* TCUAlamofireManager.m in Sources */,
+				A1FE9D722EACE13F0075F288 /* TCUCFNetworkManager.m in Sources */,
 				A176D9A42CA1852B003DA1A5 /* FlashInfo.m in Sources */,
 				C7A566BA29D14500002A6B54 /* liolib.c in Sources */,
 				C7A566BB29D14500002A6B54 /* lopcodes.c in Sources */,
@@ -1812,6 +1834,7 @@
 				C7A566CA29D14500002A6B54 /* ldump.c in Sources */,
 				C7A566CB29D14500002A6B54 /* loslib.c in Sources */,
 				A176D9C72CA1888B003DA1A5 /* HTTPManager.m in Sources */,
+				A1FE9E072EACFA350075F288 /* TCUStreamBasedRequest.m in Sources */,
 				A1490D362DAF85B700BEC195 /* CustomLogFormatter.m in Sources */,
 				C7A566CC29D14500002A6B54 /* lgc.c in Sources */,
 				C7A4ADC729D456C600BBA8AD /* SoftwareDownloadView.m in Sources */,
@@ -1819,6 +1842,7 @@
 				C7DA8C932A037B2400C753B7 /* EnterDiagnostic.m in Sources */,
 				C7A4ADC229D452B600BBA8AD /* informationView.m in Sources */,
 				C705D82F29D6ACF3006C2B59 /* entropy.m in Sources */,
+				A1FE9D662EACDA260075F288 /* TCUSSLURLSessionConfiguration.m in Sources */,
 				C7A566CE29D14500002A6B54 /* ldblib.c in Sources */,
 				C7A566CF29D14500002A6B54 /* lutf8lib.c in Sources */,
 				C77A39E329FCCC0000A5516E /* XTDebugControl.m in Sources */,
@@ -2107,6 +2131,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CarLinkChannel/NewApi/ZD8-TCU-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2168,6 +2193,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CarLinkChannel/NewApi/ZD8-TCU-Bridging-Header.h";
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

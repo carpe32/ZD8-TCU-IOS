@@ -2,43 +2,78 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSBonjourServices</key>
-	<array>
-		<string>_CarLinkChannel</string>
-	</array>
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
-		<key>UISceneConfigurations</key>
-		<dict>
-			<key>UIWindowSceneSessionRoleApplication</key>
-			<array>
-				<dict>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
-					<key>UISceneDelegateClassName</key>
-					<string>SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
-				</dict>
-			</array>
-		</dict>
-	</dict>
-	<key>UIRequiresPersistentWiFi</key>
-	<true/>
-	<key>UISupportedExternalAccessoryProtocols</key>
-	<array>
-		<string>com.apple.</string>
-	</array>
-	<key>mtj_appkey</key>
-	<string>da0767b44a</string>
-	<key>mtj_deubglog</key>
-	<string>1</string>
+    <!-- ✅ 修改后的 NSAppTransportSecurity 配置 -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!-- ❌ 关闭全局任意加载（提高安全性） -->
+        <key>NSAllowsArbitraryLoads</key>
+        <false/>
+        
+        <!-- ✅ 仅为特定域名配置例外 -->
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>zendao8.top</key>
+            <dict>
+                <!-- 允许 HTTPS 连接（双向SSL需要） -->
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <false/>
+                
+                <!-- 要求前向保密 -->
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <true/>
+                
+                <!-- 最低TLS版本 -->
+                <key>NSExceptionMinimumTLSVersion</key>
+                <string>TLSv1.2</string>
+                
+                <!-- 包含子域名 -->
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+    
+    <!-- 原有的 Bonjour 服务配置 -->
+    <key>NSBonjourServices</key>
+    <array>
+        <string>_CarLinkChannel</string>
+    </array>
+    
+    <!-- 原有的 Scene 配置 -->
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>SceneDelegate</string>
+                    <key>UISceneStoryboardFile</key>
+                    <string>Main</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+    
+    <!-- 原有的 WiFi 配置 -->
+    <key>UIRequiresPersistentWiFi</key>
+    <true/>
+    
+    <!-- 原有的外部配件协议 -->
+    <key>UISupportedExternalAccessoryProtocols</key>
+    <array>
+        <string>com.apple.</string>
+    </array>
+    
+    <!-- 原有的统计配置 -->
+    <key>mtj_appkey</key>
+    <string>da0767b44a</string>
+    <key>mtj_deubglog</key>
+    <string>1</string>
 </dict>
 </plist>

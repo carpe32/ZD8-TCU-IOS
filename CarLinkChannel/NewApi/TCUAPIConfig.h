@@ -45,15 +45,32 @@
 #define API_LICENSE_VERIFY      @"/api/license/verify"
 
 /**
- * 文件下载
- */
-#define API_FILE_DOWNLOAD       @"/api/files/download"
-
-/**
  * 健康检查
  */
 #define API_HEALTH_CHECK        @"/health"
 
+/**
+ * 激活码检查
+ */
+#define API_LICENSE_CHECK      @"/api/users/License/check"
+/**
+ * 激活码注册
+ */
+#define API_LICENSE_REGISTER   @"/api/users/License/register"
+/**
+ * 获取文件列表
+ */
+#define API_FILE_LIST          @"/api/users/VehicleMsg/file/list"
+
+/**
+ * 获取文件状态
+ */
+#define API_FILE_STATE         @"/api/users/VehicleMsg/file/state"
+
+/**
+ * 文件下载
+ */
+#define API_FILE_DOWNLOAD      @"/api/users/VehicleMsg/file/download"
 #pragma mark - Timeout Configuration
 
 /**

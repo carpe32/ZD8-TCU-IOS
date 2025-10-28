@@ -11,7 +11,8 @@
 #import "SSZipArchive.h"
 #import "TCUAPIService.h"
 #import "TCUAPIConfig.h"
-
+#import "TCUAlamofireManager.h"  // ✅ 导入纯OC版本
+#import "TCUCFNetworkManager.h"
 @interface AppDelegate ()
 
 @end
@@ -19,16 +20,29 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // 日志配置
     self.fileLogger = [[DDFileLogger alloc] init];
     self.fileLogger.rollingFrequency = 60 * 60 * 24; // 每 24 小时创建一个新日志文件
     self.fileLogger.logFileManager.maximumNumberOfLogFiles = 3;
     CustomLogFormatter *formatter = [[CustomLogFormatter alloc] init];
     [self.fileLogger setLogFormatter:formatter];
-
     [DDLog addLogger:self.fileLogger];
-
-    [[TCUAPIService sharedService] setupSSLWithCertName:CLIENT_CERT_FILENAME
-                                                password:CLIENT_CERT_PASSWORD];
+    
+    
+     // 1. 配置SSL
+     TCUAPIService *service = [TCUAPIService sharedService];
+     BOOL success = [service setupSSLWithCertName:@"CLIENT-IOS-001"
+                                         password:@"Q1w2e3r4@#$"];
+     
+     if (!success) {
+         NSLog(@"❌ SSL配置失败");
+         return YES;
+     }
+     
+     // 2. 测试连接
+//     [service testConnection];
+    
     return YES;
 }
 - (void)applicationWillTerminate:(UIApplication *)application {

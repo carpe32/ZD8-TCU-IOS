@@ -39,8 +39,16 @@ NS_ASSUME_NONNULL_BEGIN
  * 文件夹信息
  */
 @interface TCUFolderInfo : NSObject
+
 @property (nonatomic, copy) NSString *folderName;      // 文件夹名称（如 "Stage 1"）
 @property (nonatomic, copy) NSString *displayContent;  // 显示内容（从show.txt读取）
+
+// ✅ 添加这个方法声明（之前缺少）
+/**
+ * 从字典创建文件夹信息
+ */
++ (instancetype)folderWithDictionary:(NSDictionary *)dict;
+
 @end
 
 /**

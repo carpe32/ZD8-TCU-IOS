@@ -49,6 +49,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)clearCertificate;
 
+/**
+ * 为NSURLSession创建凭据
+ */
+- (NSURLCredential * _Nullable)createCredential;
+
 @end
 
 NS_ASSUME_NONNULL_END

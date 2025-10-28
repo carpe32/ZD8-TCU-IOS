@@ -8,7 +8,7 @@ target 'CarLinkChannel' do
   # Pods for CarLinkChannel
   pod 'CocoaLumberjack'
   pod 'SSZipArchive'
-
+  pod 'Alamofire', '~> 5.9'
 
   target 'CarLinkChannelTests' do
     inherit! :search_paths

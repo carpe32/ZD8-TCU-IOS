@@ -119,7 +119,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     [self storeMacrosInDictionary];
 }
 
-
 - (void)uploadVehicleInfoAndCheckSupport {
     
     // 1. 检查VIN和SVT是否已获取
@@ -141,11 +140,17 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
         [self PrintInformationToDisplayLog:info_prefix :@"正在上传车辆信息..."];
     });
     
-    // 2. 调用新API上传车辆信息
-    [self uploadVehicleInfoWithCompletion:^(BOOL success, NSString *binFileName, NSError *error) {
+    // 2. 调用车辆服务上传信息
+    TCUVehicleService *vehicleService = [TCUVehicleService sharedService];
+    NSDictionary *svtDict = [self convertSvtArrayToDictionary:self->VehicleSvt];
+    NSDictionary *cafdDict = [self convertCafdArrayToDictionary:self->cafdArray];
+    
+    [vehicleService uploadVehicleInfoWithVIN:self->VehicleVin
+                                        svtData:svtDict
+                                        cafdData:cafdDict
+                                  completion:^(BOOL success, NSString *binFileName, NSError *error) {
         
         if (!success || error) {
-            // 上传失败
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSString *errorMsg = error ? error.localizedDescription : @"车辆信息上传失败";
                 [self PrintInformationToDisplayLog:error_prefix :errorMsg];
@@ -153,26 +158,74 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
             return;
         }
         
-        // 3. 检查车辆是否支持
-        if ([self checkVehicleSupportWithBinFileName:binFileName]) {
-            // 车辆支持
+        // 3. 检查BinFileName
+        if (!binFileName || binFileName.length == 0) {
+            // 车型不支持
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self PrintInformationToDisplayLog:info_prefix :@"车辆支持刷写"];
+                [self PrintInformationToDisplayLog:error_prefix :@"Vehicle model not supported. Please contact customer service."];
+                self.activationButton.enabled = NO;
+                self.nextButton.enabled = NO;
             });
-            
-            // 4. 继续原有流程
-            [self CafdAndMidProcess];
-            [self DisplayCheckVehicleStatus];
-            
-            // 5. 检查激活状态
-            [self checkActivationStatus];
-            
-        } else {
-            // 车辆不支持
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self PrintInformationToDisplayLog:error_prefix :ECU_UNSUPPORTED];
-            });
+            return;
         }
+        
+        // 4. 车型支持，继续流程
+        self->binaryName = binFileName;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self PrintInformationToDisplayLog:info_prefix :@"车辆支持刷写"];
+        });
+        
+        [self DisplayCheckVehicleStatus];
+        
+        // 5. 检查本地激活码
+        NSDictionary *keyDic = [KeyChainProcess getFromKeychainForKey:@"License"];
+        NSString *localLicense = keyDic[self->VehicleVin];
+        
+        if (!localLicense || localLicense.length == 0) {
+            // 无激活码
+            DDLogInfo(@"[NewAPI] 本地无激活码");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self PrintInformationToDisplayLog:info_prefix :CAR_NOT_REGISTER_CONTENT];
+                self.activationButton.enabled = YES;
+                self.nextButton.enabled = NO;
+            });
+            return;
+        }
+        
+        // 6. 验证激活码
+        DDLogInfo(@"[NewAPI] 验证激活码: %@", localLicense);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self PrintInformationToDisplayLog:info_prefix :@"正在验证激活状态..."];
+        });
+        
+        [vehicleService checkLicenseValidityWithVIN:self->VehicleVin
+                                            license:localLicense
+                                         completion:^(BOOL isValid, NSError *error) {
+            
+            if (error) {
+                DDLogError(@"[NewAPI] 验证失败: %@", error.localizedDescription);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self PrintInformationToDisplayLog:warn_prefix :@"无法验证激活状态"];
+                    self.activationButton.enabled = YES;
+                    self.nextButton.enabled = NO;
+                });
+                return;
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (isValid) {
+                    [self PrintInformationToDisplayLog:info_prefix :@"车辆已激活"];
+                    self.activationButton.enabled = NO;
+                    self.nextButton.enabled = YES;
+                } else {
+                    [self PrintInformationToDisplayLog:warn_prefix :@"激活码已失效"];
+                    self.activationButton.enabled = YES;
+                    self.nextButton.enabled = NO;
+                }
+            });
+        }];
     }];
 }
 
@@ -219,49 +272,43 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     
     // 4. 调用TCUAPIService的方法上传
     [[TCUVehicleService sharedService] uploadVehicleInfoWithVIN:self->VehicleVin
-                                                        svt:svtDict
-                                                       cafd:cafdDict
+                                                        svtData:svtDict
+                                                       cafdData:cafdDict
                                                  completion:^(BOOL success, NSString *binFileName, NSError *error) {
         
-//        // 5. 处理响应
-//        if (error) {
-//            DDLogError(@"[NewAPI] 车辆信息上传失败: %@", error.localizedDescription);
-//            
-//            NSString *errorMessage = error.localizedDescription;
-//            if (error.code == TCUErrorCodeSSLError) {
-//                errorMessage = @"SSL证书未配置";
-//            } else if (error.code == TCUErrorCodeNetworkError) {
-//                errorMessage = @"网络连接失败，请检查网络";
-//            }
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self PrintInformationToDisplayLog:error_prefix :errorMessage];
-//            });
-//            
-//            if (completion) completion(NO, nil, error);
-//            return;
-//        }
-//        
-//        if (success) {
-//            DDLogInfo(@"[NewAPI] 车辆信息上传成功, BinFileName: %@", binFileName);
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self PrintInformationToDisplayLog:info_prefix :@"车辆信息上传成功"];
-//            });
-//            
-//            if (completion) completion(YES, binFileName, nil);
-//        } else {
-//            DDLogError(@"[NewAPI] API返回失败");
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self PrintInformationToDisplayLog:error_prefix :@"服务器返回失败"];
-//            });
-//            
-//            NSError *apiError = [NSError errorWithDomain:@"TCUAPIError"
-//                                                    code:1003
-//                                                userInfo:@{NSLocalizedDescriptionKey: @"服务器返回失败"}];
-//            if (completion) completion(NO, nil, apiError);
-//        }
+    
+        // 5. 处理响应
+        if (error) {
+            DDLogError(@"[NewAPI] 车辆信息上传失败: %@", error.localizedDescription);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self PrintInformationToDisplayLog:error_prefix :@"Network Error,please check"];
+            });
+            
+            if (completion) completion(NO, nil, error);
+            return;
+        }
+        
+        if (success) {
+            DDLogInfo(@"[NewAPI] 车辆信息上传成功, BinFileName: %@", binFileName);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self PrintInformationToDisplayLog:info_prefix :@"connect success"];
+            });
+            
+            if (completion) completion(YES, binFileName, nil);
+        } else {
+            DDLogError(@"[NewAPI] API返回失败");
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self PrintInformationToDisplayLog:error_prefix :@"Server Error,please contact the customer service"];
+            });
+            
+            NSError *apiError = [NSError errorWithDomain:@"TCUAPIError"
+                                                    code:1003
+                                                userInfo:@{NSLocalizedDescriptionKey: @"服务器返回失败"}];
+            if (completion) completion(NO, nil, apiError);
+        }
     }];
 }
 #pragma mark - 检查激活状态
@@ -1481,83 +1528,118 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 }
 
 
-#pragma mark 底部弹出的激活视图
--(void)ValidFunction{
-    NSString * code = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    NetworkInterface * interface = [NetworkInterface getInterface];
-    [interface ValidWithVin:self->VehicleVin Code:code returnBlock:^(Boolean result){
-        if(result){
-            NSDictionary *VehicleDictionary = @{
+#pragma mark - 激活视图相关
+
+/**
+ * 验证并注册激活码（使用新API）
+ */
+-(void)ValidFunction {
+    
+    // 1. 获取用户输入的激活码
+    NSString *code = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    // 2. 验证激活码不为空
+    if (!code || code.length == 0) {
+        [self showActivationAlert:@"Invalid Active Key" message:@"Please enter activation code"];
+        return;
+    }
+    
+    // 3. 显示加载状态
+    [self PrintInformationToDisplayLog:info_prefix :@"Validating activation code..."];
+    
+    // 4. 调用新API注册激活码
+    TCUVehicleService *vehicleService = [TCUVehicleService sharedService];
+    [vehicleService registerLicenseWithVIN:self->VehicleVin
+                                   license:code
+                                completion:^(BOOL success, BOOL isNewActivation, NSString *message, NSError *error) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (error) {
+                // 网络错误
+                DDLogError(@"[Activation] 注册失败: %@", error.localizedDescription);
+                [self PrintInformationToDisplayLog:error_prefix :@"Network error, please try again"];
+                [self showActivationAlert:@"Activation Failed" message:@"Network error, please check connection"];
+                return;
+            }
+            
+            if (!success) {
+                // 激活码无效或其他业务错误
+                DDLogError(@"[Activation] 激活码无效: %@", message);
+                [self PrintInformationToDisplayLog:error_prefix :message ?: @"Invalid activation code"];
+                [self showActivationAlert:@"Activation Failed" message:message ?: @"Invalid Active Key"];
+                return;
+            }
+            
+            // ========== 激活成功 ==========
+            DDLogInfo(@"[Activation] 激活成功: isNew=%@, message=%@", isNewActivation ? @"YES" : @"NO", message);
+            
+            // 1. 保存激活码到Keychain
+            NSDictionary *vehicleDictionary = @{
                 self->VehicleVin: code,
             };
-            [KeyChainProcess Updatechain:VehicleDictionary forKey:@"License"];
+            [KeyChainProcess Updatechain:vehicleDictionary forKey:@"License"];
+            DDLogInfo(@"[Activation] 激活码已保存到Keychain");
+            
+            // 2. 隐藏键盘
             [self->textField resignFirstResponder];
+            
+            // 3. 关闭激活视图
             [UIView animateWithDuration:0.25 delay:0.25 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 self->activationView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, 360);
             } completion:^(BOOL finish){
                 
-                UIAlertController * controller = [UIAlertController alertControllerWithTitle:@"" message:ACTIVATION_SUCCESS_CONTENT preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction * action = [UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){}];
+                // 4. 显示成功提示
+                NSString *successMessage = isNewActivation ?
+                    @"Activation successful! This is your first activation." :
+                    @"Activation successful! Vehicle already activated.";
+                
+                UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Success"
+                                                                                    message:successMessage
+                                                                             preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"Done"
+                                                                 style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * action){}];
                 [controller addAction:action];
                 [self presentViewController:controller animated:YES completion:nil];
                 
-                NSDateFormatter * format = [[NSDateFormatter alloc] init];
-                format.dateFormat = date_format;
-                NSString * date_string = [format stringFromDate:[NSDate date]];
-                NSString * content = [NSString stringWithFormat:@"\r\n%@ %@\r\n%@",info_prefix,date_string,ACTIVATION_SUCCESS_CONTENT];
-                self.svtTextView.attributedText = [self getTextViewAttributeString:content WithAttribute:@""];
-                if(self.svtTextView.contentSize.height > self.svtTextView.frame.size.height){
-                    [self.svtTextView setContentOffset:CGPointMake(0, self.svtTextView.contentSize.height - self.svtTextView.frame.size.height) animated:YES];
-                }
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0), ^{
-                    [self CheckBinFile];
-                });
+                // 5. 更新日志
+                [self PrintInformationToDisplayLog:info_prefix :ACTIVATION_SUCCESS_CONTENT];
                 
+                // 6. 检查Bin文件（可选）
+                // 注：新流程中已经在 uploadVehicleInfoAndCheckSupport 中检查过了
+                // 这里可以选择性地再次检查更新
+                // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0), ^{
+                //     [self CheckBinFile];
+                // });
+                
+                // 7. 更新按钮状态
                 self.activationButton.enabled = NO;
                 self.nextButton.enabled = YES;
+                
+                // 8. 清理视图
                 [self->bgView removeFromSuperview];
                 [self->activationView removeFromSuperview];
                 self->bgView = nil;
                 self->activationView = nil;
-
             }];
-        
-        }else{
-            [self->textField resignFirstResponder];
-            [UIView animateWithDuration:0.25 delay:0.25 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                self->activationView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, 360);
-            } completion:^(BOOL finish){
-                [self->bgView removeFromSuperview];
-                [self->activationView removeFromSuperview];
-            }];
-
-            UIAlertController * controller = [UIAlertController alertControllerWithTitle:@"" message:@"Invalid Active Key." preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction * action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * aciton){
-                [controller dismissViewControllerAnimated:YES completion:nil];
-            }];
-            [controller addAction:action];
-            [self presentViewController:controller animated:YES completion:nil];
-        }
-    } withError:^(NSError * error){
-        [self->textField resignFirstResponder];
-        [UIView animateWithDuration:0.25 delay:0.25 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            self->activationView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, 360);
-        } completion:^(BOOL finish){
-            [self->bgView removeFromSuperview];
-            [self->activationView removeFromSuperview];
-        }];
-
-        UIAlertController * controller = [UIAlertController alertControllerWithTitle:@"" message:@"Network cannot connection." preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction * action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * aciton){
-            [controller dismissViewControllerAnimated:YES completion:nil];
-        }];
-        [controller addAction:action];
-        [self presentViewController:controller animated:YES completion:nil];
+        });
     }];
-    
-    
 }
 
+/**
+ * 显示激活提示框
+ */
+- (void)showActivationAlert:(NSString *)title message:(NSString *)message {
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
+                                                                        message:message
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:nil];
+    [controller addAction:action];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 #pragma mark 退出背景视图层
 -(void)dismissActivityView {
     if(self->activationView.frame.origin.y + self->activationView.frame.size.height < [UIScreen mainScreen].bounds.size.height){
